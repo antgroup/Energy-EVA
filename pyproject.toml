@@ -1,0 +1,21 @@
+[project]
+name = "EnergyEVA"
+version = "0.1.0"
+description = "A Mutltimodal benchmark for Energy&Electricity domain"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "einops>=0.8.1",
+    "fev==0.5.0",
+    "h5py>=3.14.0",
+    "jaxtyping>=0.3.2",
+    "loguru>=0.7.3",
+    "matplotlib==3.9.2",
+    "prophet>=1.1.7",
+    "statsforecast>=2.0.2",
+    "torch>=2.6.0",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
