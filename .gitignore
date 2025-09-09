@@ -1,0 +1,8 @@
+test*.py
+.sumi
+.nfs*
+.temp
+.venv
+**/__pycache__
+.vscode/
+.idea/
