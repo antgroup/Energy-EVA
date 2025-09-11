@@ -32,7 +32,7 @@ Each scenario contains multiple sub-datasets. All datasets are sourced from publ
 | Load  | active_power_load                 |            7 |        5,160 | [Link](https://data.mendeley.com/datasets/jxm8d4w4cv/1)                                                                                                                                                              |
 | Load  | icsuci                            |           64 |       90,930 | [Link](https://archive.ics.uci.edu/dataset/1158/high-resolution+load+dataset+from+smart+meters+across+various+cities+in+morocco)                                                                                     |
 
-**Coming Soon** [dataset download link]()
+[dataset download link](https://zenodo.org/records/17099628)
 
 ## Project Structure
 ```shell
