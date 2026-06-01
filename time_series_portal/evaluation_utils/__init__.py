@@ -1,4 +1,4 @@
 from .data_generate_util import build_univar_adapter_input_data,build_covars_adapter_input_data
-from .metric_extensions import WindAcc,SolarAcc,LoadAcc
+from .metric_extensions import WindAcc,SolarAcc,LoadAcc,PriceAcc
 from .persistence_util import PersistenceUtil
 from .register import registry

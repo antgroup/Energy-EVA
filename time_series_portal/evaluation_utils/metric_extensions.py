@@ -150,3 +150,34 @@ class WindAcc(Metric):
         if return_detail:
             return np.asarray(all_instance_score)
         return np.nanmean(all_instance_score)
+
+
+class PriceAcc(Metric):
+    # acc = 1 - sum(|gt - pred|) / sum(|gt|)
+    # Computed per instance, then averaged across instances.
+    def compute(
+            self,
+            *,
+            test_data: datasets.Dataset,
+            predictions: datasets.Dataset,
+            past_data: datasets.Dataset,
+            seasonality: int = 1,
+            quantile_levels: list[float] | None = None,
+            target_column: str = "target",
+            return_detail=False,
+    ) -> Union[float, np.ndarray]:
+        instance_count = test_data.num_rows
+        prediction_data = predictions[PREDICTIONS]
+        target_data = test_data[target_column]
+        all_instance_score = []
+        for m_instance_index in range(instance_count):
+            m_target = np.asarray(target_data[m_instance_index], dtype=np.float64).reshape(-1)
+            m_pred = np.asarray(prediction_data[m_instance_index], dtype=np.float64).reshape(-1)
+            m_denom = np.abs(m_target).sum()
+            if m_denom == 0:
+                all_instance_score.append(np.nan)
+                continue
+            all_instance_score.append(1 - np.abs(m_target - m_pred).sum() / m_denom)
+        if return_detail:
+            return np.asarray(all_instance_score)
+        return np.nanmean(all_instance_score)

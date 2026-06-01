@@ -12,7 +12,7 @@ from typing_extensions import LiteralString
 
 import time_series_portal.evaluation_methods  # noqa: F401
 from Core.Utils.file_helper import glob
-from time_series_portal.benchmark_tasks import get_solar_tasks, get_wind_tasks, get_load_tasks
+from time_series_portal.benchmark_tasks import get_solar_tasks, get_wind_tasks, get_load_tasks, get_price_tasks
 from time_series_portal.evaluation_utils import registry
 from time_series_portal.evaluation_utils.logger_utils import setup_logger
 from time_series_portal.evaluation_utils.persistence_util import PersistenceUtil
@@ -58,6 +58,8 @@ def selected_dataset_benchmark(
         selected_tasks = get_wind_tasks(_dataset_path)
     elif _dataset_name == 'load':
         selected_tasks = get_load_tasks(_dataset_path)
+    elif _dataset_name == 'price':
+        selected_tasks = get_price_tasks(_dataset_path)
     else:
         raise ValueError(f"Unknown dataset name: {_dataset_name}")
     for m_model_index, m_model_name in enumerate(_to_evaluate_models, 1):
@@ -81,7 +83,7 @@ def selected_dataset_benchmark(
 
 def parse_args():
     parser = ArgumentParser('Energy Dataset Benchmark')
-    parser.add_argument('--scene', nargs='+', choices=['solar', 'wind', 'load'], required=True,
+    parser.add_argument('--scene', nargs='+', choices=['solar', 'wind', 'load', 'price'], required=True,
                         help='support task name')
     parser.add_argument('--model', nargs='+', type=str, required=True, help='model name')
     parser.add_argument('--dataset_path', type=str, required=True, help='dataset path')

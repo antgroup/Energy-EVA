@@ -3,24 +3,31 @@
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+## Updates!!
+- **[2026-06-01]**: Released **Energy-EVA 2.0** — added a new day-ahead electricity price forecasting scene (3 sub-datasets); upgraded four third-party baselines (Chronos-2, Moirai-2.0-R-small, Toto-2.0-2.5B, TimesFM-2.5-200M); added EnergyTS V3.0.
+
 ## Overview
 The Energy Scenario Evaluation Dataset and Benchmark (Energy-EVA) serves as a dedicated evaluation standard for applications in the energy domain, focusing currently on zero-shot time series forecasting tasks, including renewable energy production and industrial usage. It provides a consistent framework and datasets for assessing model generalization within practical energy environments, and features a versatile structure to facilitate the future incorporation of multi-modal tasks. Looking ahead, Energy-EVA plans to broaden its scope to encompass various task types, including applications for energy-oriented large language models and visual tasks for contexts such as power grid inspections.
 ## Key Features
 - Time series datasets tailored for applications in energy and electricity
 - Customized evaluation metrics for precise energy and electricity forecasting
-- Performance comparison of leading open-source models (i.e., Moirai, Chronos, TiRex, Sundial, TOTO, and TimesFM, along with EnergyTS 2.0) alongside our proprietary model, EnergyTS 2.0.
+- Performance comparison of leading open-source models (Moirai, Chronos, TiRex, Sundial, TOTO, TimesFM) alongside our proprietary model EnergyTS V3.0.
 
 ## Scene Description
-We provide evaluation benchmarks for three scenarios:
+We provide evaluation benchmarks for four scenarios:
 1. **Univariate electricity load forecasting** - Single variable power consumption prediction with datetime information
 2. **Photovoltaic power generation forecasting with meteorological covariates** - Solar power prediction incorporating weather data and datetime information
 3. **Wind power generation forecast with meteorological covariates** - Wind power prediction incorporating weather data and datetime information.
+4. **Day-ahead electricity price forecasting** - Hourly day-ahead electricity price prediction with datetime information.
 
 
 Every scenario encompasses several sub-datasets. All data is obtained from publicly accessible and traceable platforms. Using data pre-processing and processing methods, the initial raw data is converted to standardized evaluation data files.
 ## Dataset Description
 
-[Download link](https://zenodo.org/records/17099628)
+[Download link for Solar/Wind/Load](https://zenodo.org/records/17099628)
+
+[Download link for Price](https://zenodo.org/records/20485935)
 
 | Scene | Sub Dataset Name                  | Instance Num | Timestep Num | Source                                                                                                                                                                                                               |
 |-------|-----------------------------------|-------------:|-------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,7 +41,10 @@ Every scenario encompasses several sub-datasets. All data is obtained from publi
 | Load  | aemo                              |           40 |      117,256 | [Link](https://www.aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/aggregated-data)                                                                                                  |
 | Load  | entsoe                            |           73 |       53,352 | [Link](https://transparency.entsoe.eu/)                                                                                                                                                                              |
 | Load  | active_power_load                 |            7 |        5,160 | [Link](https://data.mendeley.com/datasets/jxm8d4w4cv/1)                                                                                                                                                              |
-| Load  | icsuci                            |           64 |       90,930 | [Link](https://archive.ics.uci.edu/dataset/1158/high-resolution+load+dataset+from+smart+meters+across+various+cities+in+morocco)                
+| Load  | icsuci                            |           64 |       90,930 | [Link](https://archive.ics.uci.edu/dataset/1158/high-resolution+load+dataset+from+smart+meters+across+various+cities+in+morocco)                |
+| Price | R1_Sim                            |            1 |        8,640 | -                                                                                                                                                                                                                    |
+| Price | R2_Sim                            |            1 |        8,832 | -                                                                                                                                                                                                                    |
+| Price | R3_Sim                            |            1 |        8,640 | -                                                                                                                                                                                                                    |
 
 ## Leaderboard
 
@@ -42,42 +52,55 @@ Access the [evaluation detail](./evaluation_results/) to examine comprehensive i
 
 ### Solar Power Generation Forecasting
 
-| model_name          | gmean_relative_error | avg_rank | avg_acc |
-|---------------------|:--------------------:|:--------:|:-------:|
-| EnergyTS_V2.0       | 0.4777               | 1.0667   | 0.8148  |
-| timesfm2_xreg_early | 0.5872               | 2.3333   | 0.7969  |
-| chronos-bolt-base   | 0.9097               | 4.0167   | 0.6748  |
-| tirex               | 0.9201               | 4.5667   | 0.6724  |
-| moirai_1.1_R_large  | 1.0479               | 6.5833   | 0.6552  |
-| sundial_base_128m   | 0.9749               | 5.4333   | 0.6452  |
-| toto_151m           | 0.9646               | 5.8667   | 0.6448  |
-| dummy_model         | 1.0000               | 6.1333   | 0.6263  |
+| model_name            | gmean_relative_error | avg_rank | avg_acc |
+| --------------------- | -------------------- | -------- | ------- |
+| EnergyTS_V3.0         | 0.4452               | 1.90     | 0.8296  |
+| chronos-2             | 0.4442               | 1.50     | 0.8274  |
+| timesfm2.5_xreg_early | 0.5910               | 3.63     | 0.7938  |
+| toto_2.0_2.5B         | 0.7595               | 3.62     | 0.7074  |
+| tirex                 | 0.9201               | 5.70     | 0.6724  |
+| moirai_2.0_R_small    | 0.9924               | 6.50     | 0.6555  |
+| sundial_base_128m     | 0.9749               | 6.30     | 0.6452  |
+| dummy_model           | 1.0000               | 6.85     | 0.6263  |
 
 ### Wind Power Generation Forecasting
 
-| model_name          | gmean_relative_error | avg_rank | avg_acc |
-|---------------------|:--------------------:|:--------:|:-------:|
-| EnergyTS_V2.0       | 0.1061               | 1.0000   | 0.7870  |
-| timesfm2_xreg_early | 0.4002               | 2.8889   | 0.5964  |
-| toto_151m           | 0.7027               | 4.3333   | 0.3670  |
-| tirex               | 0.6887               | 3.6444   | 0.3619  |
-| sundial_base_128m   | 0.7046               | 4.8889   | 0.3617  |
-| moirai_1.1_R_large  | 0.7040               | 4.7556   | 0.3557  |
-| chronos-bolt-base   | 0.7827               | 6.5111   | 0.3152  |
-| dummy_model         | 1.0000               | 7.9778   | 0.0462  |
+| model_name            | gmean_relative_error | avg_rank | avg_acc |
+| --------------------- | -------------------- | -------- | ------- |
+| EnergyTS_V3.0         | 0.0732               | 1.31     | 0.8292  |
+| chronos-2             | 0.2393               | 1.69     | 0.7263  |
+| timesfm2.5_xreg_early | 0.3725               | 3.60     | 0.6134  |
+| tirex                 | 0.6887               | 4.87     | 0.3619  |
+| sundial_base_128m     | 0.7046               | 5.98     | 0.3617  |
+| toto_2.0_2.5B         | 0.6797               | 4.60     | 0.3591  |
+| moirai_2.0_R_small    | 0.7065               | 5.96     | 0.3494  |
+| dummy_model           | 1.0000               | 8.00     | 0.0462  |
 
 ### Power Load Forecasting
 
-| model_name          | gmean_relative_error | avg_rank | avg_acc |
-|---------------------|:--------------------:|:--------:|:-------:|
-| EnergyTS_V2.0       | 0.6122               | 1.9167   | 0.6971  |
-| timesfm2_xreg_early | 0.6690               | 3.5667   | 0.6814  |
-| chronos-bolt-base   | 0.6751               | 3.6667   | 0.6811  |
-| toto_151m           | 0.7046               | 4.9000   | 0.6763  |
-| moirai_1.1_R_large  | 0.7541               | 5.7000   | 0.6709  |
-| sundial_base_128m   | 0.7569               | 4.3667   | 0.6689  |
-| tirex               | 0.7766               | 4.4333   | 0.6688  |
-| dummy_model         | 1.0000               | 7.4500   | 0.6163  |
+| model_name            | gmean_relative_error | avg_rank | avg_acc |
+| --------------------- | -------------------- | -------- | ------- |
+| EnergyTS_V3.0         | 0.5877               | 3.47     | 0.7071  |
+| toto_2.0_2.5B         | 0.6125               | 2.90     | 0.6938  |
+| chronos-2             | 0.6198               | 3.03     | 0.6921  |
+| moirai_2.0_R_small    | 0.6287               | 3.67     | 0.6894  |
+| timesfm2.5_xreg_early | 0.7549               | 4.70     | 0.6725  |
+| sundial_base_128m     | 0.7569               | 5.12     | 0.6689  |
+| tirex                 | 0.7766               | 5.40     | 0.6688  |
+| dummy_model           | 1.0000               | 7.72     | 0.6163  |
+
+### Day-ahead Electricity Price Forecasting
+
+| model_name            | gmean_relative_error | avg_rank | avg_acc |
+| --------------------- | -------------------- | -------- | ------- |
+| EnergyTS_V3.0         | 0.5974               | 2.64     | 0.8874  |
+| chronos-2             | 0.7007               | 3.51     | 0.8699  |
+| timesfm2.5_xreg_early | 0.7237               | 3.96     | 0.8478  |
+| toto_2.0_2.5B         | 0.8163               | 4.39     | 0.8447  |
+| tirex                 | 0.8820               | 4.98     | 0.8381  |
+| moirai_2.0_R_small    | 0.9130               | 5.22     | 0.8321  |
+| sundial_base_128m     | 0.9590               | 5.59     | 0.8274  |
+| dummy_model           | 1.0000               | 5.71     | 0.8152  |
 
 ## Project Structure
 ```shell
@@ -95,6 +118,7 @@ Access the [evaluation detail](./evaluation_results/) to examine comprehensive i
 │   ├── config.py # Several typical configurations, like the path for storing the model
 │   ├── evaluation.py # Execute this for assessment
 │   ├── evaluation_methods # Implemented evaluation methods
+│   │   └── third_party_methods # Contains v1 baselines (chronos/, moirai/, timesfm/, toto/, tirex/, sundial/) and v2 baselines (chronos2/, moirai2/, timesfm25/, toto2/)
 │   ├── evaluation_utils  # Utilities for evaluating time series
 │   ├── leaderboard_generate.py # Generate customized leaderboard
 │   └── visualize_multi_model_results.py  # Visualize predictions from multiple models
@@ -127,7 +151,7 @@ Run evaluation:
 python time_series_portal/evaluation.py \ 
         --dataset_path PATH/TO/YOUR/DATASET/LOCATION \
         --target_path PATH/TO/YOUR/EVALUATION_RESULT/LOCATION \
-        --scene wind load solar \
+        --scene wind load solar price \
         --model dummy_model \
 ```
 Use `python time_series_portal/evaluation.py --help` to view more configuration options
@@ -138,7 +162,7 @@ python time_series_portal/visualize_multi_model_results.py \
         --dataset_path PATH/TO/YOUR/DATASET/LOCATION \
         --target_path PATH/TO/YOUR/EVALUATION_RESULT/LOCATION \
         --scene load \
-        --model dummy_model toto_151m
+        --model dummy_model toto_2.0_2.5B
 ```
 Use `python time_series_portal/visualize_multi_model_results.py --help` to view more configuration options
 

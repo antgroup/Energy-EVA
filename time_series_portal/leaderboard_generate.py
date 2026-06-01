@@ -31,7 +31,7 @@ def get_summary(
     merged_summary.to_csv(_target_path, index=False)
 
 def leaderboard_generate(_args):
-    scenes = ['load', 'solar', 'wind']
+    scenes = ['load', 'solar', 'wind', 'price']
     source_directory = _args.source_path
     target_directory = _args.target_path
     os.makedirs(target_directory, exist_ok=True)

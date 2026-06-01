@@ -4,3 +4,7 @@ from .timesfm.evaluate_model import *
 from .tirex.evaluate_model import *
 from .sundial.evaluate_model import *
 from .toto.evaluate_model import *
+from .chronos2.evaluate_model import *
+from .moirai2.evaluate_model import *
+from .timesfm25.evaluate_model import *
+from .toto2.evaluate_model import *
