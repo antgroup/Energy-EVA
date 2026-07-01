@@ -1,0 +1,65 @@
+{
+  "aggregateMethod": "mean_of_replicates",
+  "aggregateRunId": "claude-code-power-trade-standard-v1-final",
+  "caseCounts": {
+    "completedCasesAcrossBatches": 128.0,
+    "failedCasesAcrossBatches": 1.0,
+    "incompleteCasesAcrossBatches": 0.0,
+    "selectedCasesAcrossBatches": 129.0,
+    "successRate": 0.9922
+  },
+  "datasetId": "power_trade_standard_v1",
+  "datasetVersion": "v1",
+  "evidenceLocation": "tools/agentx_bench/frozen_results/power_trade_standard_v1/claude-code/2026-06-29",
+  "failurePolicy": "bounded attempts and bounded runtime; failed, timed-out, and non-completed final case rows are retained and scored as 0 by AgentX Bench while remaining in the selected-case denominator",
+  "finalBatches": [
+    "final-batch-1",
+    "final-batch-2",
+    "final-batch-3"
+  ],
+  "leaderboardEligible": false,
+  "manualImportPolicy": "manual_import with per-case metricResults; multi_agent.* marked NOT_APPLICABLE for single_agent",
+  "model": {
+    "caseTimeoutSeconds": 600,
+    "claudeCodeVersion": "2.1.177 (Claude Code)",
+    "effort": "low",
+    "maxAttemptsPerCase": 1,
+    "permissionMode": "bypassPermissions",
+    "requestedModel": "sonnet",
+    "tools": [
+      "WebSearch",
+      "WebFetch"
+    ],
+    "workers": 2
+  },
+  "reviewMode": "answer_plus_claude_code_stream_trace",
+  "reviewerProcess": "codex_manual_review_rubric_v1_codified_for_claude_code",
+  "runDate": "2026-06-29",
+  "scores": {
+    "efficiencyScoreInterval": "[89.1742, 92.2084]",
+    "efficiencyScoreMean": 90.8612,
+    "executionScoreInterval": "[27.3837, 28.0070]",
+    "executionScoreMean": 27.6636,
+    "orchestrationScoreInterval": "[0.0000, 0.0000]",
+    "orchestrationScoreMean": 0.0,
+    "outcomeScoreInterval": "[33.4624, 35.2157]",
+    "outcomeScoreMean": 34.1714,
+    "scoreInterval": "[41.7902, 42.6200]",
+    "totalScoreMean": 42.1808,
+    "totalScoreStdDev": 0.417
+  },
+  "scoringVersion": "v1",
+  "secretsPersisted": false,
+  "selectedCaseCountPerBatch": 43,
+  "snapshotType": "claude_code_final_failure_inclusive_benchmark_snapshot",
+  "subject": {
+    "agentMode": "single_agent",
+    "subjectId": "claude-code",
+    "subjectName": "Claude Code",
+    "subjectType": "claude_code",
+    "teamName": "external-claude-code"
+  },
+  "totalCaseRows": 129,
+  "traceEvidencePolicy": "required for every final case row; aggregate generated with --require-trace-evidence using Claude Code stream-json summaries",
+  "validReplicateCount": 3
+}

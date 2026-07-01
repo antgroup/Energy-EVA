@@ -1,0 +1,22 @@
+{
+  "attempt": 1,
+  "baseUrlHost": "aiot-coding-maas.antdigital.com",
+  "caseId": "power_trade_standard_v1_005",
+  "elapsedSeconds": 78.807,
+  "finalBatch": "final-batch-1",
+  "messageCount": 1,
+  "model": "gpt-5.5",
+  "observedAt": "2026-06-29T17:59:36+08:00",
+  "rawTraceCount": 1,
+  "roleCount": 1,
+  "sessionId": "agentx-crewai-final-batch-1-005-a1-74d12d43",
+  "stageCount": 1,
+  "status": "SUCCESS",
+  "taskOutputCount": 1,
+  "tokenUsage": 996.0,
+  "toolCallCount": 3,
+  "toolFailureCount": 0,
+  "toolSuccessCount": 3,
+  "toolSuccessRate": 1.0,
+  "traceSource": "crewai_lite_agent_session"
+}

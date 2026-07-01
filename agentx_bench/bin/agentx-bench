@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PACKAGE_DIR="$(CDPATH= cd -- "${SCRIPT_DIR}/.." && pwd)"
+PYTHON_BIN="${PYTHON:-python3}"
+
+usage() {
+  cat <<'EOF'
+AgentX Bench command line.
+
+Usage:
+  agentx-bench run [evaluation options]
+  agentx-bench tasks [task options]
+  agentx-bench cases [task options]
+  agentx-bench list [task options]
+
+Examples:
+  agentx-bench tasks --suite power_trade_standard_v1
+  agentx-bench run --suite power_trade_standard_v1 --method energent_swarm --service-url http://127.0.0.1:8080 --team-name virtual-trader-team
+
+Environment:
+  PYTHON    Python interpreter to use. Defaults to python3.
+EOF
+}
+
+if [[ $# -eq 0 ]]; then
+  usage
+  exit 0
+fi
+
+command="$1"
+case "${command}" in
+  run)
+    shift
+    exec "${PYTHON_BIN}" "${PACKAGE_DIR}/evaluation.py" "$@"
+    ;;
+  tasks|cases|list)
+    shift
+    exec "${PYTHON_BIN}" "${PACKAGE_DIR}/benchmark_tasks.py" "$@"
+    ;;
+  help|-h|--help)
+    usage
+    exit 0
+    ;;
+  *)
+    exec "${PYTHON_BIN}" "${PACKAGE_DIR}/evaluation.py" "$@"
+    ;;
+esac

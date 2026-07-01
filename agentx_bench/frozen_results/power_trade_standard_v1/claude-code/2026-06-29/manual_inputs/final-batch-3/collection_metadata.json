@@ -1,0 +1,27 @@
+{
+  "agentMode": "single_agent",
+  "aggregateRunId": "claude-code-power-trade-standard-v1-final",
+  "allRowsSuccessful": false,
+  "batch": "final-batch-3",
+  "caseTimeoutSeconds": 600,
+  "claudeCodeVersion": "2.1.177 (Claude Code)",
+  "collectionTime": "2026-06-29T03:00:01+08:00",
+  "datasetId": "power_trade_standard_v1",
+  "datasetVersion": "v1",
+  "effort": "low",
+  "failurePolicy": "retain failed or timed-out final rows; AgentX scoring keeps them in the denominator with 0 case score",
+  "maxAttemptsPerCase": 1,
+  "permissionMode": "bypassPermissions",
+  "requestedModel": "sonnet",
+  "rowCount": 43,
+  "secretsPersisted": false,
+  "selectedCaseCount": 43,
+  "subjectId": "claude-code",
+  "subjectName": "Claude Code",
+  "subjectType": "claude_code",
+  "tools": [
+    "WebSearch",
+    "WebFetch"
+  ],
+  "workers": 2
+}

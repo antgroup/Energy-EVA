@@ -1,0 +1,19 @@
+{
+  "attempt": 1,
+  "baseUrlHost": "aiot-coding-maas.antdigital.com",
+  "caseId": "power_trade_standard_v1_014",
+  "elapsedSeconds": 58.135,
+  "finalBatch": "final-batch-1",
+  "messageCount": 1,
+  "model": "gpt-5.5",
+  "observedAt": "2026-06-29T17:14:24+08:00",
+  "rawTraceCount": 1,
+  "sessionId": "agentx-goose-final-batch-1-014-a1-83328e9d",
+  "status": "SUCCESS",
+  "tokenUsage": 0.0,
+  "toolCallCount": 0,
+  "toolFailureCount": 0,
+  "toolSuccessCount": 0,
+  "toolSuccessRate": null,
+  "traceSource": "goose_cli_session"
+}

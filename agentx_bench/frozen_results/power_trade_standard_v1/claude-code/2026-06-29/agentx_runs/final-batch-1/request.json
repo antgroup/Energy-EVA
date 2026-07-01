@@ -1,0 +1,1051 @@
+{
+  "cases": [
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "retail_package",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_001",
+      "caseName": "河南物流园区套餐定制",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别套餐推荐意图和河南工商业客户场景",
+          "使用客户用电量、行业负荷特征和省份作为推荐依据",
+          "给出套餐推荐、适用条件和节省逻辑",
+          "说明需补充分时负荷、历史账单、峰谷比例等信息",
+          "不得编造确定收益"
+        ],
+        "expectedAnswer": "应识别为河南物流园区售电套餐推荐需求，基于9月预计用电45000kWh、工商业物流园区负荷特征和省份市场，推荐适合的套餐或套餐组合；若缺少分时负荷、峰谷比例、历史电费单等关键信息，应明确说明并给出补充清单，不得编造不存在的套餐价格或确定收益。",
+        "intent": "retail.package_recommendation"
+      },
+      "inputJson": {
+        "query": "我经营一家物流园区，位于河南省，2026年9月预计用电45000kWh。请结合客户侧用电规模和省份，帮我定制合适的售电套餐，并说明推荐理由、风险和需要补充的信息。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "trade_brief",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_002",
+      "caseName": "盘前电力交易简报",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别盘前简报意图和日期",
+          "覆盖供需、天气、新能源、价格或成交关注点",
+          "输出结构化摘要和交易风险",
+          "数据缺失时说明边界而非编造"
+        ],
+        "expectedAnswer": "应识别为2026-06-23盘前电力交易简报需求，结合可用行情、天气、负荷、新能源出力和交易基础数据形成结构化简报；若部分数据不可用，应说明缺口，不能凭空编造数值。",
+        "intent": "trade.brief"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请生成一份今日盘前电力交易简报，覆盖市场供需、天气、新能源出力、价格或成交关注点，以及今日交易风险。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "market_query",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_003",
+      "caseName": "山东竞价空间数据",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别省份山东和竞价空间指标",
+          "返回数值、单位、时段和数据口径",
+          "解释竞价空间对供需和报价策略的意义",
+          "无数据时如实说明，不编造"
+        ],
+        "expectedAnswer": "应识别山东竞价空间查询需求，调用或引用竞价空间数据源，返回2026-06-23山东市场的竞价空间关键数值、单位、时段口径和交易含义；无数据时必须说明缺失。",
+        "intent": "market.auction_space"
+      },
+      "inputJson": {
+        "query": "请查询山东省2026-06-23的竞价空间数据，给出关键数值、口径、时段和对交易策略的影响。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "policy_rule",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_004",
+      "caseName": "新建发电企业注册办理",
+      "expectedJson": {
+        "answerCriteria": [
+          "覆盖注册、资料上传、审核激活和培训/操作指导流程",
+          "列出基础工商、信用承诺、电力资质、银行、联系人、股权、法人材料",
+          "说明不同省份规则可能不同",
+          "提醒材料格式、审核周期和交易中心权威口径",
+          "不得编造具体地方文件号"
+        ],
+        "expectedAnswer": "应解释新建发电企业电力交易平台注册流程：账号注册与企业信息填写、工商和资质材料上传、交易中心审核、账号激活和必要培训；材料应包括营业执照、信用承诺书、电力许可证或相关资质、银行开户证明、联系人信息、股权结构和法定代表人材料，并提醒省份差异和以当地交易中心规则为准。",
+        "intent": "policy.market_access"
+      },
+      "inputJson": {
+        "query": "新建发电企业办理电力交易平台注册应该怎么做？需要准备哪些资料？请按注册流程、材料清单、审核激活和注意事项说明。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "scenario_analysis",
+        "category": "external_signal",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_005",
+      "caseName": "进口煤限制放开影响分析",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别燃料政策/新闻信号",
+          "说明煤价或配额变化到火电边际成本的传导",
+          "结合本省火电占比和进口煤依赖讨论影响方向",
+          "给出需核验数据和不确定性边界",
+          "不得把新闻信号当作已落地政策或编造具体降幅"
+        ],
+        "expectedAnswer": "应沿进口煤限制放开到燃料成本、火电边际成本、报价行为和现货价格的传导路径分析。若本省火电对进口煤依赖较高，度电燃料成本可能下降，火电报价中枢和部分时段现货价格存在下行压力；影响幅度需结合进口煤占比、煤价、热耗、火电装机占比和市场供需核验，不能直接给确定数值。",
+        "intent": "external_signal.cost_impact"
+      },
+      "inputJson": {
+        "query": "给定外部信号：新闻提到进口煤限制可能放开，关税或配额约束可能下降。请分析这对本省火电成本和电力现货价格可能产生什么影响，并说明需要核验的数据。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "scenario_analysis",
+        "category": "external_signal",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_006",
+      "caseName": "储能补贴传言影响分析",
+      "expectedJson": {
+        "answerCriteria": [
+          "明确传言需通过权威渠道核验",
+          "分析储能补贴到充放电行为和供需曲线的影响",
+          "说明对午间低谷、晚高峰和峰谷价差的潜在方向",
+          "给出交易风险和观察指标",
+          "不得把传言当事实或承诺价格必然下跌"
+        ],
+        "expectedAnswer": "应区分传言和事实，先要求核验权威政策来源，再分析补贴落地后可能增强储能投资和充电意愿，增加午间低价时段吸纳能力、影响晚高峰放电供给，并可能压低部分峰谷价差或改变现货价格曲线；结论必须带条件和不确定性。",
+        "intent": "external_signal.policy_impact"
+      },
+      "inputJson": {
+        "query": "给定外部信号：网上传言下个月可能出台新的储能补贴政策。请分析如果补贴落地，对储能充放电行为和现货价格可能有什么打压或重塑作用，并说明传言应如何核验。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "scenario_analysis",
+        "category": "external_signal",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_007",
+      "caseName": "隔壁省停电跨省交易影响",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别突发停电事件和跨省交易风险",
+          "区分送端、受端、通道节点不同传导路径",
+          "分析通道容量、送受电计划、备用和现货价格影响",
+          "给出交易风险提示和需确认的数据",
+          "不编造具体事故规模或调度指令"
+        ],
+        "expectedAnswer": "应先判断事故省份是送端、受端还是通道节点，再分析停电对跨省通道可用容量、送受电计划、备用需求和现货供需的传导影响；若事故省是受端，可能增加外购需求或减少送出，若是送端可能削弱外来电供应。应提示通道约束、临时调度、价格波动和履约风险。",
+        "intent": "external_signal.emergency_risk"
+      },
+      "inputJson": {
+        "query": "给定外部事件：隔壁省份发生大面积停电事故。请分析这会对我省跨省区交易产生什么连锁反应，并给出交易风险提示。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "scenario_analysis",
+        "category": "external_signal",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_008",
+      "caseName": "夏季高温社交情绪风险",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别社交情绪和交易心理场景",
+          "分析高温预期对负荷和买方行为的影响",
+          "识别恐慌囤货和高位接盘风险",
+          "给出理性仓位、数据核验和风险控制建议",
+          "不得把社交讨论直接等同于确定天气事实"
+        ],
+        "expectedAnswer": "应分析高温讨论到负荷预期、看涨情绪、提前补仓和高位接盘风险的传导。若社交热度高但缺少权威气象和负荷验证，应提示可能存在情绪过热和恐慌性囤货，建议结合气象预报、负荷预测、持仓缺口和价格位置控制仓位，避免盲目追高。",
+        "intent": "external_signal.sentiment_risk"
+      },
+      "inputJson": {
+        "query": "给定外部信号：社交媒体上大量讨论“夏季高温将持续一个月”。请分析这种市场情绪是否可能导致交易员过度恐慌性囤货，并给出交易建议。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "strategy_advice",
+        "category": "intraday_strategy",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_009",
+      "caseName": "买卖一价差大卖盘增加",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别价差大、卖盘增加、成交少、撤单快等盘口信号",
+          "给出假性压价/试探性卖压的概率判断而非绝对结论",
+          "结合剩余60MWh、目标均价和剩余时间给出分批或等待策略",
+          "说明触发条件：成交放量、价格中枢变化、撤单行为变化",
+          "提示风险：误判真实供给或错过补量"
+        ],
+        "expectedAnswer": "应判断为存在假性压价或试探性卖压的可能，但不能仅凭挂单量认定真实供给。依据是价差大、卖盘挂量增加但成交少、撤单快。建议先小单试探或等待成交确认，关注成交是否贴近买价、撤单持续性和价格中枢变化；在目标均价385约束下分批成交，避免因表面卖压盲目压低成交或错失补量窗口。",
+        "intent": "intraday.orderbook_behavior"
+      },
+      "inputJson": {
+        "query": "盘中静态切片：当前时点2026-06-23 10:20，标的日2026-06-24，晚高峰18:00-20:00时段；我方还需买入60MWh，目标均价不高于385元/MWh；当前成交进度45%，买一价378、卖一价390，买卖一价差较大；卖一到卖五挂单量持续增加但实际成交较少，部分卖单撤单较快，剩余交易时间70分钟。请判断这是不是有人在故意压价，并给出交易动作。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "strategy_advice",
+        "category": "intraday_strategy",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_010",
+      "caseName": "截标前地板价卖单涌现",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别临近截标、地板价卖单、成交小额和买方跟进弱的组合信号",
+          "区分抢量和扰乱视听两种解释",
+          "结合剩余35MWh和价格区间给出分批成交策略",
+          "给出撤单、成交连续性、价格突破等调整条件",
+          "提示尾盘流动性和误导挂单风险"
+        ],
+        "expectedAnswer": "应判断为尾盘抢量和扰动信号并存：临近截标地板价卖单可能代表卖方出清压力，但若成交小、买方跟进弱，也可能是扰乱预期或诱导压价。建议按未成交35MWh和价格上限分批承接，优先吃可成交且不突破目标区间的真实卖单，避免一次性大额追单；若地板价快速撤单或成交无法持续，应降低判断权重并保留部分缺口到更稳盘口。",
+        "intent": "intraday.orderbook_behavior"
+      },
+      "inputJson": {
+        "query": "盘中静态切片：当前距离截标还有10分钟，标的日2026-06-24午高峰12:00-14:00；我方仍有35MWh未成交，目标价格区间360-372元/MWh；突然出现大量地板价卖单，地板价挂单量占该时段剩余盘口卖量的45%，但成交集中在小额单，买方跟进不连续。请判断这是抢量还是扰乱视听，并给出应对策略。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "strategy_advice",
+        "category": "intraday_strategy",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_011",
+      "caseName": "上午十点成交量达到八成",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别成交进度显著高于历史基准",
+          "分析抢跑可能来自预期一致、恐慌补量或提前出清",
+          "结合已完成70%和剩余30MWh给出保守补量策略",
+          "提示高位追价和市场情绪过热风险",
+          "给出继续放量、回落、突破上限等触发条件"
+        ],
+        "expectedAnswer": "应识别为成交进度异常抢跑，可能意味着市场预期提前一致、买方恐慌补量或卖方提前出清。价格中枢高于昨日说明追涨风险上升。由于我方已完成70%，建议暂停大额追价，保留30MWh分批观察，只有在价格回落或盘口真实放量时补足；若后续成交继续放量并突破风险上限，应接受小缺口或调整策略。",
+        "intent": "intraday.trade_progress"
+      },
+      "inputJson": {
+        "query": "盘中静态切片：2026-06-23上午10点，某标的日全天滚动撮合成交量已经达到计划量80%，而历史同类交易日上午10点通常只完成35%-45%；价格中枢比昨日同阶段高6元/MWh，我方已完成目标买入量70%，剩余30MWh。请分析这种抢跑现象意味着什么，并给出我方后续交易建议。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "strategy_advice",
+        "category": "intraday_strategy",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_012",
+      "caseName": "晚高峰成交进度滞后",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别成交进度滞后、价差扩大和高价卖盘的信号",
+          "解释尾盘等待和流动性集中风险",
+          "给出提前小单试探、分批锁量和价格上限策略",
+          "说明尾盘成交密度、价格上行、盘口主动性变化的调整条件",
+          "提示全部留到尾盘的风险"
+        ],
+        "expectedAnswer": "应判断为晚高峰流动性滞后和尾盘博弈风险上升，买卖双方可能都在等待尾盘明确信号。价差扩大、买盘不愿上移、卖盘高挂说明市场分歧较大。建议不要把全部缺口留到最后，先用小单探测真实成交价，分批锁定部分电量，并设置价格上限；若尾盘成交密度升高但价格快速上行，应控制追价，避免被动高价补量。",
+        "intent": "intraday.trade_progress"
+      },
+      "inputJson": {
+        "query": "盘中静态切片：当前时间2026-06-23 14:40，标的日2026-06-24晚高峰19:00-21:00；该时段计划成交100MWh，到现在只完成30%，低于计划进度25个百分点；买卖价差从5元扩大到12元，买盘报价不愿上移，卖盘挂单集中在高价区。请判断大家是否都在等尾盘报价，并给出我方交易策略。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "strategy_advice",
+        "category": "intraday_strategy",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_013",
+      "caseName": "大盘偏慢买方主动增强策略",
+      "expectedJson": {
+        "answerCriteria": [
+          "结合成交偏慢、买方主动增强和价格中枢上移判断形势",
+          "给出分批电量、价格区间和时间触发条件",
+          "覆盖做什么、何时做、做多少、如何调整",
+          "严格使用386均价风险约束",
+          "提示盘口转向、价格突破和尾盘风险"
+        ],
+        "expectedAnswer": "应给出可执行调仓建议：先完成约30-40MWh的基础补量，首批可报15MWh，价格控制在380-384元/MWh；若30分钟内成交价持续突破386且买方主动仍增强，可谨慎跟进约10MWh但不得突破均价约束；若盘口转为卖方主动或价格回落，应停止追价，等待378附近机会；保留部分机动量应对尾盘。",
+        "intent": "intraday.strategy_advice"
+      },
+      "inputJson": {
+        "query": "盘中静态切片：当前标的时段成交进度偏慢，买方主动性增强，价格中枢正在上移；我方目标是补足60MWh，风险约束是均价不超过386元/MWh，剩余交易时间90分钟。请给出我方现在该做什么、何时做、做多少、如何调整。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "strategy_advice",
+        "category": "spot_strategy",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_014",
+      "caseName": "陕西日前现货申报策略",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别主体、日期和日前现货申报策略意图",
+          "使用负荷、价格、持仓、供需等依据",
+          "给出分时或分段申报方向、量价区间和风险控制",
+          "说明缺失数据和补充信息",
+          "避免只输出卖出/买入/观望的空泛结论"
+        ],
+        "expectedAnswer": "应识别为陕西能源售电有限责任公司2026-06-24日前现货申报策略需求，结合可用负荷预测、价格预测、持仓或代理电量、市场供需和风险约束给出买卖/观望建议、分时申报区间和风险提示；若缺少主体持仓或预测数据，应说明需要补充，不得仅用简单规则武断给结论。",
+        "intent": "trade.spot_strategy"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请给出陕西能源售电有限责任公司2026-06-24日前现货市场申报策略，要求说明买卖方向、价格或电量区间、依据和风险。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "market_query",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_015",
+      "caseName": "上周现货出清电价",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析上周为2026-06-15至2026-06-21",
+          "识别现货出清电价指标",
+          "返回价格口径、单位和时段",
+          "突出关键变化而非无重点罗列",
+          "无数据不编造"
+        ],
+        "expectedAnswer": "应识别上周现货出清电价查询，按2026-06-15至2026-06-21时间范围查询日前或实时出清电价，说明价格口径、单位、时段和关键高低点；没有可用数据时说明缺失。",
+        "intent": "market.clearing_price"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询2026-06-15至2026-06-21的现货出清电价，说明时段、价格口径、单位和关键变化。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "system_data_query",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_016",
+      "caseName": "陕西昨日申报负荷曲线",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别主体、日期和申报负荷曲线",
+          "按时段或图表结构展示数据",
+          "说明峰谷特征和异常点",
+          "说明数据来源和口径",
+          "无数据或无权限时明确说明"
+        ],
+        "expectedAnswer": "应识别为主体日前现货申报负荷曲线查询，查询陕西能源售电有限责任公司2026-06-22的申报负荷数据，按时段或曲线展示负荷，并说明峰谷、异常点和数据口径；若无权限或无数据应说明。",
+        "intent": "transaction.load_curve"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询陕西能源售电有限责任公司2026-06-22申报的日前现货负荷曲线，按时段展示并说明峰谷特征。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "market_query",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_017",
+      "caseName": "陕西上周现货价差",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析上周和陕西市场",
+          "同时提供日前价、实时价和价差",
+          "说明统计口径、单位和关键时段",
+          "突出异常价差或主要变化",
+          "不得只给单一全量电价"
+        ],
+        "expectedAnswer": "应识别为陕西上周现货价差查询，返回2026-06-15至2026-06-21日前价格、实时价格和两者差额，说明单位、统计口径、均值或极值以及关键时段；数据缺失时说明。",
+        "intent": "market.price_spread"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询2026-06-15至2026-06-21陕西现货日前价格、实时价格及价差，给出汇总和关键时段。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "system_data_query",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_018",
+      "caseName": "今日全省开停机情况",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别开停机和全省范围",
+          "返回开机、停机数据和汇总口径",
+          "说明机组类型、容量或台数",
+          "分析供需和价格影响",
+          "不编造机组状态"
+        ],
+        "expectedAnswer": "应识别全省开停机情况查询，返回2026-06-23现货开机和停机数据，按机组类型、容量或台数汇总，说明对供给侧、备用和现货价格的影响；无数据时说明缺失。",
+        "intent": "grid.unit_status"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询今日全省机组开机和停机情况，按机组类型或容量口径汇总，并说明对供需和价格的影响。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_019",
+      "caseName": "后天气象情况",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析后天为2026-06-25",
+          "识别气象预测意图",
+          "处理城市或市场范围缺省",
+          "输出天气关键指标及图表/数值摘要",
+          "说明负荷和新能源出力影响"
+        ],
+        "expectedAnswer": "应识别2026-06-25气象预测需求，查询特定城市或默认市场范围的天气、温度、降水、风速/辐照等信息，并解释对负荷、风电光伏出力和交易策略的影响；若用户未指定城市，应使用团队默认市场或提出澄清。",
+        "intent": "weather.forecast"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询2026-06-25的气象情况，说明关键城市或默认市场范围、温度、降水、风光资源影响和对负荷/新能源出力的交易含义。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "policy_rule",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_020",
+      "caseName": "跨省绿电交易规则",
+      "expectedJson": {
+        "answerCriteria": [
+          "覆盖跨省绿电交易主要规则维度",
+          "说明绿色属性和结算/偏差处理",
+          "包含安全校核和通道约束",
+          "区分通用规则和省份差异",
+          "未找到资料时如实说明，不编造文件号"
+        ],
+        "expectedAnswer": "应从知识库或权威资料解释跨省绿电交易规则，覆盖参与主体、交易组织、合同和电量安排、绿色电力证书或绿色属性、结算和偏差处理、安全校核及输电通道约束；无法确认具体省份规则时应说明差异和需查询的权威来源。",
+        "intent": "policy.trading_rules"
+      },
+      "inputJson": {
+        "query": "请分析跨省绿电交易的交易规则，覆盖参与主体、交易流程、合同/电量、结算、绿色属性和安全校核等关键点；找不到权威资料时请说明。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "policy_rule",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_021",
+      "caseName": "年用电量500万kWh用户入市",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别工商业用户入市指南需求",
+          "说明准入判断、注册或代理路径",
+          "列出材料和交易方式",
+          "提示各省门槛差异和权威口径",
+          "不编造特定省份准入文件号"
+        ],
+        "expectedAnswer": "应解释年用电量500万kWh工商业用户入市的一般路径：确认所在地准入门槛和用户类型，完成市场主体注册或委托售电公司代理，准备营业执照、用电户号、授权委托、信用承诺和联系人等材料，了解中长期/现货/绿电等交易方式，并提示各省政策差异和以当地交易中心规则为准。",
+        "intent": "policy.market_access"
+      },
+      "inputJson": {
+        "query": "年用电量500万kWh的工商业用户如何入市？请说明准入判断、注册流程、需要材料、交易方式和注意事项。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "trade_review",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_022",
+      "caseName": "前天现货复盘",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析前天为2026-06-21",
+          "覆盖价格、成交、供需、新能源和负荷",
+          "分析异常或波动原因",
+          "给出后续策略启示",
+          "数据缺失时说明边界"
+        ],
+        "expectedAnswer": "应识别2026-06-21现货复盘需求，按行业通用复盘结构输出价格走势、成交情况、供需变化、新能源出力、负荷和异常原因，并给出后续交易关注点；无可用数据时说明数据缺口。",
+        "intent": "trade.review"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请给我2026-06-21现货复盘，覆盖价格、成交、供需、新能源、异常原因和后续策略启示。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_023",
+      "caseName": "明天全省电源预测总出力",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析明天为2026-06-24",
+          "识别全省电源预测总出力",
+          "返回时段曲线或数值摘要",
+          "解释对供需和价格影响",
+          "不编造预测数据"
+        ],
+        "expectedAnswer": "应识别2026-06-24全省电源预测总出力查询，调用预测模型或数据源，按时段展示总出力曲线或摘要，说明峰谷、可再生能源占比或供给宽松程度对现货价格的影响；无数据时说明。",
+        "intent": "forecast.generation_output"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询2026-06-24全省电源预测总出力，按时段展示，并说明对现货价格的影响。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "policy_rule",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_024",
+      "caseName": "2025年绿电交易价格机制",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别绿电价格机制问题",
+          "说明电能量价格和绿色价值构成",
+          "覆盖交易、结算、偏差或履约风险",
+          "提示省份差异和权威资料要求",
+          "不编造文件号或全国统一价格"
+        ],
+        "expectedAnswer": "应解释2025年绿电交易价格机制的一般构成，包括电能量价格、绿色环境价值或绿证关联、交易组织方式、合同和结算安排、偏差或履约风险；不同省份机制差异较大，应说明需以具体省份和交易中心文件为准。",
+        "intent": "policy.price_mechanism"
+      },
+      "inputJson": {
+        "query": "2025年绿电交易价格机制是什么？请基于知识库或权威资料说明价格形成、绿色价值、结算和风险边界。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "policy_rule",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_025",
+      "caseName": "跨省绿电安全校核流程",
+      "expectedJson": {
+        "answerCriteria": [
+          "解释安全校核对象和目的",
+          "覆盖申报、通道校核、调度确认、调整和发布流程",
+          "说明送受端、通道约束和电网安全因素",
+          "提示具体规则差异",
+          "不编造确定审批步骤"
+        ],
+        "expectedAnswer": "应说明跨省绿电交易安全校核通常围绕输电通道能力、电网运行安全、送受端平衡、交易计划和调度约束展开，流程包括交易申报、通道/潮流校核、调度或交易机构确认、必要的削减或调整、结果发布和结算衔接；具体流程应以区域和省级交易规则为准。",
+        "intent": "policy.trading_rules"
+      },
+      "inputJson": {
+        "query": "跨省绿电交易的安全校核流程是什么？请说明校核对象、通道约束、调度确认、交易结果调整和风险点。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "policy_rule",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_026",
+      "caseName": "光储充消防标准",
+      "expectedJson": {
+        "answerCriteria": [
+          "覆盖储能、充电、光伏和电气消防风险",
+          "说明监测预警、灭火、应急、验收和运维要求",
+          "提示需按国家、行业、地方标准确认",
+          "避免编造具体条文编号",
+          "给出合规核验清单"
+        ],
+        "expectedAnswer": "应围绕光储充一体化项目的消防合规进行说明，包括储能电池舱防火分区、热失控监测、消防报警和灭火系统、充电设施电气安全、光伏接入和逆变设备安全、应急处置、验收和定期运维；具体标准需结合项目所在地和现行国家/行业/地方规范查询确认。",
+        "intent": "policy.safety_compliance"
+      },
+      "inputJson": {
+        "query": "光储充一体化电站消防标准有哪些？请从储能系统、充电设施、光伏接入、消防设计、监测预警和验收运维方面说明。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "policy_rule",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_027",
+      "caseName": "浙江峰谷价差与工商业储能投资",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别工商业储能投资分析场景",
+          "覆盖收益来源、成本、效率、寿命和政策约束",
+          "说明峰谷价差与利用小时是核心敏感因素",
+          "给出需要补充的测算参数",
+          "不承诺固定收益或回本周期"
+        ],
+        "expectedAnswer": "应分析浙江工商业储能投资的收益逻辑，包括峰谷套利、需量管理、参与需求响应或辅助服务等可能收益；同时需要结合当前峰谷价差、充放电效率、投资成本、运维、循环寿命、政策补贴和并网消防约束判断可行性。若缺少最新电价和项目参数，应给出测算所需数据，不能直接承诺值得投。",
+        "intent": "policy.investment_analysis"
+      },
+      "inputJson": {
+        "query": "目前浙江的峰谷价差下，投资工商业储能怎么样？请从收益来源、峰谷价差、利用小时、政策、成本和风险方面分析。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "market_query",
+        "difficulty": "L1"
+      },
+      "caseId": "power_trade_standard_v1_028",
+      "caseName": "实时电价查询",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别实时电价意图",
+          "返回市场、时段、价格、单位和更新时间",
+          "说明日前/实时价格口径",
+          "缺失或延迟时如实说明",
+          "不得凭空给当前价格"
+        ],
+        "expectedAnswer": "应识别实时电价查询，返回当前可用实时电价或最新时段价格，说明所属市场、时段、单位、数据更新时间和与日前价的关系；没有实时数据时应说明缺失或延迟。",
+        "intent": "market.clearing_price"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询当前可用的实时电价，说明市场、时段、价格口径、单位和数据更新时间。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "market_query",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_029",
+      "caseName": "上个月电价查询",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析上个月为2026年5月",
+          "区分日前价、实时价和价差",
+          "输出汇总趋势或关键时段",
+          "说明统计口径和单位",
+          "避免只给零散全量明细"
+        ],
+        "expectedAnswer": "应识别上个月电价查询，将时间范围解析为2026-05-01至2026-05-31，返回日前价格、实时价格和关键价差的汇总或趋势，说明单位、市场和统计口径；无数据时说明。",
+        "intent": "market.clearing_price"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询2026年5月的电价情况，区分日前价格、实时价格和关键价差，并给出汇总。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_030",
+      "caseName": "明天电价预测",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析明天为2026-06-24",
+          "识别电价预测需求",
+          "返回曲线、区间或关键时段预测",
+          "说明负荷、天气、新能源和供需因素",
+          "提示预测不确定性"
+        ],
+        "expectedAnswer": "应识别2026-06-24电价预测需求，调用预测模型或可用数据，给出分时电价曲线、峰谷区间或关键时段预测，并解释负荷、天气、新能源、机组和供需对价格的影响；预测应带不确定性边界。",
+        "intent": "market.price_forecast"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请预测2026-06-24的电价走势，给出分时曲线或关键时段预测，并说明主要影响因素和不确定性。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "trade_review",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_031",
+      "caseName": "电价上涨原因分析",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别价格上涨原因分析",
+          "覆盖负荷、天气、新能源、机组、燃料和交易行为",
+          "区分已确认数据和可能原因",
+          "给出后续核验指标",
+          "缺少市场/时段时提出边界或澄清"
+        ],
+        "expectedAnswer": "应识别为价格波动原因分析，围绕需求侧负荷上升、极端天气、新能源出力下降、机组停机或备用收紧、燃料成本变化、外送受限和成交行为等维度进行复盘；若没有具体市场和时段，应说明分析框架并建议补充范围。",
+        "intent": "market.price_analysis"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请分析近期电价上涨的可能原因，要求结合负荷、天气、新能源出力、机组开停、燃料成本和市场成交行为。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "robustness",
+        "category": "retail_package",
+        "difficulty": "L1"
+      },
+      "caseId": "power_trade_standard_v1_032",
+      "caseName": "选择最省钱用电套餐",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别套餐推荐意图",
+          "指出关键输入缺失并提出补充清单",
+          "给出套餐比较框架",
+          "说明省钱结论需要测算支持",
+          "不得编造客户画像或确定节省金额"
+        ],
+        "expectedAnswer": "应识别套餐推荐需求，但由于缺少客户用电量、分时负荷、峰谷比例、历史电费单、所在省份和用电行业等关键信息，不能直接给确定套餐。应先列出所需信息，并说明可从固定价、分时价、现货联动、绿电或组合套餐等维度比较节省效果。",
+        "intent": "retail.package_recommendation"
+      },
+      "inputJson": {
+        "query": "帮我选最省钱的用电套餐。当前没有提供客户名称、用电量、分时负荷和历史电费单，请先说明需要哪些信息，并给出可比较的套餐选择思路。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "retail_package",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_033",
+      "caseName": "账单分析与套餐推荐",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别账单分析和套餐推荐复合意图",
+          "列出需要的账单和负荷字段",
+          "说明分析流程和成本比较方法",
+          "给出可能优化方向和风险",
+          "不在无账单情况下承诺具体套餐最省钱"
+        ],
+        "expectedAnswer": "应识别账单分析加套餐推荐需求，说明需要电费单明细、分时用电量、需量、电价结构、功率因数、基本电费和历史峰谷用电等字段；在拿到账单前只能给分析流程和可能优化方向，不能直接确定套餐。拿到数据后应比较不同套餐总成本、风险和适用条件。",
+        "intent": "retail.bill_analysis"
+      },
+      "inputJson": {
+        "query": "请分析我2026年5月的电费单，并推荐一个省钱的用电套餐。当前未上传账单明细，请说明需要的账单字段和推荐流程。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "business_answer",
+        "category": "trade_brief",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_034",
+      "caseName": "今日盘前交易简报",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别盘前交易简报意图",
+          "覆盖市场、天气、负荷、新能源、价格和成交",
+          "包含文字、数值和图表要点",
+          "说明风险和关注点",
+          "无数据不编造"
+        ],
+        "expectedAnswer": "应识别今日盘前电力交易简报需求，基于可用市场、天气、负荷、新能源、价格和成交数据输出结构化简报；应包含文字摘要、关键指标和适合图表展示的要点，并说明数据缺失项。",
+        "intent": "trade.brief"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请发我今日盘前电力交易简报，要求包含文字、关键数值和可视化摘要要点。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_035",
+      "caseName": "大丰风电场功率预测",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别场站、日期和风电功率预测",
+          "返回曲线或分时数值摘要",
+          "说明高低出力时段和影响因素",
+          "提示预测不确定性",
+          "无场站数据时说明边界"
+        ],
+        "expectedAnswer": "应识别大丰风电场2026-06-24功率预测需求，调用场站功率预测模型或数据源，输出分时预测曲线或摘要，说明高低出力时段、天气/风况影响和不确定性；无数据或场站无法识别时说明。",
+        "intent": "forecast.station_power"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请给出大丰风电场2026-06-24的功率预测曲线，说明高低出力时段和预测不确定性。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "strategy_advice",
+        "category": "spot_strategy",
+        "difficulty": "L3"
+      },
+      "caseId": "power_trade_standard_v1_036",
+      "caseName": "威海光伏站现货申报策略",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别场站、日期和日前现货申报策略",
+          "结合光伏出力、电价、天气和偏差风险",
+          "给出分时量价策略或保守边界",
+          "说明缺失数据和需要补充的信息",
+          "避免简单买卖观望结论"
+        ],
+        "expectedAnswer": "应识别威海光伏站2026-06-24日前现货申报策略需求，结合光伏出力预测、天气、电价预测、偏差考核和持仓情况，给出分时申报电量、报价区间或风险控制建议；缺少场站预测或持仓数据时说明。",
+        "intent": "trade.spot_strategy"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请给出威海光伏站2026-06-24日前现货市场申报策略，结合光伏出力预测、电价预测和偏差风险说明。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_037",
+      "caseName": "浙江未来两天日前现货电价预测",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析未来两天为2026-06-24至2026-06-25",
+          "识别浙江日前现货电价预测",
+          "返回曲线或关键时段预测",
+          "说明主要驱动因素",
+          "提示预测边界"
+        ],
+        "expectedAnswer": "应识别浙江省未来两天日前现货电价预测需求，输出2026-06-24至2026-06-25分时预测曲线或关键时段价格区间，说明负荷、天气、新能源、机组和供需对价格的驱动，并提示预测不确定性。",
+        "intent": "market.price_forecast"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请给出浙江省2026-06-24至2026-06-25日前现货电价预测曲线，并说明主要驱动因素。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "robustness",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_038",
+      "caseName": "代理售电负荷预测",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别售电公司代理负荷预测",
+          "处理主体无法唯一定位的问题",
+          "说明需要补充的主体和用户范围信息",
+          "描述预测曲线、峰谷和天气影响输出",
+          "不编造未知公司的负荷数值"
+        ],
+        "expectedAnswer": "应识别代理售电负荷预测需求。由于公司名称不具体，若无法唯一定位主体，应要求补充公司名称、用户清单或户号范围；在可定位时应输出2026-06-24分时负荷预测、峰谷、天气影响和不确定性。不能对未知主体编造预测值。",
+        "intent": "forecast.user_load"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请预测某售电公司2026-06-24代理售电负荷。如果主体无法唯一定位，请说明需要哪些信息，并给出负荷预测输出应包含的内容。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_039",
+      "caseName": "后天全省光伏风电预测",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析后天为2026-06-25",
+          "区分光伏和风电功率预测",
+          "返回分时数据或曲线摘要",
+          "说明天气和供需影响",
+          "不混同为总新能源出力且不编造"
+        ],
+        "expectedAnswer": "应识别2026-06-25全省光伏和风电功率预测需求，分别返回光伏、风电分时预测曲线或摘要，说明峰值、低谷、天气影响和对供需/价格的影响；无数据时说明。",
+        "intent": "forecast.generation_output"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询2026-06-25全省光伏功率预测数据和风电功率预测数据，按时段展示并说明对现货供需的影响。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_040",
+      "caseName": "江苏能量块后天预测",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析江苏和2026-06-25",
+          "识别能量块/滚撮预测",
+          "返回价格、电量或区间预测",
+          "说明关键时段和交易风险",
+          "无模型数据时明确说明"
+        ],
+        "expectedAnswer": "应识别江苏省2026-06-25能量块预测需求，调用能量块或滚撮价格预测模型，输出关键时段的预测价格、电量或区间，并说明供需、新能源、负荷和预测不确定性对交易的影响；无模型数据时说明。",
+        "intent": "forecast.energy_block"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请给出江苏省2026-06-25的能量块预测，说明预测价格或电量区间、关键时段和交易风险。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "data_query",
+        "category": "market_query",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_041",
+      "caseName": "今明两天竞价空间",
+      "expectedJson": {
+        "answerCriteria": [
+          "正确解析今明两天",
+          "识别竞价空间指标",
+          "返回数值、时段和趋势",
+          "解释对报价策略的影响",
+          "不输出无口径全量数据"
+        ],
+        "expectedAnswer": "应识别今明两天竞价空间查询，解析为2026-06-23至2026-06-24，返回竞价空间关键数值、时段或日维度趋势，并解释对报价积极性、供需宽松程度和风险的影响；无数据时说明。",
+        "intent": "market.auction_space"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请查询2026-06-23至2026-06-24的交易竞价空间情况，给出关键数值、变化趋势和对报价策略的影响。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "robustness",
+        "category": "forecast_analysis",
+        "difficulty": "L2"
+      },
+      "caseId": "power_trade_standard_v1_042",
+      "caseName": "未来用户预测负荷",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别用户负荷预测意图",
+          "处理时间、区域和用户范围缺省",
+          "按区域、用户类型或天气情景拆分",
+          "说明预测曲线或关键数值",
+          "不只给单一总负荷且不编造"
+        ],
+        "expectedAnswer": "应识别用户预测负荷需求，若用户未给出具体区域、用户组和时间范围，应使用团队默认口径或提出澄清；合格输出应包含未来时段负荷预测、区域或用户类型拆分、晴天/阴天等天气情景影响和不确定性。",
+        "intent": "forecast.user_load"
+      },
+      "inputJson": {
+        "query": "以2026-06-23为今天，请给出未来一段时间的用户预测负荷，要求尽量按区域、用户类型和天气情景拆分；如果缺少范围，请说明默认口径或需要补充的信息。",
+        "teamName": "external-claude-code"
+      }
+    },
+    {
+      "attributesJson": {
+        "caseType": "robustness",
+        "category": "system_data_query",
+        "difficulty": "L1"
+      },
+      "caseId": "power_trade_standard_v1_043",
+      "caseName": "历史用户实际电量",
+      "expectedJson": {
+        "answerCriteria": [
+          "识别用户历史实际电量查询",
+          "指出日期、区域、用户范围缺失",
+          "说明可按区域、用户、日期展示",
+          "给出单位和数据来源要求",
+          "不得在缺少条件时编造电量"
+        ],
+        "expectedAnswer": "应识别历史用户实际电量查询需求。由于缺少具体日期、区域和用户范围，应提出澄清或使用默认查询范围；在条件明确时应按区域、用户和日期展示实际用电量，并说明单位、数据来源和缺失情况。",
+        "intent": "load.actual_usage"
+      },
+      "inputJson": {
+        "query": "请查询历史日期下的用户实际电量，要求按区域、用户和日期展示。若我没有指定日期和用户范围，请说明需要补充哪些条件。",
+        "teamName": "external-claude-code"
+      }
+    }
+  ],
+  "clientRunId": "claude-code-power-trade-standard-v1-final-final-batch-1",
+  "manualResultFile": "/Users/renke/Projects/zkenergyaicommon/evaluation_results/agentx/manual_inputs/power_trade_standard_v1/claude-code/claude-code-power-trade-standard-v1-final/final-batch-1/claude_code_results.jsonl",
+  "subject": {
+    "agentMode": "single_agent",
+    "model": "sonnet",
+    "subjectId": "claude-code",
+    "subjectName": "Claude Code",
+    "subjectType": "claude_code",
+    "teamName": "external-claude-code",
+    "version": "Claude Code 2.1.177 (Claude Code)"
+  },
+  "suite": {
+    "asOfDate": "2026-06-23",
+    "suiteId": "power_trade_standard_v1",
+    "suiteVersion": "v1",
+    "timezone": "Asia/Shanghai"
+  }
+}

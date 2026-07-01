@@ -1,0 +1,89 @@
+datasetId: power_trade_standard_v1
+name: 电力交易场景标准评测集
+description: >
+  AgentX Bench 电力交易客户侧标准评测集，覆盖市场问数、政策规则、预测分析、
+  套餐账单、复盘、盘中盘口策略和外部信号影响分析，用于 Energent Swarm
+  自动评测和产品发布 ranking。
+version: v1
+defaultAsOfDate: "2026-06-23"
+timezone: Asia/Shanghai
+entry:
+  requiredInputFields:
+    - query
+    - teamName
+  teamNamePlaceholder: ${subject.teamName}
+recommendedSubjects:
+  - subjectId: energent-swarm
+    subjectName: Energent Swarm
+    subjectType: energent_swarm
+    agentMode: multi_agent
+    comparisonPath: automatic_eval_service
+    description: Energent Swarm 2.0 自动评测主对象，通过 AgentX Evaluation Service 提交并拉取结果。
+caseCount: 43
+caseFiles:
+  - cases.jsonl
+scoringFile: scoring.yaml
+auditFile: source_row_audit.jsonl
+coverage:
+  retail_package: 3
+  trade_brief: 2
+  market_query: 6
+  policy_rule: 7
+  external_signal: 4
+  intraday_strategy: 5
+  spot_strategy: 2
+  forecast_analysis: 9
+  trade_review: 2
+  system_data_query: 3
+caseTypes:
+  data_query:
+    description: 验证行情、预测、负荷、交易数据等结构化数据查询与结果说明。
+  business_answer:
+    description: 验证政策规则、套餐账单、简报复盘等业务回答完整性和事实边界。
+  scenario_analysis:
+    description: 验证给定外部信号或业务场景下的分析路径、方向性判断和边界。
+  strategy_advice:
+    description: 验证交易策略建议是否结合目标、约束、时点、量价条件并给出可执行动作。
+  robustness:
+    description: 验证缺信息、传言、能力边界和不确定性下的保守处理。
+canonicalIntents:
+  - retail.package_recommendation
+  - retail.bill_analysis
+  - trade.brief
+  - market.auction_space
+  - market.clearing_price
+  - market.price_spread
+  - market.price_forecast
+  - market.price_analysis
+  - transaction.load_curve
+  - grid.unit_status
+  - weather.forecast
+  - policy.market_access
+  - policy.trading_rules
+  - policy.price_mechanism
+  - policy.safety_compliance
+  - policy.investment_analysis
+  - forecast.generation_output
+  - forecast.station_power
+  - forecast.user_load
+  - forecast.energy_block
+  - load.actual_usage
+  - trade.review
+  - trade.spot_strategy
+  - intraday.orderbook_behavior
+  - intraday.trade_progress
+  - intraday.strategy_advice
+  - external_signal.cost_impact
+  - external_signal.policy_impact
+  - external_signal.emergency_risk
+  - external_signal.sentiment_risk
+standardRules:
+  - 所有相对日期均以 defaultAsOfDate 解释，今天为 2026-06-23。
+  - Agent 必须能从 inputJson.query 看到完成任务所需的关键业务上下文。
+  - expectedAnswer 承载核心结论、关键事实和必要业务边界；answerCriteria 只用于拆解评分点。
+  - 实时、历史或预测数值必须来自工具、Skill、知识库或可用数据源；无数据时必须说明缺失，不得编造。
+  - 缺少关键槽位时，可基于团队默认市场处理；无法安全默认时应提出澄清。
+  - 策略建议必须给出依据、风险、适用条件和调整触发条件，不得承诺收益。
+  - 政策规则类不得编造文件号；无法确认时应说明需要查询权威文件。
+  - 盘中滚撮类使用静态盘面切片，不要求连续撮合仿真。
+  - 舆情、新闻、社交媒体、突发事件类评测分析路径、方向性结论和不确定性边界，不要求自动实时检索全量外部信息。

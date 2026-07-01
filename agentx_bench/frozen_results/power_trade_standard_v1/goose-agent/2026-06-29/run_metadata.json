@@ -1,0 +1,62 @@
+{
+  "aggregateMethod": "mean_of_replicates",
+  "aggregateRunId": "goose-agent-power-trade-standard-v1-final",
+  "caseCounts": {
+    "completedCasesAcrossBatches": 129.0,
+    "failedCasesAcrossBatches": 0.0,
+    "incompleteCasesAcrossBatches": 0.0,
+    "selectedCasesAcrossBatches": 129.0,
+    "successRate": 1.0
+  },
+  "datasetId": "power_trade_standard_v1",
+  "datasetVersion": "v1",
+  "evidenceLocation": "tools/agentx_bench/frozen_results/power_trade_standard_v1/goose-agent/2026-06-29",
+  "failurePolicy": "bounded attempts and bounded runtime; failed, timed-out, and non-completed final case rows are retained and scored as 0 by AgentX Bench while remaining in the selected-case denominator",
+  "finalBatches": [
+    "final-batch-1",
+    "final-batch-2",
+    "final-batch-3"
+  ],
+  "leaderboardEligible": true,
+  "manualImportPolicy": "manual_import with per-case metricResults; multi_agent.* marked NOT_APPLICABLE for single_agent",
+  "model": {
+    "agentVersion": "1.39.0; upstream=2cc1140dc1e8d8dc8576bb41bdd5f9c5631a36d6",
+    "baseUrlHost": "aiot-coding-maas.antdigital.com",
+    "caseTimeoutSeconds": 600,
+    "maxAttemptsPerCase": 1,
+    "maxStepsOrTurns": 12,
+    "model": "gpt-5.5",
+    "requestTimeoutSeconds": 180,
+    "workers": 4
+  },
+  "reviewMode": "answer_plus_goose_cli_trace",
+  "reviewerProcess": "codex_manual_review_rubric_v1_codified_for_goose",
+  "runDate": "2026-06-29",
+  "scores": {
+    "efficiencyScoreInterval": "[59.8665, 59.9124]",
+    "efficiencyScoreMean": 59.8964,
+    "executionScoreInterval": "[6.4419, 6.5581]",
+    "executionScoreMean": 6.5194,
+    "orchestrationScoreInterval": "[0.0000, 0.0000]",
+    "orchestrationScoreMean": 0.0,
+    "outcomeScoreInterval": "[33.3976, 33.9814]",
+    "outcomeScoreMean": 33.6964,
+    "scoreInterval": "[32.9373, 33.3654]",
+    "totalScoreMean": 33.1491,
+    "totalScoreStdDev": 0.2141
+  },
+  "scoringVersion": "v1",
+  "secretsPersisted": false,
+  "selectedCaseCountPerBatch": 43,
+  "snapshotType": "official_goose_final_benchmark_snapshot",
+  "subject": {
+    "agentMode": "single_agent",
+    "subjectId": "goose-agent",
+    "subjectName": "Goose Agent",
+    "subjectType": "goose_agent",
+    "teamName": "external-goose"
+  },
+  "totalCaseRows": 129,
+  "traceEvidencePolicy": "required for every final case row; aggregate generated with --require-trace-evidence using goose_cli_session",
+  "validReplicateCount": 3
+}

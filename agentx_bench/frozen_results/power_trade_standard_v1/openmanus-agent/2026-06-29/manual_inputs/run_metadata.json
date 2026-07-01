@@ -1,0 +1,27 @@
+{
+  "agentMode": "single_agent",
+  "aggregateRunId": "openmanus-agent-power-trade-standard-v1-final",
+  "caseRetryPolicy": "If a final batch case failed or lacked trace evidence, it was retried with a fresh session id until the bounded attempt limit; if still unusable, the failed final row is retained.",
+  "caseTimeoutSeconds": 600,
+  "datasetId": "power_trade_standard_v1",
+  "datasetVersion": "v1",
+  "failurePolicy": "After bounded attempts, a still-unusable case is retained as FAILED or TIMEOUT and scored as 0 in the suite denominator.",
+  "finalBatches": [
+    "final-batch-1",
+    "final-batch-2",
+    "final-batch-3"
+  ],
+  "maxAttemptsPerCase": 2,
+  "maxStepsOrTurns": 1,
+  "requestTimeoutSeconds": 180,
+  "reviewerProcess": "codex_manual_review_rubric_v1_codified_for_openmanus",
+  "scoringVersion": "v1",
+  "secretsPersisted": false,
+  "selectedCaseCountPerBatch": 43,
+  "subjectId": "openmanus-agent",
+  "subjectName": "OpenManus Agent",
+  "subjectType": "openmanus_agent",
+  "totalCaseRows": 129,
+  "traceEvidencePolicy": "required local openmanus_local_memory evidence for every final case row",
+  "workers": 7
+}

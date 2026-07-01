@@ -1,0 +1,2612 @@
+{
+  "agentMode": "single_agent",
+  "avgDurationMs": 189448.93,
+  "caseScores": [
+    {
+      "caseId": "power_trade_standard_v1_001",
+      "caseName": "河南物流园区套餐定制",
+      "caseScore": 43.4604,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8297,
+            "token.normalized": 0.9868
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.358,
+            "reasoning.task_completion_quality": 0.498
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3580; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4980; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 89.2532,
+        "execution": 9.0,
+        "outcome": 41.4
+      },
+      "durationMs": 174982.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4592.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_002",
+      "caseName": "盘前电力交易简报",
+      "caseScore": 36.5068,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8437,
+            "token.normalized": 0.982
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.5000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=13"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.25,
+            "reasoning.task_completion_quality": 0.42
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.2500; criteriaCoverage=0.5000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=13",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4200; criteriaCoverage=0.5000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=13"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 89.9008,
+        "execution": 9.0,
+        "outcome": 31.8
+      },
+      "durationMs": 165496.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4812.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_003",
+      "caseName": "山东竞价空间数据",
+      "caseScore": 31.9878,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9784,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 98.7063,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 74554.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 1996.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_004",
+      "caseName": "新建发电企业注册办理",
+      "caseScore": 39.0459,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2801,
+            "token.normalized": 0.9834
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.358,
+            "reasoning.task_completion_quality": 0.498
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3580; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4980; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 56.1442,
+        "execution": 9.0,
+        "outcome": 41.4
+      },
+      "durationMs": 545918.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4746.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_005",
+      "caseName": "进口煤限制放开影响分析",
+      "caseScore": 31.5045,
+      "caseType": "scenario_analysis",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9327,
+            "token.normalized": 0.9942
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.2000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=21"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.158,
+            "reasoning.task_completion_quality": 0.342
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.1580; criteriaCoverage=0.2000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=21",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.3420; criteriaCoverage=0.2000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=21"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 95.7313,
+        "execution": 9.0,
+        "outcome": 23.16
+      },
+      "durationMs": 105413.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4261.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_006",
+      "caseName": "储能补贴传言影响分析",
+      "caseScore": 43.3789,
+      "caseType": "scenario_analysis",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.7845,
+            "token.normalized": 0.9845
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=9"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.362,
+            "reasoning.task_completion_quality": 0.498
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3620; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=9",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4980; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=9"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 86.4522,
+        "execution": 9.0,
+        "outcome": 41.64
+      },
+      "durationMs": 205453.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4696.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_007",
+      "caseName": "隔壁省停电跨省交易影响",
+      "caseScore": 40.2175,
+      "caseType": "scenario_analysis",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9254,
+            "token.normalized": 0.99
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=10"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.294,
+            "reasoning.task_completion_quality": 0.446
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.2940; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=10",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4460; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=10"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 95.1228,
+        "execution": 9.0,
+        "outcome": 35.48
+      },
+      "durationMs": 110379.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4449.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_008",
+      "caseName": "夏季高温社交情绪风险",
+      "caseScore": 48.355,
+      "caseType": "scenario_analysis",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9697,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.9500; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=22"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.413,
+            "reasoning.task_completion_quality": 0.537
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.4130; criteriaCoverage=0.9500; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=22",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.5370; criteriaCoverage=0.9500; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=22"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 98.1849,
+        "execution": 9.0,
+        "outcome": 46.26
+      },
+      "durationMs": 80420.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 3720.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_009",
+      "caseName": "买卖一价差大卖盘增加",
+      "caseScore": 37.038,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8971,
+            "token.normalized": 0.9871
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.274,
+            "reasoning.task_completion_quality": 0.436
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.2740; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4360; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 93.3062,
+        "execution": 9.0,
+        "outcome": 33.88
+      },
+      "durationMs": 129485.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4582.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_010",
+      "caseName": "截标前地板价卖单涌现",
+      "caseScore": 42.3669,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9289,
+            "token.normalized": 0.9988
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.362,
+            "reasoning.task_completion_quality": 0.498
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3620; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4980; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 95.6885,
+        "execution": 9.0,
+        "outcome": 41.64
+      },
+      "durationMs": 107964.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4054.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_011",
+      "caseName": "上午十点成交量达到八成",
+      "caseScore": 48.2155,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9475,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=4"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.444,
+            "reasoning.task_completion_quality": 0.596
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.4440; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=4",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.5960; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=4"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 96.8487,
+        "execution": 9.0,
+        "outcome": 50.48
+      },
+      "durationMs": 95452.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 3511.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_012",
+      "caseName": "晚高峰成交进度滞后",
+      "caseScore": 48.0051,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8689,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=1.0000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=6"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.46,
+            "reasoning.task_completion_quality": 0.59
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.4600; criteriaCoverage=1.0000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=6",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.5900; criteriaCoverage=1.0000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=6"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 92.1359,
+        "execution": 9.0,
+        "outcome": 51.2
+      },
+      "durationMs": 148471.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 3493.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_013",
+      "caseName": "大盘偏慢买方主动增强策略",
+      "caseScore": 39.1995,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.5715,
+            "token.normalized": 0.9806
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=19"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.362,
+            "reasoning.task_completion_quality": 0.498
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3620; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=19",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4980; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=19"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 73.5164,
+        "execution": 9.0,
+        "outcome": 41.64
+      },
+      "durationMs": 349231.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4871.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_014",
+      "caseName": "陕西日前现货申报策略",
+      "caseScore": 28.7393,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.973,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.03,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0300; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 98.3799,
+        "execution": 40.33,
+        "outcome": 9.4
+      },
+      "durationMs": 78226.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2346.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_015",
+      "caseName": "上周现货出清电价",
+      "caseScore": 30.1166,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.7809,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 86.8549,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 207882.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2093.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_016",
+      "caseName": "陕西昨日申报负荷曲线",
+      "caseScore": 27.7866,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.535,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 72.0988,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 373889.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2027.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_017",
+      "caseName": "陕西上周现货价差",
+      "caseScore": 24.9101,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2313,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 53.8808,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 578841.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2021.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_018",
+      "caseName": "今日全省开停机情况",
+      "caseScore": 32.1472,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9953,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 99.7159,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 63196.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2308.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_019",
+      "caseName": "后天气象情况",
+      "caseScore": 32.1414,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9946,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 99.6788,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 63613.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2322.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_020",
+      "caseName": "跨省绿电交易规则",
+      "caseScore": 27.5412,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8022,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.11,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.1100; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 88.1292,
+        "execution": 40.33,
+        "outcome": 14.2
+      },
+      "durationMs": 193547.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2033.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_021",
+      "caseName": "年用电量500万kWh用户入市",
+      "caseScore": 29.124,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 1.0,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.11,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.1100; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 100.0,
+        "execution": 40.33,
+        "outcome": 14.2
+      },
+      "durationMs": 23707.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2199.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_022",
+      "caseName": "前天现货复盘",
+      "caseScore": 27.6617,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8172,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.11,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.1100; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 89.0329,
+        "execution": 40.33,
+        "outcome": 14.2
+      },
+      "durationMs": 183380.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2171.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_023",
+      "caseName": "明天全省电源预测总出力",
+      "caseScore": 23.2004,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.6609,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.3333
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.3333; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=12"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.0,
+            "reasoning.task_completion_quality": 0.08
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0000; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=12",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.0800; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=12"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 79.6526,
+        "execution": 33.33,
+        "outcome": 3.2
+      },
+      "durationMs": 288908.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2200.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_024",
+      "caseName": "2025年绿电交易价格机制",
+      "caseScore": 29.0829,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9949,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.11,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.1100; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 99.6916,
+        "execution": 40.33,
+        "outcome": 14.2
+      },
+      "durationMs": 63469.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2082.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_025",
+      "caseName": "跨省绿电安全校核流程",
+      "caseScore": 35.5763,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.4837,
+            "token.normalized": 0.9076
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=7"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.286,
+            "reasoning.task_completion_quality": 0.446
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.2860; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=7",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4460; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=7"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 65.322,
+        "execution": 9.0,
+        "outcome": 35.0
+      },
+      "durationMs": 408527.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 8160.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_026",
+      "caseName": "光储充消防标准",
+      "caseScore": 26.4791,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.6694,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.11,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.1100; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 80.163,
+        "execution": 40.33,
+        "outcome": 14.2
+      },
+      "durationMs": 283166.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2538.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_027",
+      "caseName": "浙江峰谷价差与工商业储能投资",
+      "caseScore": 28.7881,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.958,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.11,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.1100; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 97.4809,
+        "execution": 40.33,
+        "outcome": 14.2
+      },
+      "durationMs": 88340.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2096.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_028",
+      "caseName": "实时电价查询",
+      "caseScore": 32.1921,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 1.0,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 100.0,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 48080.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2253.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_029",
+      "caseName": "上个月电价查询",
+      "caseScore": 30.1772,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.7873,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 87.2391,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 203560.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2339.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_030",
+      "caseName": "明天电价预测",
+      "caseScore": 21.9166,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8091,
+            "token.normalized": 0.9521
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.02
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0200; criteriaCoverage=0.4000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.022,
+            "reasoning.task_completion_quality": 0.3
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0220; criteriaCoverage=0.4000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.3000; criteriaCoverage=0.4000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 86.6321,
+        "execution": 2.0,
+        "outcome": 13.32
+      },
+      "durationMs": 188849.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 6154.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_031",
+      "caseName": "电价上涨原因分析",
+      "caseScore": 37.9121,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.7422,
+            "token.normalized": 0.9578
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=7"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.286,
+            "reasoning.task_completion_quality": 0.446
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.2860; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=7",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4460; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=7"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 82.8409,
+        "execution": 9.0,
+        "outcome": 35.0
+      },
+      "durationMs": 234030.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 5901.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_032",
+      "caseName": "选择最省钱用电套餐",
+      "caseScore": 48.7767,
+      "caseType": "robustness",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.7276,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.7000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.4,
+            "reasoning.task_completion_quality": 0.472
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.4000; criteriaCoverage=0.7000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4720; criteriaCoverage=0.7000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 83.6567,
+        "execution": 9.0,
+        "outcome": 42.88
+      },
+      "durationMs": 243862.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 3563.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_033",
+      "caseName": "账单分析与套餐推荐",
+      "caseScore": 44.6028,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9648,
+            "token.normalized": 0.9983
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.358,
+            "reasoning.task_completion_quality": 0.498
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3580; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4980; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=11"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 97.8212,
+        "execution": 9.0,
+        "outcome": 41.4
+      },
+      "durationMs": 83741.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4077.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_034",
+      "caseName": "今日盘前交易简报",
+      "caseScore": 40.6859,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.6168,
+            "token.normalized": 0.9784
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=6"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.336,
+            "reasoning.task_completion_quality": 0.496
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3360; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=6",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4960; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=6"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 76.1439,
+        "execution": 9.0,
+        "outcome": 40.0
+      },
+      "durationMs": 318661.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 4972.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_035",
+      "caseName": "大丰风电场功率预测",
+      "caseScore": 31.2221,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8976,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 93.8565,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 129114.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2146.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_036",
+      "caseName": "威海光伏站现货申报策略",
+      "caseScore": 37.0379,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.3273,
+            "token.normalized": 0.9687
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=23"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.362,
+            "reasoning.task_completion_quality": 0.498
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3620; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=23",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4980; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=23"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 58.385,
+        "execution": 9.0,
+        "outcome": 41.64
+      },
+      "durationMs": 514069.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 5410.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_037",
+      "caseName": "浙江未来两天日前现货电价预测",
+      "caseScore": 27.2904,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.4826,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 68.9558,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 409247.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2184.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_038",
+      "caseName": "代理售电负荷预测",
+      "caseScore": 52.7263,
+      "caseType": "robustness",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8832,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.43,
+            "reasoning.task_completion_quality": 0.498
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.4300; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4980; criteriaCoverage=0.8000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=14"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 92.9916,
+        "execution": 9.0,
+        "outcome": 45.72
+      },
+      "durationMs": 138845.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 3737.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_039",
+      "caseName": "后天全省光伏风电预测",
+      "caseScore": 31.4432,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9209,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 95.2567,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 113362.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2025.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_040",
+      "caseName": "江苏能量块后天预测",
+      "caseScore": 31.6485,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.9426,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 96.5569,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 98735.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2185.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_041",
+      "caseName": "今明两天竞价空间",
+      "caseScore": 32.1921,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 1.0,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.4033
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.4033; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.04,
+            "reasoning.task_completion_quality": 0.19
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.0400; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.1900; criteriaCoverage=0.0000; toolCalls=1; toolSuccessRate=1.0000; honestLimitation=0.0; unsupportedNumericTokens=3"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 100.0,
+        "execution": 40.33,
+        "outcome": 10.0
+      },
+      "durationMs": 53322.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2210.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_042",
+      "caseName": "未来用户预测负荷",
+      "caseScore": 48.367,
+      "caseType": "robustness",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.884,
+            "token.normalized": 0.9746
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=27"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.37,
+            "reasoning.task_completion_quality": 0.446
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.3700; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=27",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.4460; criteriaCoverage=0.6000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=27"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 92.0216,
+        "execution": 9.0,
+        "outcome": 40.04
+      },
+      "durationMs": 138327.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 5143.0
+    },
+    {
+      "caseId": "power_trade_standard_v1_043",
+      "caseName": "历史用户实际电量",
+      "caseScore": 33.5507,
+      "caseType": "robustness",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 1.0,
+            "token.normalized": 1.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.09
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.0900; criteriaCoverage=0.0000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": null,
+            "multi_agent.task_decompose_reasonability": null
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric not applicable",
+            "multi_agent.task_decompose_reasonability": "metric not applicable"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.145,
+            "reasoning.task_completion_quality": 0.224
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.1450; criteriaCoverage=0.0000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.2240; criteriaCoverage=0.0000; toolCalls=0; toolSuccessRate=0.0000; honestLimitation=1.0; unsupportedNumericTokens=12"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 100.0,
+        "execution": 9.0,
+        "outcome": 17.66
+      },
+      "durationMs": 38591.0,
+      "reasons": [
+        "orchestration not applicable"
+      ],
+      "status": "SUCCESS",
+      "tokenUsage": 2709.0
+    }
+  ],
+  "clientRunId": "openmanus-agent-power-trade-standard-v1-final-final-batch-3",
+  "completedCases": 43,
+  "derivedAvailable": 86,
+  "derivedExpected": 86,
+  "derivedMissing": 0,
+  "diagnostics": {
+    "caseRunCount": 0,
+    "failedCaseCount": 0,
+    "latestStatus": {
+      "failedCaseCount": 0,
+      "selectedCaseCount": 43,
+      "status": "COMPLETED",
+      "submittedCaseCount": 43
+    },
+    "nextActions": [],
+    "selectedCaseCount": 43,
+    "stableForSeconds": null,
+    "status": "COMPLETED",
+    "submittedCaseCount": 43,
+    "warnings": []
+  },
+  "dimensionScores": {
+    "efficiency": 87.9868,
+    "execution": 23.9751,
+    "orchestration": 0.0,
+    "outcome": 24.6614
+  },
+  "efficiencyScore": 87.9868,
+  "evalRunId": null,
+  "evidenceSummary": {
+    "caseResultCount": 43,
+    "eventCount": 0,
+    "finalAnswerCount": 43,
+    "rawTraceCount": 150,
+    "traceFailedCount": 0,
+    "traceSuccessCount": 43
+  },
+  "executionScore": 23.9751,
+  "failedCases": 0,
+  "formula": "Each metric is normalized to 0..1. Case score is the weighted average of configured dimension scores for the case type. Suite score is the average across all selected cases, so failed, timed-out, incomplete, and metric-missing cases remain in the denominator.",
+  "incompleteCases": 0,
+  "latestStatus": {
+    "failedCaseCount": 0,
+    "selectedCaseCount": 43,
+    "status": "COMPLETED",
+    "submittedCaseCount": 43
+  },
+  "leaderboardEligible": true,
+  "leaderboardRow": {
+    "agentMode": "single_agent",
+    "avgDurationMs": 189448.93,
+    "completedCases": 43,
+    "derivedAvailable": 86,
+    "derivedExpected": 86,
+    "derivedMissing": 0,
+    "efficiencyScore": 87.9868,
+    "evalRunId": null,
+    "executionScore": 23.9751,
+    "failedCases": 0,
+    "incompleteCases": 0,
+    "leaderboardEligible": true,
+    "orchestrationScore": 0.0,
+    "outcomeScore": 24.6614,
+    "qualityExpected": 215,
+    "qualityMissing": 0,
+    "qualityNotApplicable": 86,
+    "qualityScored": 129,
+    "qualityUnavailable": 0,
+    "routingScore": 0.0,
+    "runId": "openmanus-agent-power-trade-standard-v1-final-final-batch-3",
+    "scoreConfidence": "full",
+    "selectedCases": 43,
+    "status": "COMPLETED",
+    "subject": "OpenManus Agent",
+    "subjectId": "openmanus-agent",
+    "subjectType": "openmanus_agent",
+    "successRate": 1.0,
+    "tokenUsage": 147387.0,
+    "totalScore": 35.2167
+  },
+  "metricSummary": {
+    "byMetric": {
+      "multi_agent.collaboration_quality": {
+        "not_applicable": 43
+      },
+      "multi_agent.task_decompose_reasonability": {
+        "not_applicable": 43
+      },
+      "reasoning.answer_accuracy": {
+        "scored": 43
+      },
+      "reasoning.task_completion_quality": {
+        "scored": 43
+      },
+      "skill.execution_quality": {
+        "scored": 43
+      }
+    },
+    "derivedAvailable": 86,
+    "derivedExpected": 86,
+    "derivedMissing": 0,
+    "outcomes": {
+      "not_applicable": 86,
+      "scored": 129
+    },
+    "qualityExpected": 215,
+    "qualityMetricCodes": [
+      "reasoning.answer_accuracy",
+      "reasoning.task_completion_quality",
+      "skill.execution_quality",
+      "multi_agent.task_decompose_reasonability",
+      "multi_agent.collaboration_quality"
+    ],
+    "qualityMissing": 0,
+    "qualityNotApplicable": 86,
+    "qualityScored": 129,
+    "qualityUnavailable": 0,
+    "scoreBearingMetricCodes": [
+      "reasoning.answer_accuracy",
+      "reasoning.task_completion_quality",
+      "skill.execution_quality",
+      "multi_agent.task_decompose_reasonability",
+      "multi_agent.collaboration_quality",
+      "duration.normalized",
+      "token.normalized"
+    ],
+    "scoreConfidence": "full",
+    "totalMetricResults": 215
+  },
+  "orchestrationScore": 0.0,
+  "outcomeScore": 24.6614,
+  "qualityExpected": 215,
+  "qualityMissing": 0,
+  "qualityNotApplicable": 86,
+  "qualityScored": 129,
+  "qualityUnavailable": 0,
+  "resultCompleteness": {
+    "hasSelectedCaseEcho": true,
+    "hasVolatileRunState": false,
+    "manualImport": true,
+    "missingManualRows": 0
+  },
+  "routingScore": 0.0,
+  "runId": "openmanus-agent-power-trade-standard-v1-final-final-batch-3",
+  "scoreConfidence": "full",
+  "selectedCases": 43,
+  "status": "COMPLETED",
+  "subjectId": "openmanus-agent",
+  "subjectName": "OpenManus Agent",
+  "subjectType": "openmanus_agent",
+  "successRate": 1.0,
+  "suiteId": "power_trade_standard_v1",
+  "suiteVersion": "v1",
+  "tokenUsage": 147387.0,
+  "totalScore": 35.2167
+}

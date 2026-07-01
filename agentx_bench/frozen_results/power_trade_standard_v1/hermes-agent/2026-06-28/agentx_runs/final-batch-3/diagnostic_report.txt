@@ -1,0 +1,94 @@
+AgentX Bench Dashboard
+========================================================================
+Run        : hermes-agent-power-trade-standard-v1-final-final-batch-3
+EvalRun    : -
+Subject    : Hermes Agent
+Status     : Incomplete (INCOMPLETE)
+Artifacts  : /Users/renke/Projects/zkenergyaicommon/evaluation_results/agentx/power_trade_standard_v1/hermes-agent/hermes-agent-power-trade-standard-v1-final-final-batch-3
+
+Scores
+  total          : 39.38
+  outcome        : 35.19
+  execution      : 23.11
+  orchestration  : 0.00
+  efficiency     : 73.75
+
+Run Stats
+  cases          : 40/43 completed
+  failed         : 3
+  success rate   : 93.02%
+  avg duration   : 153.93s
+  token usage    : 820570.00
+
+Dimension Breakdown
+  outcome       : [#######.............] 35.19
+  execution     : [#####...............] 23.11
+  orchestration : [....................] 0.00
+  efficiency    : [###############.....] 73.75
+
+Score Coverage
+  confidence     : full
+  quality metrics: 120/200 scored | unavailable 0 | missing 0 | n/a 80
+  efficiency data: 80/80 available
+  metric results : 215
+  outcomes       : scored=129, not_applicable=86
+  metric detail  :
+    - multi_agent.collaboration_quality: not_applicable:43
+    - multi_agent.task_decompose_reasonability: not_applicable:43
+    - reasoning.answer_accuracy: scored:43
+    - reasoning.task_completion_quality: scored:43
+    - skill.execution_quality: scored:43
+
+Evidence Coverage
+  case results   : 43
+  final answers  : 40
+  events         : 0
+  raw traces     : 367
+  trace summaries: success 40 | failed 0
+
+Run Diagnostics
+  latest status  : Incomplete (INCOMPLETE)
+  phase          : -
+  message        : -
+  selected       : 43
+  submitted      : 43
+  caseRuns       : -
+  metrics        : -
+  warnings       :
+    - 3 case(s) have failed according to the service status.
+
+Data Quality
+  leaderboard    : diagnostic only
+  score confidence: full
+  case coverage  : 40/43 completed, 3 not completed
+  case counters  : failedCases=3, incompleteCases=0
+  warning count  : 1
+  exclusion      : terminal status INCOMPLETE is not complete
+  completeness   :
+    - hasSelectedCaseEcho=True
+    - hasVolatileRunState=False
+    - manualImport=True
+    - missingManualRows=3
+
+Artifacts
+  request.json          : ok
+  run_status.json       : ok
+  raw_results.json      : ok
+  summary.json          : ok
+  case_results.csv      : ok
+  case_results.jsonl    : ok
+  leaderboard_row.csv   : ok
+  dashboard.txt         : ok
+  diagnostic_report.txt : ok
+  errors.jsonl          : ok
+
+Attention Cases
+  - power_trade_standard_v1_006 | TIMEOUT | score 0.00 | 储能补贴传言影响分析
+    reason: case status is TIMEOUT; case score forced to 0; Hermes case
+            timed out after 240s
+  - power_trade_standard_v1_026 | TIMEOUT | score 0.00 | 光储充消防标准
+    reason: case status is TIMEOUT; case score forced to 0; Hermes case
+            timed out after 240s
+  - power_trade_standard_v1_031 | TIMEOUT | score 0.00 | 电价上涨原因分析
+    reason: case status is TIMEOUT; case score forced to 0; Hermes case
+            timed out after 240s

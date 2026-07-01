@@ -1,0 +1,45 @@
+caseId,caseName,caseType,status,caseScore,outcomeScore,routingScore,executionScore,orchestrationScore,efficiencyScore,durationMs,tokenUsage,reason
+power_trade_standard_v1_001,河南物流园区套餐定制,business_answer,SUCCESS,52.3921,50.692,,28.0,,86.1344,139658.0,11633.0,orchestration not applicable
+power_trade_standard_v1_002,盘前电力交易简报,business_answer,SUCCESS,48.5255,42.48,,45.0,,85.3009,129255.0,13611.0,orchestration not applicable
+power_trade_standard_v1_003,山东竞价空间数据,data_query,SUCCESS,41.7646,30.422,,45.0,,77.9615,164023.0,18391.0,orchestration not applicable
+power_trade_standard_v1_004,新建发电企业注册办理,business_answer,SUCCESS,50.6508,44.72,,36.67,,97.2509,77667.0,5326.0,orchestration not applicable
+power_trade_standard_v1_005,进口煤限制放开影响分析,scenario_analysis,SUCCESS,18.2286,4.72,,4.0,,100.0,33872.0,1678.0,orchestration not applicable
+power_trade_standard_v1_006,储能补贴传言影响分析,scenario_analysis,SUCCESS,38.0957,31.534,,9.0,,100.0,30473.0,1630.0,orchestration not applicable
+power_trade_standard_v1_007,隔壁省停电跨省交易影响,scenario_analysis,SUCCESS,48.0571,45.48,,9.0,,100.0,28889.0,1562.0,orchestration not applicable
+power_trade_standard_v1_008,夏季高温社交情绪风险,scenario_analysis,SUCCESS,53.0429,52.46,,9.0,,100.0,22411.0,1399.0,orchestration not applicable
+power_trade_standard_v1_009,买卖一价差大卖盘增加,strategy_advice,SUCCESS,33.9571,27.6,,9.0,,100.0,31296.0,1730.0,orchestration not applicable
+power_trade_standard_v1_010,截标前地板价卖单涌现,strategy_advice,SUCCESS,37.1714,32.6,,9.0,,100.0,21665.0,1429.0,orchestration not applicable
+power_trade_standard_v1_011,上午十点成交量达到八成,strategy_advice,SUCCESS,39.0229,35.48,,9.0,,100.0,24214.0,1493.0,orchestration not applicable
+power_trade_standard_v1_012,晚高峰成交进度滞后,strategy_advice,SUCCESS,39.8971,36.84,,9.0,,100.0,22132.0,1454.0,orchestration not applicable
+power_trade_standard_v1_013,大盘偏慢买方主动增强策略,strategy_advice,SUCCESS,32.2429,26.6,,4.0,,100.0,23140.0,1446.0,orchestration not applicable
+power_trade_standard_v1_014,陕西日前现货申报策略,strategy_advice,SUCCESS,48.0007,46.3,,35.29,,74.72,191380.0,19302.0,orchestration not applicable
+power_trade_standard_v1_015,上周现货出清电价,data_query,SUCCESS,40.8703,33.64,,40.14,,68.5984,215938.0,23733.0,orchestration not applicable
+power_trade_standard_v1_016,陕西昨日申报负荷曲线,data_query,SUCCESS,39.4692,29.32,,28.0,,95.7982,66440.0,8083.0,orchestration not applicable
+power_trade_standard_v1_017,陕西上周现货价差,data_query,SUCCESS,38.2875,29.32,,45.0,,59.9805,347179.0,20304.0,orchestration not applicable
+power_trade_standard_v1_018,今日全省开停机情况,data_query,SUCCESS,42.4029,26.76,,45.0,,95.4315,96696.0,5470.0,orchestration not applicable
+power_trade_standard_v1_019,后天气象情况,data_query,SUCCESS,34.3376,21.96,,40.0,,70.2847,311627.0,12267.0,orchestration not applicable
+power_trade_standard_v1_020,跨省绿电交易规则,business_answer,SUCCESS,46.6893,42.48,,45.0,,71.5299,289839.0,13045.0,orchestration not applicable
+power_trade_standard_v1_021,年用电量500万kWh用户入市,business_answer,SUCCESS,49.8359,44.24,,38.33,,92.1196,148275.0,4038.0,orchestration not applicable
+power_trade_standard_v1_022,前天现货复盘,business_answer,SUCCESS,49.3959,42.16,,45.0,,93.5892,99152.0,7297.0,orchestration not applicable
+power_trade_standard_v1_023,明天全省电源预测总出力,data_query,SUCCESS,42.6527,32.2,,36.5,,91.2336,98382.0,10024.0,orchestration not applicable
+power_trade_standard_v1_024,2025年绿电交易价格机制,business_answer,SUCCESS,54.669,53.52,,40.75,,74.9073,209573.0,17272.0,orchestration not applicable
+power_trade_standard_v1_025,跨省绿电安全校核流程,business_answer,SUCCESS,53.0887,47.12,,41.67,,97.335,82221.0,4776.0,orchestration not applicable
+power_trade_standard_v1_026,光储充消防标准,business_answer,SUCCESS,43.6586,34.91,,41.67,,93.7644,115260.0,5489.0,orchestration not applicable
+power_trade_standard_v1_027,浙江峰谷价差与工商业储能投资,business_answer,SUCCESS,50.5683,45.36,,45.0,,84.7826,144896.0,12630.0,orchestration not applicable
+power_trade_standard_v1_028,实时电价查询,data_query,SUCCESS,45.2392,40.2,,37.45,,76.6986,160451.0,20169.0,orchestration not applicable
+power_trade_standard_v1_029,上个月电价查询,data_query,FAILED,0.0,,,,,,180904.0,,"case status is FAILED; case score forced to 0; Claude Code subprocess failed rc=1; stderr= stdout={""type"":""system"",""subtype"":""init"",""cwd"":""/private/tmp/agentx-claude-code-runs/claude-code-power-trade-standard-v1-final/final-batch-3/power_trade_standard_v1_029-a1"",""session_id"":""a839ad57-f70b-4376-badb-a45f68364dde"",""tools"":[""WebFetch"",""WebSearch""],""mcp_servers"":[],""model"":""gpt-5.5"",""permissionMode"":""bypassPermissions"",""slash_commands"":[""deep-research"",""update-config"",""verify"",""debug"",""code-review"",""simplify"",""batch"",""fewer-permission-prompts"",""loop"",""claude-api"",""run"",""run-skill-generator"",""clear"",""compact"",""context"",""heapdump"",""init"",""reload-skills"",""review"",""security-review"",""usage"",""insights"",""goal"",""team-onboarding""],""apiKeySource"":""none"",""claude_code_version"":""2.1.177"",""output_style"":""default"",""agents"":[""claude"",""Explore"",""general-purpose"",""Plan""],""skills"":[""deep-research"",""update-config"",""verify"",""debug"",""code-review"",""simplify"",""batch"",""fewer-permission-prompts"",""loop"",""claude-api"",""run"",""run-skill-generator""],""plugins"":[],""analytics_disabled"":true,""product_feedback_disabled"":true,""uuid"":""5d2a3732-638c-44d7-981e-705e152a65a6"",""fast_mode_state"":""off""}
+{""type"":""system"",""subtype"":""thinking_tokens"",""estimated_tokens"":10,""estimated_tokens_delta"":10,""uuid"":""60d9ae78-c225-4f30-b...[truncated]"
+power_trade_standard_v1_030,明天电价预测,data_query,SUCCESS,22.9158,11.4,,2.0,,100.0,28118.0,1545.0,orchestration not applicable
+power_trade_standard_v1_031,电价上涨原因分析,business_answer,SUCCESS,40.6987,35.68,,9.0,,100.0,30398.0,1600.0,orchestration not applicable
+power_trade_standard_v1_032,选择最省钱用电套餐,robustness,SUCCESS,49.9627,40.04,,9.0,,100.0,27865.0,1536.0,orchestration not applicable
+power_trade_standard_v1_033,账单分析与套餐推荐,business_answer,SUCCESS,46.448,43.52,,9.0,,100.0,29242.0,1572.0,orchestration not applicable
+power_trade_standard_v1_034,今日盘前交易简报,business_answer,SUCCESS,53.105,47.868,,45.0,,90.0137,125596.0,8675.0,orchestration not applicable
+power_trade_standard_v1_035,大丰风电场功率预测,data_query,SUCCESS,43.446,28.75,,45.0,,94.7413,88250.0,7091.0,orchestration not applicable
+power_trade_standard_v1_036,威海光伏站现货申报策略,strategy_advice,SUCCESS,54.5722,50.48,,45.0,,87.3453,130415.0,11195.0,orchestration not applicable
+power_trade_standard_v1_037,浙江未来两天日前现货电价预测,data_query,SUCCESS,40.3662,23.88,,41.67,,98.6428,73309.0,4196.0,orchestration not applicable
+power_trade_standard_v1_038,代理售电负荷预测,robustness,SUCCESS,54.128,45.72,,9.0,,100.0,26501.0,1505.0,orchestration not applicable
+power_trade_standard_v1_039,后天全省光伏风电预测,data_query,SUCCESS,46.9458,36.36,,45.0,,89.0033,134243.0,8947.0,orchestration not applicable
+power_trade_standard_v1_040,江苏能量块后天预测,data_query,SUCCESS,45.9743,37.64,,33.67,,97.0404,68435.0,6486.0,orchestration not applicable
+power_trade_standard_v1_041,今明两天竞价空间,data_query,SUCCESS,46.4067,35.08,,45.0,,90.2821,127706.0,8162.0,orchestration not applicable
+power_trade_standard_v1_042,未来用户预测负荷,robustness,SUCCESS,47.8507,37.16,,9.0,,100.0,39900.0,1605.0,orchestration not applicable
+power_trade_standard_v1_043,历史用户实际电量,robustness,SUCCESS,27.6253,9.58,,9.0,,100.0,16653.0,1158.0,orchestration not applicable
