@@ -1,0 +1,94 @@
+AgentX Bench Dashboard
+========================================================================
+Run        : openmanus-agent-power-trade-standard-v1-final-final-batch-3
+EvalRun    : -
+Subject    : OpenManus Agent
+Status     : Completed (COMPLETED)
+Artifacts  : /Users/renke/Projects/zkenergyaicommon/evaluation_results/agentx/power_trade_standard_v1/openmanus-agent/openmanus-agent-power-trade-standard-v1-final-final-batch-3
+
+Scores
+  total          : 35.22
+  outcome        : 24.66
+  execution      : 23.98
+  orchestration  : 0.00
+  efficiency     : 87.99
+
+Run Stats
+  cases          : 43/43 completed
+  failed         : 0
+  success rate   : 100.00%
+  avg duration   : 189.45s
+  token usage    : 147387.00
+
+Dimension Breakdown
+  outcome       : [#####...............] 24.66
+  execution     : [#####...............] 23.98
+  orchestration : [....................] 0.00
+  efficiency    : [##################..] 87.99
+
+Score Coverage
+  confidence     : full
+  quality metrics: 129/215 scored | unavailable 0 | missing 0 | n/a 86
+  efficiency data: 86/86 available
+  metric results : 215
+  outcomes       : scored=129, not_applicable=86
+  metric detail  :
+    - multi_agent.collaboration_quality: not_applicable:43
+    - multi_agent.task_decompose_reasonability: not_applicable:43
+    - reasoning.answer_accuracy: scored:43
+    - reasoning.task_completion_quality: scored:43
+    - skill.execution_quality: scored:43
+
+Evidence Coverage
+  case results   : 43
+  final answers  : 43
+  events         : 0
+  raw traces     : 150
+  trace summaries: success 43 | failed 0
+
+Run Diagnostics
+  latest status  : Completed (COMPLETED)
+  phase          : -
+  message        : -
+  selected       : 43
+  submitted      : 43
+  caseRuns       : -
+  metrics        : -
+
+Data Quality
+  leaderboard    : eligible
+  score confidence: full
+  case coverage  : 43/43 completed, 0 not completed
+  case counters  : failedCases=0, incompleteCases=0
+  warning count  : 0
+  exclusion      : none
+  completeness   :
+    - hasSelectedCaseEcho=True
+    - hasVolatileRunState=False
+    - manualImport=True
+    - missingManualRows=0
+
+Artifacts
+  request.json          : ok
+  run_status.json       : ok
+  status_history.jsonl  : ok
+  raw_results.json      : ok
+  summary.json          : ok
+  case_results.csv      : ok
+  case_results.jsonl    : ok
+  leaderboard_row.csv   : ok
+  dashboard.txt         : ok
+  diagnostic_report.txt : ok
+  errors.jsonl          : ok
+
+Attention Cases
+  - power_trade_standard_v1_030 | SUCCESS | score 21.92 | 明天电价预测
+    reason: orchestration not applicable
+  - power_trade_standard_v1_023 | SUCCESS | score 23.20 | 明天全省电源预测总出力
+    reason: orchestration not applicable
+  - power_trade_standard_v1_017 | SUCCESS | score 24.91 | 陕西上周现货价差
+    reason: orchestration not applicable
+  - power_trade_standard_v1_026 | SUCCESS | score 26.48 | 光储充消防标准
+    reason: orchestration not applicable
+  - power_trade_standard_v1_037 | SUCCESS | score 27.29 | 浙江未来两天日前现货电价预测
+    reason: orchestration not applicable

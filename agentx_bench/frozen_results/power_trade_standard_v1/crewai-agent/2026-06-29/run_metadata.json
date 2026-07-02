@@ -1,0 +1,62 @@
+{
+  "aggregateMethod": "mean_of_replicates",
+  "aggregateRunId": "crewai-agent-power-trade-standard-v1-final",
+  "caseCounts": {
+    "completedCasesAcrossBatches": 129.0,
+    "failedCasesAcrossBatches": 0.0,
+    "incompleteCasesAcrossBatches": 0.0,
+    "selectedCasesAcrossBatches": 129.0,
+    "successRate": 1.0
+  },
+  "datasetId": "power_trade_standard_v1",
+  "datasetVersion": "v1",
+  "evidenceLocation": "tools/agentx_bench/frozen_results/power_trade_standard_v1/crewai-agent/2026-06-29",
+  "failurePolicy": "bounded attempts and bounded runtime; failed, timed-out, and non-completed final case rows are retained and scored as 0 by AgentX Bench while remaining in the selected-case denominator",
+  "finalBatches": [
+    "final-batch-1",
+    "final-batch-2",
+    "final-batch-3"
+  ],
+  "leaderboardEligible": true,
+  "manualImportPolicy": "manual_import with per-case metricResults; multi_agent.* marked NOT_APPLICABLE for single_agent",
+  "model": {
+    "agentVersion": "crewai==1.15.1; upstream=6491f5a6639c49ed1835520e683a4c42c3eaf634",
+    "baseUrlHost": "aiot-coding-maas.antdigital.com",
+    "caseTimeoutSeconds": 600,
+    "maxAttemptsPerCase": 2,
+    "maxStepsOrTurns": 12,
+    "model": "gpt-5.5",
+    "requestTimeoutSeconds": 180,
+    "workers": 4
+  },
+  "reviewMode": "answer_plus_crewai_lite_agent_trace",
+  "reviewerProcess": "codex_manual_review_rubric_v1_codified_for_crewai_agent",
+  "runDate": "2026-06-29",
+  "scores": {
+    "efficiencyScoreInterval": "[96.7235, 97.3214]",
+    "efficiencyScoreMean": 97.0928,
+    "executionScoreInterval": "[45.0000, 45.0465]",
+    "executionScoreMean": 45.0155,
+    "orchestrationScoreInterval": "[0.0000, 0.0000]",
+    "orchestrationScoreMean": 0.0,
+    "outcomeScoreInterval": "[45.8838, 46.1689]",
+    "outcomeScoreMean": 46.0368,
+    "scoreInterval": "[53.8307, 54.0777]",
+    "totalScoreMean": 53.9729,
+    "totalScoreStdDev": 0.1277
+  },
+  "scoringVersion": "v1",
+  "secretsPersisted": false,
+  "selectedCaseCountPerBatch": 43,
+  "snapshotType": "official_crewai_final_benchmark_snapshot",
+  "subject": {
+    "agentMode": "single_agent",
+    "subjectId": "crewai-agent",
+    "subjectName": "CrewAI Agent",
+    "subjectType": "crewai_agent",
+    "teamName": "external-crewai"
+  },
+  "totalCaseRows": 129,
+  "traceEvidencePolicy": "required for every final case row; aggregate generated with --require-trace-evidence using crewai_lite_agent_session",
+  "validReplicateCount": 3
+}

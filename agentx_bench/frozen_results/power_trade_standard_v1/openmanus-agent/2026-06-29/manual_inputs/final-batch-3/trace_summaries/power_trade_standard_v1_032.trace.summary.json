@@ -1,0 +1,19 @@
+{
+  "attempt": 1,
+  "baseUrlHost": "aiot-coding-maas.antdigital.com",
+  "caseId": "power_trade_standard_v1_032",
+  "elapsedSeconds": 240.603,
+  "finalBatch": "final-batch-3",
+  "messageCount": 3,
+  "model": "gpt-5.5",
+  "observedAt": "2026-06-29T20:53:01+08:00",
+  "rawTraceCount": 3,
+  "sessionId": "agentx-openmanus-final-batch-3-032-a1-5ed089a6",
+  "status": "SUCCESS",
+  "tokenUsage": 3563.0,
+  "toolCallCount": 0,
+  "toolFailureCount": 0,
+  "toolSuccessCount": 0,
+  "toolSuccessRate": null,
+  "traceSource": "openmanus_local_memory"
+}

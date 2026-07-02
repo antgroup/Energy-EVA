@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgentX Bench Leaderboard Snapshot</title>
+  <style>
+    :root {
+      --pixel-ink: #111827;
+      --pixel-ink-soft: #334155;
+      --pixel-blue: #1746a2;
+      --pixel-cyan: #06b6d4;
+      --pixel-line: #cbd5e1;
+      --pixel-line-soft: #e2e8f0;
+      --pixel-paper: #ffffff;
+      --pixel-panel: #f8fbff;
+      --pixel-shadow: #bad2ff;
+      --pixel-warn: #9a3412;
+      --pixel-ok: #15803d;
+      --side-width: clamp(172px, 14vw, 214px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      color: var(--pixel-ink);
+      background: #f8fbff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "PingFang SC", monospace;
+      letter-spacing: 0;
+    }
+
+    .ranking-page {
+      position: relative;
+      min-height: 100svh;
+      padding-top: 54px;
+      padding-bottom: 24px;
+      overflow-x: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 255, 0.98) 62%),
+        #f8fbff;
+    }
+
+    .ranking-page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(29, 78, 216, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(29, 78, 216, 0.07) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(6, 182, 212, 0.055) 25%, transparent 25%, transparent 75%, rgba(6, 182, 212, 0.055) 75%);
+      background-size: 28px 28px, 28px 28px, 14px 14px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 78%);
+    }
+
+    .ranking-page > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .ranking-detail-toolbar {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 45;
+      min-height: 54px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 2px solid var(--pixel-ink);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 4px 0 var(--pixel-shadow);
+    }
+
+    .agentx-bench-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--pixel-ink);
+    }
+
+    .agentx-bench-mark {
+      width: 30px;
+      height: 30px;
+      border: 2px solid var(--pixel-ink);
+      background: var(--pixel-blue);
+      box-shadow: 4px 4px 0 var(--pixel-shadow);
+    }
+
+    .agentx-bench-brand div:last-child {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+    }
+
+    .agentx-bench-brand span,
+    .agentx-bench-brand strong {
+      color: var(--pixel-blue);
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 950;
+      text-shadow:
+        1px 1px 0 #ffffff,
+        2px 2px 0 var(--pixel-shadow),
+        3px 3px 0 #0f2f75;
+    }
+
+    .ranking-top-tabs {
+      position: absolute;
+      left: 50%;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--pixel-ink-soft);
+      font-size: 13px;
+      font-weight: 800;
+      transform: translateX(-50%);
+    }
+
+    .ranking-top-tabs span {
+      min-height: 34px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      border: 2px solid var(--pixel-ink);
+      color: var(--pixel-ink);
+      background: #dff7ff;
+      box-shadow: 3px 3px 0 var(--pixel-shadow);
+    }
+
+    .ranking-button {
+      min-height: 38px;
+      padding: 0 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid var(--pixel-ink);
+      color: var(--pixel-ink);
+      background: #ffffff;
+      box-shadow: 4px 4px 0 var(--pixel-shadow);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .ranking-side-rail {
+      position: fixed;
+      top: 54px;
+      bottom: 0;
+      left: 0;
+      z-index: 25;
+      width: var(--side-width);
+      padding: clamp(14px, 2svh, 22px) 10px clamp(12px, 2svh, 18px);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow: hidden;
+      border-right: 2px solid var(--pixel-ink);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .ranking-side-item {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 12px;
+      border: 2px solid transparent;
+      color: var(--pixel-ink-soft);
+      background: transparent;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .ranking-side-item.is-active {
+      border-color: var(--pixel-ink);
+      color: var(--pixel-ink);
+      background: #e0f2fe;
+      box-shadow: 4px 4px 0 var(--pixel-shadow);
+    }
+
+    .ranking-side-note {
+      margin-top: auto;
+      padding: 14px;
+      display: grid;
+      gap: 6px;
+      border: 2px solid var(--pixel-ink);
+      background: #f8fbff;
+      box-shadow: 5px 5px 0 var(--pixel-shadow);
+    }
+
+    .ranking-side-note strong {
+      overflow: hidden;
+      color: var(--pixel-ink);
+      font-size: 16px;
+      font-weight: 900;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .ranking-side-note span {
+      color: #64748b;
+      font-size: 13px;
+      line-height: 20px;
+      word-break: break-word;
+    }
+
+    .ranking-hero,
+    .ranking-scoreboard,
+    .ranking-section {
+      margin-left: calc(var(--side-width) + clamp(18px, 3vw, 44px));
+      margin-right: clamp(18px, 3vw, 44px);
+    }
+
+    .ranking-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 24px;
+      padding: clamp(18px, 3svh, 42px) 0 clamp(12px, 2svh, 18px);
+    }
+
+    .ranking-kicker {
+      margin: 0 0 10px;
+      color: #2563eb;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .ranking-hero h1 {
+      margin: 0;
+      color: var(--pixel-ink);
+      font-size: 36px;
+      font-weight: 950;
+      line-height: 44px;
+      text-shadow: 3px 3px 0 #dbeafe;
+    }
+
+    .ranking-hero h3 {
+      margin: 8px 0 0;
+      color: var(--pixel-blue);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .ranking-hero p {
+      max-width: 900px;
+      margin: 12px 0 0;
+      color: #52657d;
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    .ranking-snapshot-seal {
+      min-width: 154px;
+      min-height: 92px;
+      padding: 12px 16px;
+      display: grid;
+      align-content: center;
+      gap: 4px;
+      border: 2px solid var(--pixel-ink);
+      color: var(--pixel-ink);
+      background: var(--pixel-paper);
+      box-shadow: 6px 6px 0 var(--pixel-shadow);
+    }
+
+    .ranking-snapshot-seal span,
+    .ranking-snapshot-seal em {
+      color: #64748b;
+      font-size: 12px;
+      font-style: normal;
+    }
+
+    .ranking-snapshot-seal strong {
+      color: var(--pixel-ink);
+      font-size: 20px;
+      font-weight: 950;
+    }
+
+    .ranking-scoreboard {
+      margin-top: 14px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      border: 2px solid var(--pixel-ink);
+      background: #ffffff;
+      box-shadow: 10px 10px 0 var(--pixel-shadow);
+    }
+
+    .ranking-scoreboard::before {
+      content: "Leaderboard Overview";
+      display: block;
+      padding: clamp(15px, 2svh, 21px) clamp(16px, 2vw, 28px);
+      border-bottom: 2px solid var(--pixel-ink);
+      color: var(--pixel-ink);
+      font-size: 22px;
+      font-weight: 950;
+      background: #f0f9ff;
+    }
+
+    .ranking-scoreboard-head,
+    .leaderboard-score-row {
+      display: grid;
+      grid-template-columns:
+        minmax(46px, 56px)
+        minmax(172px, 0.64fr)
+        minmax(420px, 1.42fr)
+        minmax(142px, 156px)
+        minmax(92px, 110px);
+      align-items: center;
+      gap: clamp(8px, 1vw, 16px);
+      min-width: 900px;
+    }
+
+    .ranking-scoreboard-head {
+      padding: 12px clamp(14px, 2vw, 28px);
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 900;
+      background: #f8fbff;
+    }
+
+    .ranking-scoreboard-head > :nth-child(1),
+    .leaderboard-score-row > :nth-child(1) {
+      justify-self: center;
+    }
+
+    .ranking-scoreboard-head > :nth-child(2),
+    .leaderboard-score-row > :nth-child(2) {
+      justify-self: start;
+    }
+
+    .ranking-scoreboard-head > :nth-child(3),
+    .leaderboard-score-row > :nth-child(3) {
+      width: 100%;
+      justify-self: stretch;
+    }
+
+    .ranking-scoreboard-head > :nth-child(4),
+    .leaderboard-score-row > :nth-child(4) {
+      justify-self: end;
+      text-align: right;
+    }
+
+    .ranking-scoreboard-head > :nth-child(5),
+    .leaderboard-score-row > :nth-child(5) {
+      justify-self: end;
+    }
+
+    .leaderboard-score-row {
+      min-height: 66px;
+      padding: 10px clamp(14px, 2vw, 28px);
+      border-top: 2px solid var(--pixel-line-soft);
+      background: #ffffff;
+    }
+
+    .leaderboard-score-row.is-diagnostic {
+      background: #fff7ed;
+    }
+
+    .leaderboard-rank-medal {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      justify-self: center;
+      border: 2px solid var(--pixel-ink);
+      color: var(--pixel-blue);
+      background: #eff6ff;
+      box-shadow: 0 3px 0 var(--pixel-shadow);
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .leaderboard-agent-identity {
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .leaderboard-agent-identity strong {
+      overflow: hidden;
+      color: var(--pixel-ink);
+      font-size: 17px;
+      font-weight: 950;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .leaderboard-agent-identity span {
+      overflow: hidden;
+      color: #64748b;
+      font-size: 13px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .leaderboard-agent-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+    }
+
+    .leaderboard-agent-tags span {
+      max-width: 100%;
+      padding: 2px 6px;
+      border: 2px solid #bfdbfe;
+      color: var(--pixel-blue);
+      background: #eff6ff;
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 15px;
+    }
+
+    .leaderboard-agent-tags .is-diagnostic {
+      border-color: #fed7aa;
+      color: var(--pixel-warn);
+      background: #fff7ed;
+    }
+
+    .score-interval {
+      display: grid;
+      gap: 5px;
+    }
+
+    .score-interval-track {
+      position: relative;
+      height: 24px;
+      overflow: visible;
+      border: 2px solid var(--pixel-ink);
+      background: #eaf2fb;
+    }
+
+    .score-interval-track::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: rgba(15, 23, 42, 0.28);
+    }
+
+    .score-interval-range {
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      min-width: 18px;
+      background: repeating-linear-gradient(90deg, #06b6d4 0 9px, #2563eb 9px 18px);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42), 0 0 0 1px rgba(37, 99, 235, 0.14);
+    }
+
+    .score-interval-cap {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      width: 3px;
+      height: 20px;
+      background: var(--pixel-blue);
+      transform: translate(-50%, -50%);
+    }
+
+    .score-interval-cap.is-min {
+      background: #06b6d4;
+    }
+
+    .score-interval-marker {
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      width: 6px;
+      height: 28px;
+      border: 2px solid #ffffff;
+      background: var(--pixel-ink);
+      box-shadow: 0 0 0 1px rgba(29, 78, 216, 0.72), 1px 1px 0 var(--pixel-shadow);
+      transform: translate(-50%, -50%);
+    }
+
+    .score-interval-axis {
+      display: flex;
+      justify-content: space-between;
+      color: #94a3b8;
+      font-size: 10px;
+      line-height: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .leaderboard-mean-score {
+      display: grid;
+      gap: 1px;
+      justify-items: end;
+      min-width: 0;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .leaderboard-mean-score strong {
+      color: var(--pixel-blue);
+      font-size: clamp(20px, 1.5vw, 24px);
+      line-height: 28px;
+      font-variant-numeric: tabular-nums;
+      font-weight: 950;
+    }
+
+    .leaderboard-mean-score span {
+      overflow: hidden;
+      color: #64748b;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .leaderboard-agent-action {
+      justify-self: end;
+      min-width: 92px;
+      min-height: 38px;
+      padding: 0 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--pixel-ink);
+      color: var(--pixel-ink);
+      background: #ffffff;
+      box-shadow: 4px 4px 0 var(--pixel-shadow);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .ranking-section {
+      margin-top: 18px;
+    }
+
+    .leaderboard-section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 2px 0 10px;
+      color: var(--pixel-ink);
+    }
+
+    .leaderboard-section-heading span {
+      font-size: 17px;
+      font-weight: 950;
+    }
+
+    .leaderboard-section-heading em {
+      overflow: hidden;
+      color: #64748b;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 800;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .leaderboard-dimension-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    .leaderboard-dimension-tile {
+      min-width: 0;
+      min-height: 94px;
+      padding: 12px;
+      border: 2px solid var(--pixel-line);
+      background: #f8fbff;
+      box-shadow: 4px 4px 0 #dbeafe;
+    }
+
+    .leaderboard-dimension-head span {
+      min-width: 0;
+      overflow: hidden;
+      color: var(--pixel-ink);
+      font-size: 13px;
+      font-weight: 950;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .leaderboard-dimension-meta {
+      color: #64748b;
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    .leaderboard-dimension-tile {
+      display: grid;
+      gap: 7px;
+      align-content: start;
+    }
+
+    .leaderboard-dimension-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .leaderboard-dimension-head strong {
+      flex: 0 0 auto;
+      color: var(--pixel-blue);
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .leaderboard-mini-track {
+      height: 8px;
+      overflow: hidden;
+      background: #eaf2fb;
+    }
+
+    .leaderboard-mini-track span {
+      display: block;
+      height: 100%;
+      background: repeating-linear-gradient(90deg, #06b6d4 0 8px, #1d4ed8 8px 16px);
+    }
+
+    .leaderboard-dimension-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2px 6px;
+    }
+
+    .leaderboard-dimension-meta span {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .leaderboard-dimension-meta .wide {
+      grid-column: 1 / -1;
+    }
+
+    .leaderboard-agent-detail-strip {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      border: 2px solid var(--pixel-line);
+      background:
+        linear-gradient(90deg, rgba(29, 78, 216, 0.08), rgba(6, 182, 212, 0.05)),
+        #f8fbff;
+      box-shadow: 4px 4px 0 #dbeafe;
+    }
+
+    .leaderboard-model-cell {
+      min-width: 0;
+      padding: 12px 16px;
+      display: grid;
+      align-content: center;
+      gap: 4px;
+    }
+
+    .leaderboard-model-cell + .leaderboard-model-cell {
+      border-left: 2px solid var(--pixel-line);
+    }
+
+    .leaderboard-model-cell span {
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    .leaderboard-model-cell strong {
+      overflow-wrap: anywhere;
+      color: var(--pixel-blue);
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 950;
+      text-shadow: 2px 2px 0 #dbeafe;
+    }
+
+    .leaderboard-agent-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(126px, 1fr));
+      gap: 10px;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    .leaderboard-agent-metrics > div {
+      min-width: 0;
+      padding: 12px;
+      border: 2px solid var(--pixel-line);
+      background: #f8fbff;
+    }
+
+    .leaderboard-agent-metrics strong {
+      display: block;
+      margin-top: 3px;
+      overflow: hidden;
+      color: var(--pixel-ink);
+      font-size: 18px;
+      font-weight: 950;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --side-width: 0px;
+      }
+
+      .ranking-side-rail {
+        display: none;
+      }
+
+      .ranking-top-tabs {
+        display: none;
+      }
+
+      .ranking-detail-toolbar {
+        padding: 0 16px;
+      }
+
+      .ranking-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .leaderboard-dimension-grid,
+      .leaderboard-agent-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .leaderboard-agent-detail-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .leaderboard-model-cell + .leaderboard-model-cell {
+        border-top: 2px solid var(--pixel-line);
+        border-left: 0;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .ranking-hero h1 {
+        font-size: 28px;
+        line-height: 34px;
+      }
+
+      .leaderboard-dimension-grid,
+      .leaderboard-agent-metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="ranking-page">
+    <div class="ranking-detail-toolbar">
+      <div class="agentx-bench-brand">
+        <div class="agentx-bench-mark" aria-hidden="true"></div>
+        <div><span>AgentX</span><strong>Bench</strong></div>
+      </div>
+      <div class="ranking-top-tabs">
+        <span>Leaderboard</span>
+      </div>
+    </div>
+
+    <aside class="ranking-side-rail">
+      <div class="ranking-side-item">
+        <span>▷</span>
+        <span>Scenario</span>
+      </div>
+      <div class="ranking-side-item is-active">
+        <span>◇</span>
+        <span>Leaderboard</span>
+      </div>
+      <div class="ranking-side-note">
+        <strong>Power Trading Standard</strong>
+        <span>7 agents · 2026-06-30</span>
+      </div>
+    </aside>
+
+    <section class="ranking-hero">
+      <div>
+        <p class="ranking-kicker">AgentX Bench / Power Trading Standard</p>
+        <h1>AgentX Bench Leaderboard Snapshot</h1>
+        <h3>Power Trading Standard Benchmark</h3>
+        <p>
+          A frozen ranking snapshot for agent performance on the power trading benchmark.
+        </p>
+      </div>
+      <div class="ranking-snapshot-seal">
+        <span>Snapshot date</span>
+        <strong>2026-06-30</strong>
+        <em>Scoring v1</em>
+      </div>
+    </section>
+
+    <section class="ranking-scoreboard">
+      <div class="ranking-scoreboard-head">
+        <span>Rank</span>
+        <span>Agent</span>
+        <span>Capability band · 30-100</span>
+        <span>Mean</span>
+        <span></span>
+      </div>
+      <div id="scoreRows"></div>
+    </section>
+
+    <section class="ranking-section">
+      <div class="leaderboard-section-heading">
+        <span>Top Agent Dimensions</span>
+        <em>Energent Swarm · Rank #1</em>
+      </div>
+      <div class="leaderboard-agent-detail-strip">
+        <div class="leaderboard-model-cell">
+          <span>Subject</span>
+          <strong>Energent Swarm</strong>
+        </div>
+        <div class="leaderboard-model-cell">
+          <span>Benchmark</span>
+          <strong>power_trade_standard_v1 · frozen snapshot</strong>
+        </div>
+      </div>
+      <div class="leaderboard-agent-metrics" style="margin-top: 10px;">
+        <div><span>Score floor</span><strong>68.66</strong></div>
+        <div><span>Score peak</span><strong>68.66</strong></div>
+        <div><span>Success rate</span><strong>76.7%</strong></div>
+        <div><span>Completed cases</span><strong>33/43</strong></div>
+      </div>
+      <div class="leaderboard-dimension-grid" id="dimensionTiles"></div>
+    </section>
+  </main>
+
+  <script>
+    const rows = [
+      {rank:1, subject:"Energent Swarm", id:"energent-swarm", mode:"multi_agent", eligible:true, status:"COMPLETED", mean:68.6605, min:68.6605, max:68.6605, success:0.7674, selected:43, completed:33, failed:10, evidence:"../energent-swarm/2026-06-30/leaderboard_row.json", dims:{outcome:76.0465, execution:66.9572, orchestration:68.1395, efficiency:16.6219}},
+      {rank:2, subject:"CrewAI", id:"crewai-agent", mode:"single_agent", eligible:true, status:"COMPLETED", mean:53.9729, min:53.8307, max:54.0777, success:1, selected:129, completed:129, failed:0, evidence:"../crewai-agent/2026-06-29/leaderboard_row.json", dims:{outcome:46.0368, execution:45.0155, orchestration:0, efficiency:97.0928}},
+      {rank:3, subject:"OpenClaw", id:"openclaw-oss-agent", mode:"single_agent", eligible:true, status:"COMPLETED", mean:42.593, min:41.6917, max:43.0632, success:1, selected:129, completed:129, failed:0, evidence:"../openclaw-oss-agent/2026-06-28/leaderboard_row.json", dims:{outcome:40.2372, execution:35.7829, orchestration:0, efficiency:57.0743}},
+      {rank:4, subject:"Claude", id:"claude-code", mode:"single_agent", eligible:false, status:"DIAGNOSTIC", mean:42.1808, min:41.7902, max:42.62, success:0.9922, selected:129, completed:128, failed:1, evidence:"../claude-code/2026-06-29/leaderboard_row.json", dims:{outcome:34.1714, execution:27.6636, orchestration:0, efficiency:90.8612}},
+      {rank:5, subject:"Hermes", id:"hermes-agent", mode:"single_agent", eligible:false, status:"DIAGNOSTIC", mean:40.1049, min:39.3803, max:40.909, success:0.9612, selected:129, completed:124, failed:5, evidence:"../hermes-agent/2026-06-28/leaderboard_row.json", dims:{outcome:35.92, execution:23.7729, orchestration:0, efficiency:74.6772}},
+      {rank:6, subject:"OpenManus", id:"openmanus-agent", mode:"single_agent", eligible:true, status:"COMPLETED", mean:34.8078, min:34.4889, max:35.2167, success:1, selected:129, completed:129, failed:0, evidence:"../openmanus-agent/2026-06-29/leaderboard_row.json", dims:{outcome:24.131, execution:24.3446, orchestration:0, efficiency:87.7757}},
+      {rank:7, subject:"Goose", id:"goose-agent", mode:"single_agent", eligible:true, status:"COMPLETED", mean:33.1491, min:32.9373, max:33.3654, success:1, selected:129, completed:129, failed:0, evidence:"../goose-agent/2026-06-29/leaderboard_row.json", dims:{outcome:33.6964, execution:6.5194, orchestration:0, efficiency:59.8964}}
+    ];
+
+    const scale = {min: 30, max: 100};
+    function score(value) {
+      return Number(value || 0).toFixed(2);
+    }
+    function pct(value) {
+      return `${(Number(value || 0) * 100).toFixed(1)}%`;
+    }
+    function intervalPercent(value) {
+      const number = Number(value || 0);
+      return Math.max(0, Math.min(100, ((number - scale.min) / (scale.max - scale.min)) * 100));
+    }
+    function interval(row) {
+      const start = intervalPercent(row.min);
+      const end = intervalPercent(row.max);
+      const marker = intervalPercent(row.mean);
+      return `
+        <div class="score-interval" title="${score(row.min)} - ${score(row.max)}">
+          <div class="score-interval-track">
+            <span class="score-interval-range" style="left:${start}%;width:${Math.max(end - start, 1)}%"></span>
+            <span class="score-interval-cap is-min" style="left:${start}%"></span>
+            <span class="score-interval-cap is-max" style="left:${end}%"></span>
+            <span class="score-interval-marker" style="left:${marker}%"></span>
+          </div>
+          <div class="score-interval-axis"><span>30</span><span>65</span><span>100</span></div>
+        </div>`;
+    }
+
+    document.getElementById("scoreRows").innerHTML = rows.map(row => `
+      <div class="leaderboard-score-row ${row.eligible ? "is-official" : "is-diagnostic"}">
+        <div class="leaderboard-rank-medal"><span>#${row.rank}</span></div>
+        <div class="leaderboard-agent-identity">
+          <strong>${row.subject}</strong>
+          <span>${row.mode}</span>
+          <div class="leaderboard-agent-tags">
+            <span class="${row.eligible ? "" : "is-diagnostic"}">${row.eligible ? "Official" : "Diagnostic"}</span>
+            <span>${row.status}</span>
+          </div>
+        </div>
+        ${interval(row)}
+        <div class="leaderboard-mean-score">
+          <strong>${score(row.mean)}</strong>
+          <span>range ${score(row.min)} - ${score(row.max)} · success ${pct(row.success)}</span>
+        </div>
+        <a class="leaderboard-agent-action" href="${row.evidence}">Inspect</a>
+      </div>
+    `).join("");
+
+    const topAgent = rows[0];
+    const dimensions = [
+      ["outcome", "Outcome", "Answer accuracy, business conclusion, and boundary handling"],
+      ["execution", "Execution", "Tool, skill, data source, and evidence execution quality"],
+      ["orchestration", "Orchestration", "Task decomposition, multi-agent collaboration, and evidence organization"],
+      ["efficiency", "Efficiency", "Latency and token cost normalized performance"]
+    ];
+    document.getElementById("dimensionTiles").innerHTML = dimensions.map(([key, name, desc]) => {
+      const value = topAgent.dims[key] || 0;
+      return `
+        <article class="leaderboard-dimension-tile">
+          <div class="leaderboard-dimension-head">
+            <span>${name}</span>
+            <strong>${score(value)}</strong>
+          </div>
+          <div class="leaderboard-mini-track"><span style="width:${Math.max(0, Math.min(value, 100))}%"></span></div>
+          <div class="leaderboard-dimension-meta">
+            <span>score ${score(value)}</span>
+            <span>score</span>
+            <span class="wide">${desc}</span>
+          </div>
+        </article>
+      `;
+    }).join("");
+  </script>
+</body>
+</html>

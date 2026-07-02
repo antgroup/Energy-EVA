@@ -1,0 +1,16 @@
+{
+  "excluded": [
+    {
+      "exclusionReason": "failed, timed-out, or incomplete cases exist",
+      "failedCases": 5.0,
+      "incompleteCases": 0.0,
+      "runId": "hermes-agent-power-trade-standard-v1-final",
+      "scoreInterval": "[39.3803, 40.9090]",
+      "status": "DIAGNOSTIC",
+      "subject": "Hermes Agent",
+      "subjectId": "hermes-agent",
+      "totalScore": 40.1049
+    }
+  ],
+  "rows": []
+}

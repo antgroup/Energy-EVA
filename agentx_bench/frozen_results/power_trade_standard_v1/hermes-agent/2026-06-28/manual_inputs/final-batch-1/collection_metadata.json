@@ -1,0 +1,31 @@
+{
+  "agentMode": "single_agent",
+  "aggregateRunId": "hermes-agent-power-trade-standard-v1-final",
+  "allRowsSuccessful": false,
+  "baseUrlHost": "aiot-coding-maas.antdigital.com",
+  "batch": "final-batch-1",
+  "caseTimeoutSeconds": 600,
+  "collectionTime": "2026-06-28T21:45:14+08:00",
+  "datasetId": "power_trade_standard_v1",
+  "datasetVersion": "v1",
+  "failurePolicy": "Final Hermes benchmark package contains the complete selected case rows. Terminal TIMEOUT or FAILED rows are retained in the selected-case denominator and scored as 0 by AgentX Bench.",
+  "hermesVersion": "0.17.0",
+  "maxAttemptsPerCase": 1,
+  "maxIterationsPerAttempt": 8,
+  "model": "gpt-5.5",
+  "rowCount": 43,
+  "secretsPersisted": false,
+  "selectedCaseCount": 43,
+  "statusCounts": {
+    "SUCCESS": 42,
+    "TIMEOUT": 1
+  },
+  "subjectId": "hermes-agent",
+  "subjectName": "Hermes Agent",
+  "subjectType": "hermes_agent",
+  "toolsets": [
+    "web",
+    "browser"
+  ],
+  "workers": 4
+}
