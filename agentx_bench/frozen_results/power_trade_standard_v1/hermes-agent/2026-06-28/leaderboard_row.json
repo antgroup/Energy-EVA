@@ -1,0 +1,72 @@
+{
+  "agentMode": "single_agent",
+  "aggregateMethod": "mean_of_replicates",
+  "aggregateRunId": "hermes-agent-power-trade-standard-v1-final",
+  "avgDurationMs": 158407.9633,
+  "completedCases": 124.0,
+  "efficiencyScore": 74.6772,
+  "efficiencyScoreMax": 75.4964,
+  "efficiencyScoreMean": 74.6772,
+  "efficiencyScoreMin": 73.7547,
+  "executionScore": 23.7729,
+  "executionScoreMax": 24.4393,
+  "executionScoreMean": 23.7729,
+  "executionScoreMin": 23.1091,
+  "failedCases": 5.0,
+  "incompleteCases": 0.0,
+  "ineligibleReplicates": [
+    {
+      "index": 1,
+      "reasons": [
+        "status=INCOMPLETE",
+        "leaderboardEligible=false",
+        "traceSuccessCount=42<43"
+      ],
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-1"
+    },
+    {
+      "index": 2,
+      "reasons": [
+        "status=INCOMPLETE",
+        "leaderboardEligible=false",
+        "traceSuccessCount=42<43"
+      ],
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-2"
+    },
+    {
+      "index": 3,
+      "reasons": [
+        "status=INCOMPLETE",
+        "leaderboardEligible=false",
+        "traceSuccessCount=40<43"
+      ],
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-3"
+    }
+  ],
+  "leaderboardEligible": false,
+  "orchestrationScore": 0.0,
+  "orchestrationScoreMax": 0.0,
+  "orchestrationScoreMean": 0.0,
+  "orchestrationScoreMin": 0.0,
+  "outcomeScore": 35.92,
+  "outcomeScoreMax": 36.746,
+  "outcomeScoreMean": 35.92,
+  "outcomeScoreMin": 35.1855,
+  "runCount": 3,
+  "runId": "hermes-agent-power-trade-standard-v1-final",
+  "scoreConfidence": "full",
+  "scoreInterval": "[39.3803, 40.9090]",
+  "selectedCases": 129.0,
+  "status": "DIAGNOSTIC",
+  "subject": "Hermes Agent",
+  "subjectId": "hermes-agent",
+  "subjectType": "hermes_agent",
+  "successRate": 0.9612,
+  "tokenUsage": 919878.0,
+  "totalScore": 40.1049,
+  "totalScoreMax": 40.909,
+  "totalScoreMean": 40.1049,
+  "totalScoreMin": 39.3803,
+  "totalScoreStdDev": 0.7674,
+  "traceEvidenceRequired": true
+}

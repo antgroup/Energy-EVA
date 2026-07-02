@@ -1,0 +1,7 @@
+{
+  "clientRunId": "openmanus-agent-power-trade-standard-v1-final-final-batch-2",
+  "message": "manual import normalized",
+  "status": "COMPLETED",
+  "subjectId": "openmanus-agent",
+  "suiteId": "power_trade_standard_v1"
+}

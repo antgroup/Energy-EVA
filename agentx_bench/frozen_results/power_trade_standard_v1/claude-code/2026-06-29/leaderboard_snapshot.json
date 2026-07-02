@@ -1,0 +1,16 @@
+{
+  "excluded": [
+    {
+      "exclusionReason": "failed, timed-out, or incomplete cases exist",
+      "failedCases": 1.0,
+      "incompleteCases": 0.0,
+      "runId": "claude-code-power-trade-standard-v1-final",
+      "scoreInterval": "[41.7902, 42.6200]",
+      "status": "DIAGNOSTIC",
+      "subject": "Claude Code",
+      "subjectId": "claude-code",
+      "totalScore": 42.1808
+    }
+  ],
+  "rows": []
+}

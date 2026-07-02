@@ -1,0 +1,12 @@
+{
+  "finalBatch": "final-batch-1",
+  "suite": "power_trade_standard_v1",
+  "subjectId": "openclaw-oss-agent",
+  "selectedCaseCount": 43,
+  "successCount": 43,
+  "traceSuccessCount": 43,
+  "metricRows": 43,
+  "caseRetryCount": 0,
+  "sessionPolicy": "fresh OpenClaw session per case; frozen data stores hashed session aliases",
+  "redactionStatus": "no auth tokens, API keys, secret headers, or raw sensitive logs persisted"
+}

@@ -1,0 +1,2821 @@
+{
+  "agentMode": "multi_agent",
+  "avgDurationMs": 640700.0,
+  "caseScores": [
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_001",
+      "caseName": "河南物流园区套餐定制",
+      "caseScore": 84.15,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=10; errors=7; boundary=False; answerLength=1526; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=5; message=5; agentRun=7; errors=7; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=5; message=5; agentRun=7; errors=7; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 1.0,
+            "reasoning.task_completion_quality": 1.0
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=1.00; status=SUCCESS; coverage=0.80; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=1.00; status=SUCCESS; coverage=0.80; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 100.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 1387562.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_002",
+      "caseName": "盘前电力交易简报",
+      "caseScore": 71.65,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=14; errors=28; boundary=True; answerLength=310; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=5; message=5; agentRun=6; errors=28; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=5; message=5; agentRun=6; errors=28; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=FAILED; coverage=0.05; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=FAILED; coverage=0.05; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "风控检查无法完成：必填输入缺失。具体缺失项：1) load_forecast（负荷预测数据）— 私有数据采集阶段确认无用户上传私有数据文件，无负荷预测数据落库；2) bid_curve（日前申报曲线）— 策略生成任务因私有数据缺失降级运行，未生成完整日前申报曲线。可选数据缺失（导致规则跳过）：持仓分析数据（RC-05/06/07 SKIPPED）、月累计偏差率（RC-04 SKIPPED）、价格预测曲线（RC-05 SKIPPED）。当前已获取：市场分析评分S=2.67/置信度78%/方向震荡、策略评分S=-3.83/方向偏空。建议：补充负荷预测和日前申报曲线数据后重新执行风控检查，或控制层评估是否允许降级跳过。"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "FAILED",
+      "tokenUsage": 7341680.0
+    },
+    {
+      "answerOutcome": "DATA_UNAVAILABLE",
+      "caseId": "power_trade_standard_v1_003",
+      "caseName": "江苏竞价空间数据",
+      "caseScore": 83.0109,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.5511,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.9583
+          },
+          "reasons": {
+            "skill.execution_quality": "Current metricCode is skill.execution_quality, dimension SKILL. The target SKILL_CALL units all have clear path inputs, SUCCESS status, non-empty structured skill outputs, and the FINAL_OUTPUT correctly carries forward the observed execution results: 江苏 2026-06-23 bidding_space returned PROVINCE_EXPIRED with 0 records, key values unavailable/N/A, boundary explanation, impact, risk, and next actions. The recovered Bash error is shared diagnostic context and did not create an observable contradiction in the final skill-consumed result."
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "Current metricCode is multi_agent.task_decompose_reasonability and dimension is MULTI_AGENT. TASK_DECOMPOSE event EVT_2F47EBF940DF4C7AA5C5C289C5E824D4 decomposed the Jiangsu 2026-06-23 bidding_space query into three appropriately sequenced subtasks: data collection for key auction-space indicators and口径, analysis of key values/trends/time-period supply-demand characteristics, and trading strategy impact assessment. FINAL_OUTPUT event EVT_7E23B7C3DFDA47E488036AD036612DFB reconnects these subtasks through taskResults and summarizes the data-unavailable boundary,口径, strategy impact and next steps. The decomposition is complete, not over-fragmented, and supports a safe degraded path when data is unavailable."
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 1.0,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "Metric reasoning.answer_accuracy / REASONING judged from FINAL_OUTPUT EVT_7E23B7C3DFDA47E488036AD036612DFB. The final answer correctly identifies the 江苏省 2026-06-23 竞价空间查询, states the bidding_space data domain and 日前市场口径, reports the observable unavailability result PROVINCE_EXPIRED with 0 valid records, explicitly says key values such as 申报量、中标量、出清价格、供需比 cannot be obtained, and explains strategy impact, risks, and conservative next actions. This semantically satisfies the expected answer condition that no data must be truthfully explained rather than fabricated.",
+            "reasoning.task_completion_quality": "Metric reasoning.task_completion_quality in REASONING dimension: FINAL_OUTPUT EVT_7E23B7C3DFDA47E488036AD036612DFB responds to the Jiangsu 2026-06-23 bidding-space query, identifies province/date/domain, states that the bidding-space data is unavailable with PROVINCE_EXPIRED and 0 valid records, explains that key values cannot be retrieved, gives data口径/异常说明, discusses strategy impact, risk, and next actions. This substantially completes the task under data unavailability. The main limitation is that it includes concrete generic strategy percentages and price adjustments despite no actual bidding-space data, even though they are framed as a reference framework; this prevents full credit for unsupported quantitative recommendations."
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 41.0684,
+        "execution": 95.83,
+        "orchestration": 60.0,
+        "outcome": 90.0
+      },
+      "durationMs": 362981.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "successful caseRun with useful final output",
+      "status": "SUCCESS",
+      "tokenUsage": 1068547.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_004",
+      "caseName": "新建发电企业注册办理",
+      "caseScore": 64.15,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=1; boundary=True; answerLength=987; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=1; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=1; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.70; domainDensity=1.00; boundary=True; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.70; domainDensity=1.00; boundary=True; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 98647.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_005",
+      "caseName": "进口煤限制放开影响分析",
+      "caseScore": 71.65,
+      "caseType": "scenario_analysis",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=8; errors=12; boundary=True; answerLength=1398; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=12; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=12; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.20; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.20; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 4513628.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_006",
+      "caseName": "储能补贴传言影响分析",
+      "caseScore": 82.9,
+      "caseType": "scenario_analysis",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=6; errors=3; boundary=False; answerLength=2005; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=5; message=5; agentRun=7; errors=3; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=5; message=5; agentRun=7; errors=3; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 1.0,
+            "reasoning.task_completion_quality": 1.0
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=1.00; status=SUCCESS; coverage=0.73; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=1.00; status=SUCCESS; coverage=0.73; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 100.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 1900731.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_007",
+      "caseName": "隔壁省停电跨省交易影响",
+      "caseScore": 71.65,
+      "caseType": "scenario_analysis",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=16; errors=9; boundary=True; answerLength=1313; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=6; message=6; agentRun=8; errors=9; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=6; message=6; agentRun=8; errors=9; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.55; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.55; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 3462336.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_008",
+      "caseName": "夏季高温社交情绪风险",
+      "caseScore": 76.15,
+      "caseType": "scenario_analysis",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=9; errors=5; boundary=False; answerLength=1023; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=5; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=5; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 1.0
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.65; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=1.00; status=SUCCESS; coverage=0.65; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 85.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 1804354.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_009",
+      "caseName": "买卖一价差大卖盘增加",
+      "caseScore": 71.65,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=13; errors=27; boundary=True; answerLength=1439; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=27; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=27; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.80; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.80; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 5282619.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_010",
+      "caseName": "截标前地板价卖单涌现",
+      "caseScore": 82.9,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=10; errors=11; boundary=False; answerLength=905; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=2; dispatch=6; message=6; agentRun=9; errors=11; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=2; dispatch=6; message=6; agentRun=9; errors=11; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 1.0,
+            "reasoning.task_completion_quality": 1.0
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=1.00; status=SUCCESS; coverage=0.80; domainDensity=0.75; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=1.00; status=SUCCESS; coverage=0.80; domainDensity=0.75; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 100.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 2354116.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_011",
+      "caseName": "上午十点成交量达到八成",
+      "caseScore": 72.25,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=11; errors=5; boundary=False; answerLength=770; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=5; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=5; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.60; domainDensity=0.88; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.60; domainDensity=0.88; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 20.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": 925139.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 2480248.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_012",
+      "caseName": "晚高峰成交进度滞后",
+      "caseScore": 83.5,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=8; errors=16; boundary=False; answerLength=1285; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=16; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=16; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 1.0,
+            "reasoning.task_completion_quality": 1.0
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=1.00; status=SUCCESS; coverage=1.00; domainDensity=0.75; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=1.00; status=SUCCESS; coverage=1.00; domainDensity=0.75; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 20.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 100.0
+      },
+      "durationMs": 813655.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 7427035.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_013",
+      "caseName": "大盘偏慢买方主动增强策略",
+      "caseScore": 71.65,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=7; errors=6; boundary=True; answerLength=1361; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=6; message=6; agentRun=8; errors=6; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=6; message=6; agentRun=8; errors=6; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.37; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.37; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 1904028.0
+    },
+    {
+      "answerOutcome": "DATA_UNAVAILABLE",
+      "caseId": "power_trade_standard_v1_014",
+      "caseName": "陕西日前现货申报策略",
+      "caseScore": 62.5,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.0
+          },
+          "reasons": {
+            "skill.execution_quality": "metric score missing; zero by policy"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "当前评估指标为 multi_agent.task_decompose_reasonability，维度为 MULTI_AGENT。证据显示 EVT_D234255A677E4176BA5844EC7A9FA8F8 的任务拆解围绕用户要求的陕西能源售电有限责任公司 2026-06-24 日前现货申报策略，拆出私有数据采集、公共市场数据采集、市场与持仓分析、申报策略生成、风控检查五个子任务，覆盖买卖方向、量价区间、依据、风险和数据边界处理；EVT_0F3C24A0B849453DADF6E82D75F65F91 的最终输出也能回连这些任务结果，说明私有持仓、负荷预测等缺失并给出框架性策略与风控提示。虽然最终输出事件状态为 FAILED，caseScoringContext 标明仍可评分，且该指标关注拆解合理性，拆解本身完整且粒度适中。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 1.0,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "Metric reasoning.answer_accuracy for REASONING: FINAL_OUTPUT EVT_0F3C24A0B849453DADF6E82D75F65F91 identifies the subject 陕西能源售电有限责任公司, date 2026-06-24 and日前现货申报策略意图, provides segmented buy direction and price ranges, states supply-demand, high-temperature load, photovoltaic midday pressure and price forecast rationale, and includes risk constraints. It also explicitly discloses missing private position/contract/load forecast data and that the strategy is framework-level pending supplementation and risk checks. This semantically satisfies the expected answer despite unavailable private/realtime data.",
+            "reasoning.task_completion_quality": "Metric reasoning.task_completion_quality / REASONING: FINAL_OUTPUT in EVT_0F3C24A0B849453DADF6E82D75F65F91 directly responds to the user's request for 陕西能源售电有限责任公司 2026-06-24 日前现货申报策略 by naming the subject/date, giving segmented buy directions and price ranges, explaining supply-demand, photovoltaic and seasonal basis, and listing risks. It also states missing private holdings, long-term contracts, load forecast and wind-control checks, and recommends conservative use before supplementation. However, the concrete price forecasts and all-period buy recommendation are largely framed from trend assumptions with limited available market/private data, so the answer is useful but not fully complete as a precise executable申报方案."
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 20.0,
+        "execution": 0.0,
+        "orchestration": 60.0,
+        "outcome": 90.0
+      },
+      "durationMs": 1258365.0,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "重编排失败: 重编排未产生有效变更，停止重复执行相同失败路径"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "failed runtime status has useful final output",
+      "status": "FAILED",
+      "tokenUsage": 3832020.0
+    },
+    {
+      "answerOutcome": "UNSUPPORTED_CAPABILITY",
+      "caseId": "power_trade_standard_v1_015",
+      "caseName": "上周现货出清电价",
+      "caseScore": 48.2038,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.4346,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.0
+          },
+          "reasons": {
+            "skill.execution_quality": "metric score missing; zero by policy"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "Metric multi_agent.task_decompose_reasonability / MULTI_AGENT: EVT_FECCDFB30CA04221BD5969F8DDAA431E shows a successful TASK_DECOMPOSE with two subtasks: collecting 2026-06-15 to 2026-06-21 spot clearing price data including time periods, price basis and units, then analyzing price trend, key fluctuation periods, price basis, units and key changes. This covers the main user goal with appropriate granularity. EVT_FC16FD469795473F87A9199B3EA94EED shows the final output reconnects the plan to results and explains the data collection boundary, impact on analysis, and next actions. The main limitation is that the decomposition itself did not explicitly include a fallback/boundary-handling or clarification task for unavailable future/permissioned data; that boundary was only handled after collection failed."
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "当前指标为 reasoning.answer_accuracy / REASONING。根据 EVT_FC16FD469795473F87A9199B3EA94EED，最终答案正确识别了现货出清电价查询任务和 2026-06-15 至 2026-06-21 时间范围，并在未取得数据时明确说明所有日期返回 PROVINCE_EXPIRED、未获取任何出清价格数据，避免编造价格；同时说明缺少数据会阻断时段分析、价格口径、单位和关键变化总结，并给出调整日期、确认开放规则、协调数据源等下一步。与 expectedAnswer 的“无数据时说明缺失”基本一致。但答案中将 2026 年 6 月数据不可得的原因表述为“尚未实际发生，或数据权限尚未开放”，其中“尚未实际发生”与用户设定 2026-06-23 为今天、查询 2026-06-15 至 2026-06-21 已过去时段存在事实不严谨，因此未达到完全准确。",
+            "reasoning.task_completion_quality": "Metric reasoning.task_completion_quality / REASONING: FINAL_OUTPUT EVT_FC16FD469795473F87A9199B3EA94EED responds to the clearing price query for 2026-06-15 to 2026-06-21, identifies the spot clearing price data collection target, reports that all daily collection attempts returned PROVINCE_EXPIRED and no price data was obtained, avoids fabricating prices, explains the impact on time-period, price-basis, unit and key-change analysis, and gives conservative next steps. It does not complete the requested price table/period/unit/key changes because no data was available, and it includes a questionable explanation that the period may not have occurred despite the case assumption that 2026-06-23 is today, so task completion is useful but not complete."
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 34.0752,
+        "execution": 0.0,
+        "orchestration": 45.0,
+        "outcome": 75.0
+      },
+      "durationMs": 441654.0,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "依赖任务 t_cbf3330198474641 采集失败：江苏省电力交易平台对2026-06-15至2026-06-21所有日期返回PROVINCE_EXPIRED错误，未能获取任何现货出清电价数据。缺少分析所需的全部基础数据（逐日出清电价），无法完成时段分析、价格波动识别、价格口径说明和关键变化总结。建议控制层协调数据源或调整标的日期范围为已开放查询的时段。"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "failed runtime status has useful final output",
+      "status": "FAILED",
+      "tokenUsage": 953740.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_016",
+      "caseName": "陕西昨日申报负荷曲线",
+      "caseScore": 69.15,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=4; errors=2; boundary=False; answerLength=1356; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 1.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=1.00; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=1.00; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.5,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.50; status=SUCCESS; coverage=0.30; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.20; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.30; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.20; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 100.0,
+        "outcome": 60.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 855156.0
+    },
+    {
+      "answerOutcome": "DATA_UNAVAILABLE",
+      "caseId": "power_trade_standard_v1_017",
+      "caseName": "陕西上周现货价差",
+      "caseScore": 69.9097,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.5591,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.8333
+          },
+          "reasons": {
+            "skill.execution_quality": "Current metricCode is skill.execution_quality and dimension is SKILL. The three target SKILL_CALL units all have SUCCESS status and bounded summaries. The leader skill produced a usable orchestration plan for collecting Shaanxi day-ahead and real-time clearing prices and analyzing spreads. The worker executor accepted a clear assigned task and delegated toward collect-exec, but its own observable output is mostly a handoff rather than a complete reusable result. The collect-exec path ultimately produced a useful data-boundary outcome: Shaanxi 610000 clearing_price data for 2026-06-15 to 2026-06-21 could not be collected because the account only had Jiangsu 320000 permission, and FINAL_OUTPUT correctly consumed that boundary by asking for Shaanxi permission, an authorized account, or acceptance of alternate province data. This supports a high but not perfect skill execution quality score because the requested price/spread table was not produced and one wrapper skill result was only partially substantive."
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 1.0,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "Current metricCode is multi_agent.collaboration_quality, dimension MULTI_AGENT. Evidence shows a closed collaboration chain: leader planned collector and analysis work in EVT_BDF10B04C10E4DA482E46105F1D1FEA0, task decomposition captured data collection and downstream spread analysis in EVT_53B99EB43D3148B88155D33518B12648, dispatch sent the collection task to collector-agent in EVT_EFEF2B14A5EB4C9AAE7E9EDCEDD7F75D, collector execution and message returned the concrete data-permission boundary and suggested permission/account remedies in EVT_570C9B37F6A84E3E95EED405D9F054FA and EVT_0950BB0621914799BF25407EF6CEFFA6, leader replanning preserved that boundary and converted it to clarification in EVT_F14020EB68344A949BF8BAF57D23F430, and final output in EVT_6D9A838522514236A04A6E5607F10264 summarized the specific missing陕西权限, business-blocking data scope, and next options. Although raw FINAL_OUTPUT status is FAILED, caseScoringContext is SCORABLE and the observable collaboration result is a safe data-boundary clarification rather than an unsupported price answer.",
+            "multi_agent.task_decompose_reasonability": "当前指标为 multi_agent.task_decompose_reasonability，维度为 MULTI_AGENT。EVT_53B99EB43D3148B88155D33518B12648 的任务拆解将用户关于 2026-06-15 至 2026-06-21 陕西现货日前价、实时价及价差、汇总和关键时段的目标拆为数据采集与价差/关键时段分析两个子任务，覆盖核心业务目标且粒度适中。EVT_6D9A838522514236A04A6E5607F10264 的最终输出说明因仅有江苏权限而无法获取陕西数据，并提出开通陕西权限、提供有权限账号或接受替代省份示例的澄清路径，能部分回连到采集数据边界。但原始拆解未显式包含权限校验、数据不可得时的边界说明或澄清/降级分析子任务，因此未达到完全闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.5,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "当前指标为 reasoning.answer_accuracy。证据 EVT_6D9A838522514236A04A6E5607F10264 显示最终输出没有返回 expectedAnswer 要求的 2026-06-15 至 2026-06-21 陕西日前价、实时价、价差、统计口径、均值或极值及关键时段；但它明确说明账号仅具备江苏数据权限、无法采集陕西现货日前与实时出清价格，并提出开通陕西权限、提供陕西权限账号或接受有权限省份替代示例的下一步，避免了编造数据。因此属于部分满足：正确索要关键证据并说明数据边界，但缺少业务影响、方向性判断、统计框架和完整分析。",
+            "reasoning.task_completion_quality": "当前指标为 reasoning.task_completion_quality，维度 REASONING。FINAL_OUTPUT 未返回陕西 2026-06-15 至 2026-06-21 的日前价、实时价、价差汇总和关键时段，但明确说明因当前采集平台账号仅具备江苏省数据权限，无法采集陕西省现货日前与实时出清价格数据，并提出开通陕西权限、提供具备陕西权限账号或接受有权限省份同期替代示例的下一步。因此在数据不可用场景下，输出对任务有实际帮助，边界和可执行下一步较清楚，但未补充原时间范围、单位/统计口径要求以及缺失数据对价差汇总和关键时段识别的业务影响，不能评为完全完成。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 41.5439,
+        "execution": 83.33,
+        "orchestration": 85.0,
+        "outcome": 60.0
+      },
+      "durationMs": 357631.0,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "当前采集平台账号仅具备江苏省(320000)数据权限，无法采集陕西省(610000)现货日前与实时出清价格数据。请问：1）是否可以开通陕西省份数据采集权限？2）或者是否可以提供具备陕西权限的独立采集账号？3）如果无法开通陕西权限，是否可以接受用江苏省或其他有权限省份的同期数据作为替代示例？"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "failed runtime status has useful final output",
+      "status": "FAILED",
+      "tokenUsage": 999690.0
+    },
+    {
+      "answerOutcome": "DATA_UNAVAILABLE",
+      "caseId": "power_trade_standard_v1_018",
+      "caseName": "今日全省开停机情况",
+      "caseScore": 47.5,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.0
+          },
+          "reasons": {
+            "skill.execution_quality": "metric score missing; zero by policy"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "Current metric is multi_agent.task_decompose_reasonability for MULTI_AGENT. EVT_2E6B098DD9ED4088968758A76FD7588C decomposed the user goal into collecting 2026-06-23全省机组开停机数据 by type/capacity and analyzing supply-demand and price impact, which directly covers the core request. It also assigned downstream analysis agents and the final output EVT_E269B171271245D88D545C84F779581C reconnects the collected-data limitation and market impact analysis. However, the plan over-expanded into持仓分析、日前申报策略、风控检查, which were not requested, and the data-boundary fallback was not explicitly planned as a separate clarification or degradation task even though the final output later explains the missing专项API and uses alternative data."
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "Metric reasoning.answer_accuracy / REASONING: FINAL_OUTPUT EVT_E269B171271245D88D545C84F779581C correctly recognizes the 2026-06-23 province-wide unit start/stop status request and explicitly states that the current platform cannot provide the specialized unit start/stop list or capacity aggregation by unit type. It avoids fabricating unit status data and gives indirect supply-demand and price impact analysis using renewable output, bidding space, clearing price, load, reserve and other public data. However, it does not return actual start/stop counts, capacities, or unit-type summaries, and includes substantial trading/position/strategy content outside the expected answer, so it is useful but not fully complete.",
+            "reasoning.task_completion_quality": "Metric reasoning.task_completion_quality evaluates whether the final output completed the original task. The FINAL_OUTPUT event EVT_E269B171271245D88D545C84F779581C correctly identifies the requested 2026-06-23 provincial unit start/stop status task, explicitly states that dedicated unit start/stop data by unit type and capacity is unavailable in the current platform/API, avoids fabricating unit-status facts, and provides substitute supply-demand and price-impact analysis using renewable output, bidding space, clearing price, load, reserve and other market data. However, it does not actually return the requested open/stop unit counts or capacity summaries by type/capacity, and it includes substantial extra position/strategy content outside the core request, so completion is useful but incomplete."
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 20.0,
+        "execution": 0.0,
+        "orchestration": 45.0,
+        "outcome": 75.0
+      },
+      "durationMs": 1142728.0,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "重编排失败: Leader重编排输出为空"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "failed runtime status has useful final output",
+      "status": "FAILED",
+      "tokenUsage": 4195506.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_019",
+      "caseName": "后天气象情况",
+      "caseScore": 76.25,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=3; errors=2; boundary=False; answerLength=1146; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 1.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=1.00; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=1.00; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.40; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.40; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 0.0,
+        "execution": 75.0,
+        "orchestration": 100.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": null
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_020",
+      "caseName": "跨省绿电交易规则",
+      "caseScore": 64.15,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=1; boundary=True; answerLength=1064; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=1; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=1; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.70; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.70; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 123801.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_021",
+      "caseName": "年用电量500万kWh用户入市",
+      "caseScore": 64.15,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=0; boundary=False; answerLength=926; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=0; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=0; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.60; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.60; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 72055.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_022",
+      "caseName": "前天现货复盘",
+      "caseScore": 71.65,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=6; errors=4; boundary=True; answerLength=853; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=4; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=4; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.40; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.40; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 1906339.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_023",
+      "caseName": "明天全省电源预测总出力",
+      "caseScore": 77.5256,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2919,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=5; errors=2; boundary=False; answerLength=1127; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 1.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=1.00; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=1.00; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.60; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.60; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 25.5112,
+        "execution": 75.0,
+        "orchestration": 100.0,
+        "outcome": 75.0
+      },
+      "durationMs": 537999.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 970614.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_024",
+      "caseName": "2025年绿电交易价格机制",
+      "caseScore": 76.65,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=0; boundary=False; answerLength=834; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=0; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=0; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 1.0,
+            "reasoning.task_completion_quality": 1.0
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=1.00; status=SUCCESS; coverage=0.80; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.80; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=1.00; status=SUCCESS; coverage=0.80; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.80; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 100.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 121886.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_025",
+      "caseName": "跨省绿电安全校核流程",
+      "caseScore": 64.15,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=0; boundary=True; answerLength=816; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=0; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=0; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.60; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.60; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 71462.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_026",
+      "caseName": "光储充消防标准",
+      "caseScore": 49.15,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=2; boundary=False; answerLength=1226; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=2; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=2; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.25,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.25; status=SUCCESS; coverage=0.10; domainDensity=0.25; boundary=False; specificBoundary=False; actionability=0.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.10; domainDensity=0.25; boundary=False; specificBoundary=False; actionability=0.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 45.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 238426.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_027",
+      "caseName": "浙江峰谷价差与工商业储能投资",
+      "caseScore": 78.75,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.0
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=5; errors=0; boundary=False; answerLength=2465; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 1.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=1.00; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=0; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=1.00; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=0; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.40; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.40; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 0.0,
+        "execution": 75.0,
+        "orchestration": 100.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": null
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_028",
+      "caseName": "实时电价查询",
+      "caseScore": 74.15,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=3; errors=1; boundary=False; answerLength=356; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=1; message=1; agentRun=3; errors=1; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=1; message=1; agentRun=3; errors=1; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 1.0,
+            "reasoning.task_completion_quality": 0.5
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=1.00; status=SUCCESS; coverage=0.80; domainDensity=0.88; boundary=False; specificBoundary=False; actionability=0.20; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.50; status=SUCCESS; coverage=0.80; domainDensity=0.88; boundary=False; specificBoundary=False; actionability=0.20; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 80.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 405111.0
+    },
+    {
+      "answerOutcome": "DATA_UNAVAILABLE",
+      "caseId": "power_trade_standard_v1_029",
+      "caseName": "上个月电价查询",
+      "caseScore": 55.6845,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.8865,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.625
+          },
+          "reasons": {
+            "skill.execution_quality": "Current metricCode is skill.execution_quality, dimension SKILL. The two target Skill calls both have SUCCESS status and bounded summaries. EVT_BD7D594E908C4BE6901EB05B901E6873 produced a usable orchestration plan that correctly recognized the May 2026 electricity price query and separated collection, analysis, and summary tasks, with recovery after an initial record schema error. EVT_C2400F077D104C54AF64D049C7797BB8 identified the collector failure and attempted replan, but the replan reused the same failed path and did not produce an effective alternative, which is reflected in FINAL_OUTPUT EVT_2F4F41CEF2ED4AFFA8758538D51DA0B3. Final output correctly consumed the available skill/runtime result by explaining the failed collection, blocked downstream analysis, and next actions, but no actual price summary was produced."
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "当前指标为 multi_agent.task_decompose_reasonability，维度 MULTI_AGENT。EVT_66FC594BA4394E4D90B4DCC7B064C882 的任务拆解将用户目标拆为采集2026年5月日前/实时电价数据、基于数据计算关键价差与趋势、生成结构化汇总报告三项，覆盖了时间范围、日前价格、实时价格、价差和汇总要求，粒度适中且依赖关系清晰。EVT_2F4F41CEF2ED4AFFA8758538D51DA0B3 的最终输出虽然因采集工具问题未完成业务结果，但能回连并说明三个子任务的执行状态和中断原因；该失败不构成本指标下的任务拆解缺陷。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.5,
+            "reasoning.task_completion_quality": 0.5
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "针对 metricCode=reasoning.answer_accuracy，证据 EVT_2F4F41CEF2ED4AFFA8758538D51DA0B3 显示最终答案识别了查询目标为以2026-06-23为基准查询2026年5月电价，并提到区分日前、实时和价差；在未取得数据时说明了采集失败、未产出有效数据并给出重新确认/确保数据入库的下一步。但答案没有给出日前价、实时价和关键价差的任何汇总、趋势、关键时段、单位、市场或统计口径；且将2026年5月称为相对2026-06-23的未来日期，存在关键事实错误。因此仅部分满足期望答案。",
+            "reasoning.task_completion_quality": "Metric reasoning.task_completion_quality in REASONING dimension: FINAL_OUTPUT EVT_2F4F41CEF2ED4AFFA8758538D51DA0B3 correctly restates the user goal to query 2026年5月 electricity prices with day-ahead, real-time and key spread separation, and explains that no effective data was produced. It gives a data/tool boundary and suggests ensuring data availability before rerun. However, it does not provide the requested price summary, trends, key periods, units, market/statistical口径, and it also introduces a questionable statement that 2026年5月 is a future date despite the case specifying 2026-06-23 as today. This is a partial task outcome rather than a complete answer."
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 61.1909,
+        "execution": 62.5,
+        "orchestration": 60.0,
+        "outcome": 50.0
+      },
+      "durationMs": 136602.0,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "重编排失败: 重编排未产生有效变更，停止重复执行相同失败路径"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "failed runtime status has useful final output",
+      "status": "FAILED",
+      "tokenUsage": 244045.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_030",
+      "caseName": "明天电价预测",
+      "caseScore": 71.65,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=5; errors=4; boundary=True; answerLength=65; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=1; message=1; agentRun=3; errors=4; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=1; message=1; agentRun=3; errors=4; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=FAILED; coverage=0.00; domainDensity=0.25; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=FAILED; coverage=0.00; domainDensity=0.25; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "请提供您的私有数据（持仓头寸/能量块成交记录/储能充放电计划），以Excel附件上传或Markdown表格形式提供。"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "FAILED",
+      "tokenUsage": 459891.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_031",
+      "caseName": "电价上涨原因分析",
+      "caseScore": 72.25,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=5; errors=2; boundary=True; answerLength=1777; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.70; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.70; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 20.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": 885259.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 1560304.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_032",
+      "caseName": "选择最省钱用电套餐",
+      "caseScore": 62.9,
+      "caseType": "robustness",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=0; boundary=True; answerLength=80; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=0; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=0; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.60; domainDensity=0.50; boundary=True; specificBoundary=True; actionability=0.40; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.60; domainDensity=0.50; boundary=True; specificBoundary=True; actionability=0.40; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 71124.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_033",
+      "caseName": "账单分析与套餐推荐",
+      "caseScore": 64.15,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=2; boundary=True; answerLength=207; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=2; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=2; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.60; domainDensity=0.62; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.60; domainDensity=0.62; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 121634.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_034",
+      "caseName": "今日盘前交易简报",
+      "caseScore": 71.65,
+      "caseType": "business_answer",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=2; errors=4; boundary=True; answerLength=111; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=1; message=1; agentRun=3; errors=4; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=1; message=1; agentRun=3; errors=4; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=FAILED; coverage=0.20; domainDensity=0.38; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=FAILED; coverage=0.20; domainDensity=0.38; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "请提供2026-06-23日前交易相关的私有数据文件（Excel/JSON均可），包括：1）历史申报记录；2）机组运行状态数据；3）可用容量约束配置；4）场站运维信息。提供数据后我将恢复执行盘前简报生成流程。"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "FAILED",
+      "tokenUsage": 320540.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_035",
+      "caseName": "大丰风电场功率预测",
+      "caseScore": 77.7208,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.3569,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=4; errors=2; boundary=False; answerLength=973; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 1.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=1.00; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=1.00; taskDecompose=1; dispatch=2; message=2; agentRun=4; errors=2; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.70; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.40; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.70; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=0.40; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 29.4164,
+        "execution": 75.0,
+        "orchestration": 100.0,
+        "outcome": 75.0
+      },
+      "durationMs": 494066.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 961098.0
+    },
+    {
+      "answerOutcome": "DATA_UNAVAILABLE",
+      "caseId": "power_trade_standard_v1_036",
+      "caseName": "威海光伏站现货申报策略",
+      "caseScore": 49.0,
+      "caseType": "strategy_advice",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.0
+          },
+          "reasons": {
+            "skill.execution_quality": "metric score missing; zero by policy"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "Current metricCode is multi_agent.task_decompose_reasonability in MULTI_AGENT dimension. EVT_4FFFE312233640BCA40AD5EF83E0CEC4 decomposed the user's Weihai PV station 2026-06-24 day-ahead spot declaration strategy request into appropriately scoped subtasks covering private PV forecast and station constraints, public market data including price/weather/load, market and position analysis including deviation risk, 96-point declaration strategy generation, and risk control. EVT_744E97BD70B148F48B9E9109EE5355C4 shows the final output maps back to these subtasks and explains data and infrastructure blockers. The runtime strategy failure does not indicate an unreasonable decomposition for this metric."
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.5,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "For metric reasoning.answer_accuracy, EVT_744E97BD70B148F48B9E9109EE5355C4 shows the final answer correctly identifies the Weihai PV station, target date 2026-06-24, day-ahead spot declaration context, and explains concrete blockers: station PV forecast not yet available, holding/position analysis degraded, and strategy generation blocked by database connectivity. It avoids fabricating quantities or prices and gives operational next steps. However, compared with the expected answer, it does not provide a usable time-segment declaration quantity, price range, conservative trading boundary, or substantive deviation-risk strategy; it is mainly an execution/blocker summary rather than the requested spot-market declaration strategy.",
+            "reasoning.task_completion_quality": "Metric reasoning.task_completion_quality / REASONING: FINAL_OUTPUT EVT_744E97BD70B148F48B9E9109EE5355C4 correctly identifies the user task context as 威海光伏站 2026-06-24 日前现货申报策略, reports collected public market scopes, states private photovoltaic forecast data is unavailable for the future target date, explains that strategy generation is blocked by database connectivity, and gives concrete next actions to restore DB access and rerun after data opens. It does not deliver the expected分时申报电量、报价区间、完整电价/偏差风险策略, so the task is not fully completed, but the data boundary and executable recovery path make it practically useful."
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 20.0,
+        "execution": 0.0,
+        "orchestration": 60.0,
+        "outcome": 60.0
+      },
+      "durationMs": 940580.0,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "重编排失败: 重编排未产生有效变更，停止重复执行相同失败路径"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "failed runtime status has useful final output",
+      "status": "FAILED",
+      "tokenUsage": 2877423.0
+    },
+    {
+      "answerOutcome": "DATA_UNAVAILABLE",
+      "caseId": "power_trade_standard_v1_037",
+      "caseName": "浙江未来两天日前现货电价预测",
+      "caseScore": 69.25,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "metricCode=skill.execution_quality, dimension=SKILL. Five target SKILL_CALL units all have SUCCESS status and the FINAL_OUTPUT consumes their results: leader planned a complex multi-worker workflow, collection reported the exact target dates and data scopes with 0 records due future/publication limits, analysis/risk outputs were summarized with data-availability boundaries, and final output reflected the unavailable data, driver factors, YELLOW risk status, and rerun recommendation. Quality is useful but not complete because the expected hourly curve/price bands are not evidenced and some execution paths relied on fallback handling rather than fully structured skill outputs."
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "当前 metricCode 为 multi_agent.task_decompose_reasonability，维度为 MULTI_AGENT。EVT_34F406A89C104D308DAA0AC0ABA78E29 的 TASK_DECOMPOSE 将用户关于浙江省 2026-06-24 至 2026-06-25 日前现货电价预测曲线及主要驱动因素的目标拆为数据采集、预测曲线与驱动因素分析、风控检查三个子任务，覆盖日期、省份、日前现货预测、逐小时曲线、负荷/天气/新能源/省外送电/燃料成本等驱动因素和风险约束，粒度适中。EVT_B686BBB92E8E405386BC95D263E8C148 的 FINAL_OUTPUT 能回连这些子任务，说明采集为空的数据边界、领域知识降级分析、风险提示和重新运行建议，因此任务拆解合理完整。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "当前指标为 reasoning.answer_accuracy / REASONING。FINAL_OUTPUT EVT_B686BBB92E8E405386BC95D263E8C148 正确识别浙江省 2026-06-24 至 2026-06-25 日前现货电价预测任务，说明了未来日期数据未发布、采集为空的证据边界，列出负荷、新能源、省外送电、燃料成本、备用需求等主要驱动因素，并提示不宜直接用于日前申报、需在数据发布窗口重新运行。与 expectedAnswer 相比，核心方向和风险边界基本覆盖，但可见最终答案未充分给出分时预测曲线或关键时段价格区间，因此未达到完全满足。",
+            "reasoning.task_completion_quality": "Metric reasoning.task_completion_quality in REASONING dimension: the FINAL_OUTPUT EVT_B686BBB92E8E405386BC95D263E8C148 correctly recognizes the Zhejiang day-ahead spot price forecast task for 2026-06-24 to 2026-06-25, explains data unavailability, names relevant missing data scopes, provides driver analysis and risk boundary, and gives a conservative next action to rerun when data is published. It does not clearly provide an actual hourly forecast curve or key time-period price range in the observable summarized evidence, so task completion is useful but not complete."
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 20.0,
+        "execution": 75.0,
+        "orchestration": 60.0,
+        "outcome": 75.0
+      },
+      "durationMs": 672437.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "successful caseRun with useful final output",
+      "status": "SUCCESS",
+      "tokenUsage": 1118540.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_038",
+      "caseName": "代理售电负荷预测",
+      "caseScore": 62.9,
+      "caseType": "robustness",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=3; boundary=True; answerLength=217; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=3; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=3; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.65; domainDensity=0.75; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.65; domainDensity=0.75; boundary=True; specificBoundary=True; actionability=0.60; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 149342.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_039",
+      "caseName": "后天全省光伏风电预测",
+      "caseScore": 71.65,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=5; errors=4; boundary=False; answerLength=1584; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=4; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=4; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.53; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.53; domainDensity=1.00; boundary=False; specificBoundary=False; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 8.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": null,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 1218092.0
+    },
+    {
+      "answerOutcome": "CLARIFICATION_NEEDED",
+      "caseId": "power_trade_standard_v1_040",
+      "caseName": "江苏能量块后天预测",
+      "caseScore": 35.848,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.4827,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.0
+          },
+          "reasons": {
+            "skill.execution_quality": "metric score missing; zero by policy"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "当前指标为 multi_agent.task_decompose_reasonability，维度 MULTI_AGENT。EVT_D6D651E11E8B4552939608203E6DD65B 的 TASK_DECOMPOSE 将江苏省 2026-06-25 能量块预测目标拆成私有数据采集、公共市场数据采集、市场和持仓分析、能量块策略生成、风控检查，覆盖价格或电量区间、关键时段、交易风险和数据边界处理，粒度总体合理。EVT_C8B964C69BB44D6AB27EFA3CCCBD228E 的最终输出仅以澄清方式要求用户提供私有数据，能回连到补证路径，但未把完整子任务链或可降级分析路径进一步汇总给用户，因此按 0.75 桶评价。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.5,
+            "reasoning.task_completion_quality": 0.5
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "For metric reasoning.answer_accuracy, the FINAL_OUTPUT in EVT_C8B964C69BB44D6AB27EFA3CCCBD228E correctly recognizes an energy-block prediction flow is blocked by missing private inputs and asks for specific data types, but it does not cover the expected Jiangsu 2026-06-25 forecast substance: no predicted price/electricity interval, no key periods, and no trading risk or business-impact explanation. It avoids fabricated numbers, so it is partially useful rather than incorrect.",
+            "reasoning.task_completion_quality": "当前 metricCode 为 reasoning.task_completion_quality，维度为 REASONING。用户任务要求以 2026-06-23 为今天，给出江苏省 2026-06-25 能量块预测，并说明预测价格或电量区间、关键时段和交易风险。FINAL_OUTPUT（EVT_C8B964C69BB44D6AB27EFA3CCCBD228E）仅进入澄清状态，要求提供用户负荷预测、合约成交或能量块成交记录，说明当前未检测到附件；它识别了能量块预测需要私有数据，提出了具体数据诉求，但未输出任何价格/电量区间、关键时段、交易风险，也未说明缺失数据对交易判断的业务影响或给出保守可执行的下一步分析路径。因此属于部分完成任务。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 36.9596,
+        "execution": 0.0,
+        "orchestration": 45.0,
+        "outcome": 50.0
+      },
+      "durationMs": 409205.0,
+      "reasons": [
+        "case status is FAILED; scoreEligibility=SCORABLE; metric-derived score used",
+        "请提供以下任一私有数据以继续能量块预测流程：(1) 用户负荷预测数据（96点位Excel文件）；(2) 中长期合约成交数据；(3) 能量块成交记录。当前webchat会话中未检测到用户上传的相关附件文件。"
+      ],
+      "scorableNonSuccess": true,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "failed runtime status has useful final output",
+      "status": "FAILED",
+      "tokenUsage": 859834.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_041",
+      "caseName": "今明两天竞价空间",
+      "caseScore": 72.25,
+      "caseType": "data_query",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=8; errors=21; boundary=True; answerLength=1777; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.75,
+            "multi_agent.task_decompose_reasonability": 0.75
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=21; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.75; taskDecompose=1; dispatch=4; message=4; agentRun=6; errors=21; missingRequiredEvents=无; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.40; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.40; domainDensity=1.00; boundary=True; specificBoundary=True; actionability=1.00; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 20.0,
+        "execution": 75.0,
+        "orchestration": 75.0,
+        "outcome": 75.0
+      },
+      "durationMs": 925668.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 8117098.0
+    },
+    {
+      "answerOutcome": "DATA_UNAVAILABLE",
+      "caseId": "power_trade_standard_v1_042",
+      "caseName": "未来用户预测负荷",
+      "caseScore": 68.4988,
+      "caseType": "robustness",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 0.2829,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.875
+          },
+          "reasons": {
+            "skill.execution_quality": "metricCode=skill.execution_quality, dimension=SKILL. Evidence shows four SKILL_CALL units all completed successfully and FINAL_OUTPUT consumed their results. EVT_2204E2A4CBE64077AD8DC6A6DBAFC4B3 produced a clear COMPLEX route, two-task plan and default口径 after a recovered write-format error. EVT_46158DB0472A44B8B12C6841458638D9 correctly interpreted the collector task and delegated to collect-exec, but its own result was mostly orchestration/tool-call handoff rather than a complete reusable business output. EVT_625BFA8F9AC843AB8015F2FDC8047977 executed the collection path and documented concrete data boundaries: dev environment returned 0 rows, weather API connection refused, and user grouping metadata missing. EVT_96B3BC68B8134D66A07C530B29D03B10 used dependency output to generate a structured load forecast report framework with区域×用户类型×天气情景, 7-day window, curve template, data gaps and next steps. FINAL_OUTPUT EVT_CF02C5D93BE648A98F723CFD9EE8859B correctly reflected these skill results without fabricating load values, marking all numbers待计算 and giving data-source remediation actions."
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.0,
+            "multi_agent.task_decompose_reasonability": 1.0
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "metric score missing; zero by policy",
+            "multi_agent.task_decompose_reasonability": "当前指标为 multi_agent.task_decompose_reasonability，维度为 MULTI_AGENT。EVT_21F072BFEC6E466BB6BF7C949AF9AABF 的任务拆解将用户的未来用户预测负荷需求拆为“采集负荷预测基础数据”和“生成多维度用户预测负荷报告”两个子任务，覆盖未来7天默认时间窗口、区域、用户类型、天气情景、历史负荷、天气预报、用户分群元数据、默认口径和信息缺口说明，粒度适中且无明显过度拆解。EVT_CF02C5D93BE648A98F723CFD9EE8859B 的最终输出回连了 collector-agent 与 analyse-agent 的任务结果，说明 dev 环境数据为空、天气 API 不可用、用户分群缺失，并给出结构化框架、默认口径和下一步补证路径。因此任务拆解完整覆盖用户目标并能支撑数据边界下的安全降级输出。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "当前 metricCode 为 reasoning.answer_accuracy，维度为 REASONING。FINAL_OUTPUT 事件 EVT_CF02C5D93BE648A98F723CFD9EE8859B 识别了用户负荷预测需求，给出 2026-06-24 至 2026-06-30 的默认预测窗口，说明区域/用户类型采用数据源可用维度，并提供区域×用户类型×天气情景的拆分框架、24时段负荷曲线模板、天气情景阈值和数据缺口。由于 dev 环境历史负荷、天气预报、用户分群元数据不可用，答案未编造数值而将数值标注为待计算，并给出切换数据环境、确认口径、补全天气数据等下一步。与 expectedAnswer 的核心方向基本一致，但未产出实际预测曲线数值或可用区间，因此不能评为完全满足。",
+            "reasoning.task_completion_quality": "Metric reasoning.task_completion_quality / REASONING: FINAL_OUTPUT EVT_CF02C5D93BE648A98F723CFD9EE8859B responds to the load-forecast request by recognizing the 2026-06-23 reference date, setting a default 2026-06-24 to 2026-06-30 window, using area × user type × weather-scenario structure, explaining that historical load, weather forecast, and user segmentation data are unavailable, and giving concrete next steps. It does not provide actual forecast values or curves because all numbers are marked '待计算', so task completion is useful but incomplete."
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 24.976,
+        "execution": 87.5,
+        "orchestration": 60.0,
+        "outcome": 75.0
+      },
+      "durationMs": 544020.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "successful caseRun with useful final output",
+      "status": "SUCCESS",
+      "tokenUsage": 1154371.0
+    },
+    {
+      "answerOutcome": "USEFUL_RESULT",
+      "caseId": "power_trade_standard_v1_043",
+      "caseName": "历史用户实际电量",
+      "caseScore": 65.9,
+      "caseType": "robustness",
+      "dimensionDetails": {
+        "efficiency": {
+          "metricScores": {
+            "duration.normalized": 1.0,
+            "token.normalized": 0.2
+          },
+          "reasons": {
+            "duration.normalized": "derived from latencyMs",
+            "token.normalized": "derived from token usage"
+          }
+        },
+        "execution": {
+          "metricScores": {
+            "skill.execution_quality": 0.75
+          },
+          "reasons": {
+            "skill.execution_quality": "skill.execution_quality=0.75; skillCalls=1; errors=1; boundary=True; answerLength=90; missingRequiredEvents=无; 按当前 Skill 执行质量规则，评价 Skill 输出可用性、失败处理和最终输出吸收程度。"
+          }
+        },
+        "orchestration": {
+          "metricScores": {
+            "multi_agent.collaboration_quality": 0.5,
+            "multi_agent.task_decompose_reasonability": 0.5
+          },
+          "reasons": {
+            "multi_agent.collaboration_quality": "multi_agent.collaboration_quality=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=1; missingRequiredEvents=TASK_DECOMPOSE,TASK_DISPATCH,MESSAGE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。",
+            "multi_agent.task_decompose_reasonability": "multi_agent.task_decompose_reasonability=0.50; taskDecompose=0; dispatch=0; message=0; agentRun=1; errors=1; missingRequiredEvents=TASK_DECOMPOSE; 按当前多 Agent 规则，评价拆解、分发、通信、执行和最终输出是否形成闭环。"
+          }
+        },
+        "outcome": {
+          "metricScores": {
+            "reasoning.answer_accuracy": 0.75,
+            "reasoning.task_completion_quality": 0.75
+          },
+          "reasons": {
+            "reasoning.answer_accuracy": "reasoning.answer_accuracy=0.75; status=SUCCESS; coverage=0.10; domainDensity=0.00; boundary=True; specificBoundary=True; actionability=0.40; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。",
+            "reasoning.task_completion_quality": "reasoning.task_completion_quality=0.75; status=SUCCESS; coverage=0.10; domainDensity=0.00; boundary=True; specificBoundary=True; actionability=0.40; missingRequiredEvents=无; 按当前 judge 提示词，优先评价业务语义、数据边界、风险约束和可执行下一步。"
+          }
+        }
+      },
+      "dimensionScores": {
+        "efficiency": 68.0,
+        "execution": 75.0,
+        "orchestration": 50.0,
+        "outcome": 75.0
+      },
+      "durationMs": 43911.0,
+      "reasons": [],
+      "scorableNonSuccess": false,
+      "scoreEligibility": "SCORABLE",
+      "scoreEligibilityReason": "existing finalOutputJson is useful for current judge rubric",
+      "status": "SUCCESS",
+      "tokenUsage": 94851.0
+    }
+  ],
+  "clientRunId": "final-batch",
+  "completedCases": 33,
+  "derivedAvailable": 58,
+  "derivedExpected": 86,
+  "derivedMissing": 28,
+  "diagnostics": {
+    "caseRunCount": 43,
+    "failedCaseCount": 0,
+    "latestStatus": {
+      "caseRunCount": 43,
+      "failedCaseCount": 0,
+      "message": "merged from final-batch-1, rerun 003, and clean failed-case reruns",
+      "metricComputed": true,
+      "metricMessage": "merged caseRunCount=43, metricCount=301",
+      "observedAt": "2026-07-01T06:41:51.330047+00:00",
+      "phase": "merged",
+      "selectedCaseCount": 43,
+      "status": "COMPLETED",
+      "submittedCaseCount": 43
+    },
+    "nextActions": [],
+    "selectedCaseCount": 43,
+    "stableForSeconds": null,
+    "status": "COMPLETED",
+    "submittedCaseCount": 43,
+    "warnings": []
+  },
+  "dimensionScores": {
+    "efficiency": 16.6219,
+    "execution": 66.9572,
+    "orchestration": 68.1395,
+    "outcome": 76.0465
+  },
+  "efficiencyScore": 16.6219,
+  "evalRunId": "merged:rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_5A5C9EBB10EA46C1BC5697023784947E,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_6FB53B62349F445AAB006F13DC549E8F,ER_93E18B9C6C3C46E8A47DFBB83D7ADC94,rejudged-final-batch-1-2026-06-30,ER_EBCDCA9546DD44B88D331633B0F553F9,ER_D6297FCC8FBD4B00B791CE50F38ECD37,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_209121B1B8F84862A342AF7C94E26678,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_D087F7311BF04A2C9F16487E38F15977,ER_D2922136BE024015A26D5EA813D8A7FD,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_5767FD0F30AF4760BB8673FDD93D84D6,rejudged-final-batch-1-2026-06-30,ER_6270AD40C08647A6B8DAB207E9FEB959,rejudged-final-batch-1-2026-06-30",
+  "evidenceSummary": {
+    "caseResultCount": 43,
+    "eventCount": 1309,
+    "finalAnswerCount": 43,
+    "rawTraceCount": 42,
+    "traceFailedCount": 0,
+    "traceSuccessCount": 71
+  },
+  "executionScore": 66.9572,
+  "failedCases": 10,
+  "formula": "Each metric is normalized to 0..1. Case score is the weighted average of configured dimension scores for the case type. Suite score is the average across all selected cases, so failed, timed-out, incomplete, and metric-missing cases remain in the denominator.",
+  "incompleteCases": 0,
+  "latestStatus": {
+    "caseRunCount": 43,
+    "failedCaseCount": 0,
+    "message": "merged from final-batch-1, rerun 003, and clean failed-case reruns",
+    "metricComputed": true,
+    "metricMessage": "merged caseRunCount=43, metricCount=301",
+    "observedAt": "2026-07-01T06:41:51.330047+00:00",
+    "phase": "merged",
+    "selectedCaseCount": 43,
+    "status": "COMPLETED",
+    "submittedCaseCount": 43
+  },
+  "leaderboardEligible": true,
+  "leaderboardRow": {
+    "agentMode": "multi_agent",
+    "avgDurationMs": 640700.0,
+    "completedCases": 33,
+    "derivedAvailable": 58,
+    "derivedExpected": 86,
+    "derivedMissing": 28,
+    "efficiencyScore": 16.6219,
+    "evalRunId": "merged:rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_5A5C9EBB10EA46C1BC5697023784947E,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_6FB53B62349F445AAB006F13DC549E8F,ER_93E18B9C6C3C46E8A47DFBB83D7ADC94,rejudged-final-batch-1-2026-06-30,ER_EBCDCA9546DD44B88D331633B0F553F9,ER_D6297FCC8FBD4B00B791CE50F38ECD37,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_209121B1B8F84862A342AF7C94E26678,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_D087F7311BF04A2C9F16487E38F15977,ER_D2922136BE024015A26D5EA813D8A7FD,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_5767FD0F30AF4760BB8673FDD93D84D6,rejudged-final-batch-1-2026-06-30,ER_6270AD40C08647A6B8DAB207E9FEB959,rejudged-final-batch-1-2026-06-30",
+    "executionScore": 66.9572,
+    "failedCases": 10,
+    "incompleteCases": 0,
+    "leaderboardEligible": true,
+    "orchestrationScore": 68.1395,
+    "outcomeScore": 76.0465,
+    "qualityExpected": 215,
+    "qualityMissing": 0,
+    "qualityNotApplicable": 0,
+    "qualityScored": 201,
+    "qualityUnavailable": 14,
+    "routingScore": 0.0,
+    "runId": "final-batch",
+    "runtimeFailedCases": 10,
+    "scorableNonSuccessCases": 10,
+    "scoreConfidence": "limited",
+    "selectedCases": 43,
+    "status": "COMPLETED",
+    "subject": "Energent Swarm",
+    "subjectId": "energent-swarm",
+    "subjectType": "energent_swarm",
+    "successRate": 0.7674,
+    "tokenUsage": 75099524.0,
+    "totalScore": 68.6605,
+    "unscorableFailedCases": 0,
+    "runtimeSuccessCases": 33,
+    "scoredCases": 43
+  },
+  "metricSummary": {
+    "byMetric": {
+      "multi_agent.collaboration_quality": {
+        "scored": 34,
+        "unavailable": 9
+      },
+      "multi_agent.task_decompose_reasonability": {
+        "scored": 43
+      },
+      "openclaw.duration": {
+        "statistic": 43
+      },
+      "openclaw.token_usage": {
+        "statistic": 43
+      },
+      "reasoning.answer_accuracy": {
+        "scored": 43
+      },
+      "reasoning.task_completion_quality": {
+        "scored": 43
+      },
+      "skill.execution_quality": {
+        "scored": 38,
+        "unavailable": 5
+      }
+    },
+    "derivedAvailable": 58,
+    "derivedExpected": 86,
+    "derivedMissing": 28,
+    "outcomes": {
+      "scored": 201,
+      "statistic": 86,
+      "unavailable": 14
+    },
+    "qualityExpected": 215,
+    "qualityMetricCodes": [
+      "reasoning.answer_accuracy",
+      "reasoning.task_completion_quality",
+      "skill.execution_quality",
+      "multi_agent.task_decompose_reasonability",
+      "multi_agent.collaboration_quality"
+    ],
+    "qualityMissing": 0,
+    "qualityNotApplicable": 0,
+    "qualityScored": 201,
+    "qualityUnavailable": 14,
+    "scoreBearingMetricCodes": [
+      "reasoning.answer_accuracy",
+      "reasoning.task_completion_quality",
+      "skill.execution_quality",
+      "multi_agent.task_decompose_reasonability",
+      "multi_agent.collaboration_quality",
+      "duration.normalized",
+      "token.normalized"
+    ],
+    "scoreConfidence": "limited",
+    "totalMetricResults": 301
+  },
+  "orchestrationScore": 68.1395,
+  "outcomeScore": 76.0465,
+  "qualityExpected": 215,
+  "qualityMissing": 0,
+  "qualityNotApplicable": 0,
+  "qualityScored": 201,
+  "qualityUnavailable": 14,
+  "resultCompleteness": {
+    "detailFlags": {
+      "baseFinalBatch": "evaluation_results/agentx/power_trade_standard_v1/energent-swarm/final-batch-1",
+      "includeEvents": true,
+      "includeMetricResults": true,
+      "includeRawTrace": true,
+      "mergedFinalBatch": true
+    },
+    "hasSelectedCaseEcho": true,
+    "hasVolatileRunState": false,
+    "preCaseRunFailuresComplete": true,
+    "selectedCases": 43,
+    "completedCases": 33,
+    "failedCases": 10,
+    "runtimeSuccessCases": 33,
+    "runtimeFailedCases": 10,
+    "scoredCases": 43,
+    "scorableNonSuccessCases": 10,
+    "unscorableFailedCases": 0,
+    "successRate": 0.7674
+  },
+  "routingScore": 0.0,
+  "runId": "final-batch",
+  "runtimeFailedCases": 10,
+  "scorableNonSuccessCases": 10,
+  "scoreConfidence": "limited",
+  "selectedCases": 43,
+  "status": "COMPLETED",
+  "subjectId": "energent-swarm",
+  "subjectName": "Energent Swarm",
+  "subjectType": "energent_swarm",
+  "successRate": 0.7674,
+  "suiteId": "power_trade_standard_v1",
+  "suiteVersion": "v1",
+  "tokenUsage": 75099524.0,
+  "totalScore": 68.6605,
+  "unscorableFailedCases": 0,
+  "runtimeSuccessCases": 33,
+  "scoredCases": 43,
+  "runtimeStatusCounts": {
+    "FAILED": 10,
+    "SUCCESS": 33
+  }
+}

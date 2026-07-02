@@ -1,0 +1,29 @@
+{
+  "apiCalls": 1,
+  "attempt": 1,
+  "baseUrlHost": "aiot-coding-maas.antdigital.com",
+  "caseId": "power_trade_standard_v1_011",
+  "elapsedSeconds": 71.378,
+  "finalBatch": "final-batch-3",
+  "inputTokens": 233.0,
+  "messageCount": 2,
+  "model": "gpt-5.5",
+  "observedAt": "2026-06-28T22:15:44+08:00",
+  "outputTokens": 1877.0,
+  "rawTraceCount": 2,
+  "reasoningStats": {
+    "has_any_reasoning": false,
+    "total_assistant_turns": 1,
+    "turns_with_reasoning": 0,
+    "turns_without_reasoning": 1
+  },
+  "reasoningTokens": 122.0,
+  "sessionId": "hx-fb3-c011-a1-693bfbd7",
+  "status": "SUCCESS",
+  "tokenUsage": 5694.0,
+  "toolCallCount": 0,
+  "toolFailureCount": 0,
+  "toolSuccessCount": 0,
+  "toolSuccessRate": null,
+  "traceSource": "hermes_local_trajectory"
+}

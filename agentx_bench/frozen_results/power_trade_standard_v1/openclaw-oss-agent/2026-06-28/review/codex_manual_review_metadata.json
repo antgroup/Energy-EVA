@@ -1,0 +1,23 @@
+{
+  "reviewerProcess": "codex_manual_review_rubric_v1",
+  "reviewMode": "answer_plus_openclaw_internal_trace",
+  "qualityMetricCodes": [
+    "reasoning.answer_accuracy",
+    "reasoning.task_completion_quality",
+    "skill.execution_quality"
+  ],
+  "notApplicableMetricCodes": [
+    "multi_agent.task_decompose_reasonability",
+    "multi_agent.collaboration_quality"
+  ],
+  "rubricSummary": {
+    "data_query": "Strictly requires concrete trace-supported market data; unavailable/simulated answers receive low scores.",
+    "business_answer": "Scores factual coverage, domain specificity, usable policy/process explanation, and honest data limitations.",
+    "scenario_analysis": "Scores causal coverage, market impact analysis, and evidence discipline.",
+    "strategy_advice": "Scores actionable trading logic, constraints, risk controls, and trace-backed execution.",
+    "robustness": "Rewards safe clarification, non-fabrication, and useful next-step guidance."
+  },
+  "judgeEndpointStatus": "configured LLM judge endpoint unreachable by TCP timeout during final scoring; all final batches scored with this single manual-review rubric",
+  "rowCount": 129,
+  "secretsPersisted": false
+}

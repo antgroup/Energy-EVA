@@ -1,0 +1,420 @@
+suite: power_trade_standard_v1
+scoringVersion: v1.2-scorable-non-success
+totalScore: 100
+scoreScale:
+  min: 0
+  max: 100
+metricScoreScale:
+  min: 0
+  max: 1
+normalizationContract:
+  resultShape: caseResults_with_metricResults
+  officialRankingSource: metricResults
+  fallbackSingleScore:
+    fields:
+      - score
+      - totalScore
+    allowed: true
+    officialRanking: false
+    note: 单一总分仅用于粗粒度本地比较，不能解释 outcome、execution、orchestration、efficiency 四个维度。
+  requiredResultFields:
+    - caseId
+    - status
+    - finalOutputJson
+    - durationMs
+    - metricResults
+  requiredMetricResultFields:
+    - metricCode
+    - score
+    - computeMode
+    - reason
+  metricScoreScale:
+    min: 0
+    max: 1
+  scoreBearingMetricCodes:
+    - reasoning.answer_accuracy
+    - reasoning.task_completion_quality
+    - skill.execution_quality
+    - multi_agent.task_decompose_reasonability
+    - multi_agent.collaboration_quality
+    - duration.normalized
+    - token.normalized
+  derivedScoreInputs:
+    duration.normalized:
+      sourceField: durationMs
+      sourceMetricCode: openclaw.duration
+      description: 由单 case 执行耗时派生效率分。
+    token.normalized:
+      sourceField: tokenUsage
+      sourceMetricCode: openclaw.token_usage
+      description: 由单 case token 使用量派生效率分。
+  normalizationFlow:
+    - 同一批 case 输入给所有参评 Agent。
+    - 收集 Agent 输出、轨迹、工具调用、耗时、token 和证据。
+    - 使用同一 LLM Judge 或人工复核规则归一为 caseResults[].metricResults。
+    - 保留 raw status，同时使用 scoreEligibility 区分运行态失败和业务可评分结果。
+    - 使用 scoring.yaml 计算 summary.json 和 leaderboard。
+    - 对于电力交易场景，缺少私有、实时或权限数据时，有用回答应能说明数据边界、给出合理方向、风险约束和下一步动作；不得因为缺少无证据精确数值而直接判为低分。
+  officialRankingGuidance:
+    - 正式 ranking 必须优先使用 metricResults 计算四个维度和总分。
+    - 单 Agent 可将 multi_agent.* 指标标记为 NOT_APPLICABLE，由 scoring 按策略排除该指标分母。
+    - 缺少 score-bearing metric 时按 missingMetricPolicy 处理，不从 suite 分母剔除 case。
+    - 非成功状态只有显式 scoreEligibility=SCORABLE、存在有用 finalOutputJson 且具备 score-bearing quality metric 时才可按 metricResults 计分。
+dimensions:
+  outcome:
+    name: 结果质量
+    weight: 45
+    metrics:
+      reasoning.answer_accuracy: 30
+      reasoning.task_completion_quality: 20
+  execution:
+    name: 工具与执行
+    weight: 20
+    metrics:
+      skill.execution_quality: 15
+  orchestration:
+    name: 编排协作
+    weight: 30
+    metrics:
+      multi_agent.task_decompose_reasonability: 15
+      multi_agent.collaboration_quality: 10
+  efficiency:
+    name: 效率成本
+    weight: 5
+    derivedMetrics:
+      duration.normalized: 6
+      token.normalized: 4
+caseTypeWeights:
+  data_query:
+    outcome: 50
+    execution: 25
+    orchestration: 20
+    efficiency: 5
+  business_answer:
+    outcome: 50
+    execution: 15
+    orchestration: 30
+    efficiency: 5
+  scenario_analysis:
+    outcome: 45
+    execution: 15
+    orchestration: 35
+    efficiency: 5
+  strategy_advice:
+    outcome: 45
+    execution: 15
+    orchestration: 35
+    efficiency: 5
+  robustness:
+    outcome: 50
+    execution: 10
+    orchestration: 35
+    efficiency: 5
+missingMetricPolicy:
+  qualityMetricUnavailable: zero_score_with_reason
+  orchestrationMetricUnavailableForSingleAgent: exclude_from_denominator
+  statsMetricWithoutScore: use_only_for_normalization_or_tiebreaker
+nonSuccessScoringPolicy:
+  rawStatusPreserved: true
+  scoreEligibilityField: scoreEligibility
+  answerOutcomeField: answerOutcome
+  reasonField: scoreEligibilityReason
+  scorableValues:
+    - SCORABLE
+  unscorableValues:
+    - UNSCORABLE
+    - ""
+    - null
+  scoreableConditions:
+    - raw status may be FAILED/TIMEOUT/ERROR/VALIDATION_FAILED, but must not be relabeled as SUCCESS.
+    - case result has scoreEligibility=SCORABLE.
+    - finalOutputJson contains a useful business answer, valid data-boundary explanation, supported refusal, unsupported-capability statement, or clarification request.
+    - score-bearing quality metricResults are present.
+  zeroScoreConditions:
+    - missing durable caseRun anchor.
+    - empty or error-fallback finalOutputJson.
+    - pre-submission failure, validation failure, or timeout without useful final output.
+    - scoreEligibility missing or UNSCORABLE.
+    - score-bearing quality metricResults are absent for non-success case results.
+  denominatorPolicy: all selected cases remain in the suite denominator.
+  rankingEligibilityPolicy: leaderboard eligibility is blocked by unscorable failures and incomplete cases, not by raw FAILED status when scoreEligibility=SCORABLE.
+auxiliaryMetrics:
+  - code: successRate
+    name: 成功率
+    role: stability_diagnostic
+    scoreBearing: false
+    description: 解释运行稳定性；失败、超时、缺失 case 已通过 0 分进入 suite 分母。
+  - code: failedCases
+    name: 不可评分失败 Case 数
+    role: stability_diagnostic
+    scoreBearing: false
+    description: 无法评分的 FAILED/TIMEOUT/ERROR/VALIDATION_FAILED case 数；显式 SCORABLE 的非成功 case 不计入该字段。
+  - code: runtimeFailedCases
+    name: 原始运行失败 Case 数
+    role: stability_diagnostic
+    scoreBearing: false
+    description: 保留 raw status 的运行失败数量，用于解释链路稳定性，不直接作为独立主分指标。
+  - code: scorableNonSuccessCases
+    name: 可评分非成功 Case 数
+    role: scoring_diagnostic
+    scoreBearing: false
+    description: raw status 非成功但 scoreEligibility=SCORABLE 且按 metricResults 计分的 case 数。
+  - code: unscorableFailedCases
+    name: 不可评分失败 Case 数
+    role: scoring_diagnostic
+    scoreBearing: false
+    description: blocked official leaderboard eligibility 的失败 case 数，和 summary.failedCases 保持一致。
+  - code: avgDurationMs
+    name: 平均耗时
+    role: efficiency_diagnostic_and_tiebreaker
+    scoreBearing: false
+    description: 用于解释效率和 tie-breaker；效率主分来自 duration.normalized。
+  - code: tokenUsage
+    name: Token 使用量
+    role: efficiency_diagnostic_and_tiebreaker
+    scoreBearing: false
+    description: 用于解释成本和 tie-breaker；效率主分来自 token.normalized。
+  - code: toolCalls
+    name: 工具调用
+    role: execution_diagnostic
+    scoreBearing: false
+    description: 用于解释工具路径，不直接代表能力强弱。
+  - code: toolSuccessRate
+    name: 工具成功率
+    role: execution_diagnostic
+    scoreBearing: false
+    description: 可辅助解释 skill.execution_quality，但默认不进入主分。
+  - code: traceSteps
+    name: 轨迹步骤数
+    role: orchestration_diagnostic
+    scoreBearing: false
+    description: 用于解释流程复杂度，步骤更多不必然更优。
+  - code: retryCount
+    name: 重试次数
+    role: reliability_diagnostic
+    scoreBearing: false
+    description: 用于解释稳定性和成本，不直接加分或扣分。
+  - code: rawTrace
+    name: 原始轨迹
+    role: audit_evidence
+    scoreBearing: false
+    description: 用于人工复核和问题定位，不直接进入主分。
+  - code: evidence
+    name: 证据材料
+    role: audit_evidence
+    scoreBearing: false
+    description: 用于支撑 judge/reviewer 判断，不直接进入主分。
+  - code: judgeReason
+    name: 评分理由
+    role: audit_evidence
+    scoreBearing: false
+    description: 用于解释 metricResults 分数，不直接进入主分。
+resultIndicators:
+  count: 21
+  description: >
+    AgentX Bench 标准结果指标。正式排名由 4 个维度和 7 个 score-bearing metric 计算；
+    21 个 result indicators 用于统一展示分数、完成度、效率、评分覆盖和派生数据覆盖；
+    发布资格由 leaderboardEligible 单独判定。
+  scoringPolicy:
+    scoreBearingOnly:
+      - totalScore
+      - outcomeScore
+      - executionScore
+      - orchestrationScore
+      - efficiencyScore
+    diagnosticsDoNotChangeTotalScore: true
+    officialSnapshotRequires:
+      - status is COMPLETED or SUCCESS
+      - failedCases = 0
+      - incompleteCases = 0
+      - scoreConfidence is not diagnostic
+      - leaderboardEligible = true
+  indicators:
+    - code: totalScore
+      name: 总分
+      category: ranking_score
+      source: summary.totalScore
+      scoreBearing: true
+      description: 0-100 最终分数，正式 ranking 第一排序字段。
+    - code: outcomeScore
+      name: 结果质量分
+      category: ranking_score
+      source: summary.outcomeScore
+      scoreBearing: true
+      description: 结果质量维度分，衡量答案正确性和任务完成质量。
+    - code: executionScore
+      name: 工具与执行分
+      category: ranking_score
+      source: summary.executionScore
+      scoreBearing: true
+      description: 工具、数据源、Skill 或证据使用质量维度分。
+    - code: orchestrationScore
+      name: 编排协作分
+      category: ranking_score
+      source: summary.orchestrationScore
+      scoreBearing: true
+      description: 任务拆解、多 Agent 协作和证据组织维度分。
+    - code: efficiencyScore
+      name: 效率成本分
+      category: ranking_score
+      source: summary.efficiencyScore
+      scoreBearing: true
+      description: 由耗时和 token 归一化得到的效率成本维度分。
+    - code: selectedCases
+      name: 选中 Case 数
+      category: run_completion
+      source: summary.selectedCases
+      scoreBearing: false
+      description: 本次 run 纳入分母的 case 数。
+    - code: completedCases
+      name: 完成 Case 数
+      category: run_completion
+      source: summary.completedCases
+      scoreBearing: false
+      description: 状态为 SUCCESS/COMPLETED，或 raw status 非成功但 scoreEligibility=SCORABLE 且已按 metricResults 计分的 case 数。
+    - code: failedCases
+      name: 失败 Case 数
+      category: run_completion
+      source: summary.failedCases
+      scoreBearing: false
+      description: 不可评分的 FAILED/TIMEOUT/ERROR/VALIDATION_FAILED case 数；显式 SCORABLE 的非成功 case 按其 metricResults 计分但仍保留 raw status。
+    - code: incompleteCases
+      name: 不完整 Case 数
+      category: run_completion
+      source: summary.incompleteCases
+      scoreBearing: false
+      description: INCOMPLETE/UNKNOWN/UNKNOWN_OR_EXPIRED 的 case 数。
+    - code: successRate
+      name: 成功率
+      category: run_completion
+      source: summary.successRate
+      scoreBearing: false
+      description: completedCases / selectedCases，用于解释可评分完成度。
+    - code: avgDurationMs
+      name: 平均耗时
+      category: efficiency_cost
+      source: summary.avgDurationMs
+      scoreBearing: false
+      description: 成功和失败 case 的平均可用耗时；主分只通过 duration.normalized 使用耗时。
+    - code: tokenUsage
+      name: Token 使用量
+      category: efficiency_cost
+      source: summary.tokenUsage
+      scoreBearing: false
+      description: 本次 run 累计 token 使用量；主分只通过 token.normalized 使用 token。
+    - code: qualityExpected
+      name: 应评分质量指标数
+      category: score_coverage
+      source: summary.metricSummary.qualityExpected
+      scoreBearing: false
+      description: 成功 case 期望出现的非派生 score-bearing quality metric 数。
+    - code: qualityScored
+      name: 已评分质量指标数
+      category: score_coverage
+      source: summary.metricSummary.qualityScored
+      scoreBearing: false
+      description: 已获得有效 score 的 quality metric 数。
+    - code: qualityUnavailable
+      name: 不可用质量指标数
+      category: score_coverage
+      source: summary.metricSummary.qualityUnavailable
+      scoreBearing: false
+      description: Judge、服务或证据不可用导致无法评分的 quality metric 数。
+    - code: qualityMissing
+      name: 缺失质量指标数
+      category: score_coverage
+      source: summary.metricSummary.qualityMissing
+      scoreBearing: false
+      description: 成功 case 中缺失的 quality metric 数。
+    - code: qualityNotApplicable
+      name: 不适用质量指标数
+      category: score_coverage
+      source: summary.metricSummary.qualityNotApplicable
+      scoreBearing: false
+      description: 按规则标记为 NOT_APPLICABLE 的 quality metric 数，例如单 Agent 的多 Agent 协作指标。
+    - code: scoreConfidence
+      name: 分数可信等级
+      category: score_coverage
+      source: summary.scoreConfidence
+      scoreBearing: false
+      description: full/limited/diagnostic；diagnostic 不进入正式榜单快照。
+    - code: derivedExpected
+      name: 应派生效率指标数
+      category: derived_coverage
+      source: summary.metricSummary.derivedExpected
+      scoreBearing: false
+      description: 成功 case 期望派生的效率指标数，包括 duration.normalized 和 token.normalized。
+    - code: derivedAvailable
+      name: 可用派生效率指标数
+      category: derived_coverage
+      source: summary.metricSummary.derivedAvailable
+      scoreBearing: false
+      description: 可从 durationMs/tokenUsage 成功派生的效率指标数。
+    - code: derivedMissing
+      name: 缺失派生效率指标数
+      category: derived_coverage
+      source: summary.metricSummary.derivedMissing
+      scoreBearing: false
+      description: 无法从 durationMs/tokenUsage 派生的效率指标数。
+ranking:
+  primary: totalScore
+  tieBreakers:
+    - outcomeScore
+    - orchestrationScore
+    - executionScore
+    - avgDurationMsAsc
+    - tokenUsageAsc
+publishColumns:
+  - totalScore
+  - outcomeScore
+  - executionScore
+  - orchestrationScore
+  - efficiencyScore
+  - selectedCases
+  - completedCases
+  - failedCases
+  - incompleteCases
+  - successRate
+  - avgDurationMs
+  - tokenUsage
+  - qualityExpected
+  - qualityScored
+  - qualityUnavailable
+  - qualityMissing
+  - qualityNotApplicable
+  - scoreConfidence
+  - derivedExpected
+  - derivedAvailable
+  - derivedMissing
+  - leaderboardEligible
+publishEligibilityFields:
+  - leaderboardEligible
+compatibilityColumns:
+  routingScore: 当前 scoring 未启用 routing 维度；若旧 leaderboard row 仍输出该列，仅作为兼容字段，不参与排名解释。
+publishedRanking:
+  mode: dated_snapshot
+  hostedLeaderboard: false
+  recommendedPath: published_results/power_trade_standard_v1/YYYY-MM-DD/
+  suggestedOutputStructure:
+    - leaderboard.csv
+    - leaderboard.json
+    - run_metadata.json
+    - summaries/
+  requiredDisclosureFields:
+    - datasetId
+    - datasetVersion
+    - scoringVersion
+    - runDate
+    - comparedSubjects
+    - subjectVersions
+    - selectedCaseCount
+    - judgeModelOrReviewerProcess
+    - failedCaseCount
+    - scoreConfidence
+    - leaderboardEligible
+    - qualityMetricCoverage
+    - derivedMetricCoverage
+    - evidenceLocation
+  guidance:
+    - 发布结果是带日期的离线快照，不是 AgentX Bench 内置 hosted leaderboard。
+    - 每次发布必须保留 summary.json、case_results 或等价证据，便于复核排名。

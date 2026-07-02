@@ -1,0 +1,94 @@
+AgentX Bench Dashboard
+========================================================================
+Run        : openclaw-oss-agent-power-trade-standard-v1-final-batch-1
+EvalRun    : -
+Subject    : OpenClaw OSS Agent
+Status     : Completed (COMPLETED)
+Artifacts  : /Users/renke/Projects/zkenergyaicommon/evaluation_results/agentx/power_trade_standard_v1/openclaw-oss-agent/openclaw-oss-agent-power-trade-standard-v1-final-batch-1
+
+Scores
+  total          : 43.02
+  outcome        : 40.93
+  execution      : 35.98
+  orchestration  : 0.00
+  efficiency     : 56.87
+
+Run Stats
+  cases          : 43/43 completed
+  failed         : 0
+  success rate   : 100.00%
+  avg duration   : 85.61s
+  token usage    : 0.00
+
+Dimension Breakdown
+  outcome       : [########............] 40.93
+  execution     : [#######.............] 35.98
+  orchestration : [....................] 0.00
+  efficiency    : [###########.........] 56.87
+
+Score Coverage
+  confidence     : full
+  quality metrics: 129/215 scored | unavailable 0 | missing 0 | n/a 86
+  efficiency data: 43/86 available
+  metric results : 215
+  outcomes       : scored=129, not_applicable=86
+  metric detail  :
+    - multi_agent.collaboration_quality: not_applicable:43
+    - multi_agent.task_decompose_reasonability: not_applicable:43
+    - reasoning.answer_accuracy: scored:43
+    - reasoning.task_completion_quality: scored:43
+    - skill.execution_quality: scored:43
+
+Evidence Coverage
+  case results   : 43
+  final answers  : 43
+  events         : 0
+  raw traces     : 43
+  trace summaries: success 43 | failed 0
+
+Run Diagnostics
+  latest status  : Completed (COMPLETED)
+  phase          : -
+  message        : -
+  selected       : 43
+  submitted      : 43
+  caseRuns       : -
+  metrics        : -
+
+Data Quality
+  leaderboard    : eligible
+  score confidence: full
+  case coverage  : 43/43 completed, 0 not completed
+  case counters  : failedCases=0, incompleteCases=0
+  warning count  : 0
+  exclusion      : none
+  completeness   :
+    - hasSelectedCaseEcho=True
+    - hasVolatileRunState=False
+    - manualImport=True
+    - missingManualRows=0
+
+Artifacts
+  request.json          : ok
+  run_status.json       : ok
+  status_history.jsonl  : ok
+  raw_results.json      : ok
+  summary.json          : ok
+  case_results.csv      : ok
+  case_results.jsonl    : ok
+  leaderboard_row.csv   : ok
+  dashboard.txt         : ok
+  diagnostic_report.txt : ok
+  errors.jsonl          : ok
+
+Attention Cases
+  - power_trade_standard_v1_019 | SUCCESS | score 20.53 | 后天气象情况
+    reason: orchestration not applicable
+  - power_trade_standard_v1_028 | SUCCESS | score 21.74 | 实时电价查询
+    reason: orchestration not applicable
+  - power_trade_standard_v1_039 | SUCCESS | score 21.83 | 后天全省光伏风电预测
+    reason: orchestration not applicable
+  - power_trade_standard_v1_015 | SUCCESS | score 21.93 | 上周现货出清电价
+    reason: orchestration not applicable
+  - power_trade_standard_v1_029 | SUCCESS | score 22.14 | 上个月电价查询
+    reason: orchestration not applicable

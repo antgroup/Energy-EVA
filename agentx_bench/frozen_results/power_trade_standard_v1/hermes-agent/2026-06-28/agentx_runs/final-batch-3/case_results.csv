@@ -1,0 +1,44 @@
+caseId,caseName,caseType,status,caseScore,outcomeScore,routingScore,executionScore,orchestrationScore,efficiencyScore,durationMs,tokenUsage,reason
+power_trade_standard_v1_001,河南物流园区套餐定制,business_answer,SUCCESS,55.5444,54.268,,45.0,,73.1087,213337.0,18919.0,orchestration not applicable
+power_trade_standard_v1_002,盘前电力交易简报,business_answer,SUCCESS,43.3531,39.78,,29.25,,77.1084,149811.0,20772.0,orchestration not applicable
+power_trade_standard_v1_003,山东竞价空间数据,data_query,SUCCESS,37.9397,30.68,,29.25,,79.0412,144726.0,19106.0,orchestration not applicable
+power_trade_standard_v1_004,新建发电企业注册办理,business_answer,SUCCESS,45.9379,47.94,,29.25,,51.6143,244339.0,49051.0,orchestration not applicable
+power_trade_standard_v1_005,进口煤限制放开影响分析,scenario_analysis,SUCCESS,27.2446,17.0,,9.0,,96.7122,78788.0,5820.0,orchestration not applicable
+power_trade_standard_v1_006,储能补贴传言影响分析,scenario_analysis,TIMEOUT,0.0,,,,,,240044.0,,case status is TIMEOUT; case score forced to 0; Hermes case timed out after 240s
+power_trade_standard_v1_007,隔壁省停电跨省交易影响,scenario_analysis,SUCCESS,40.4574,35.48,,9.0,,96.8019,78039.0,5794.0,orchestration not applicable
+power_trade_standard_v1_008,夏季高温社交情绪风险,scenario_analysis,SUCCESS,44.0628,40.1,,9.0,,98.9396,56114.0,5193.0,orchestration not applicable
+power_trade_standard_v1_009,买卖一价差大卖盘增加,strategy_advice,SUCCESS,51.4523,47.28,,41.67,,84.9009,127005.0,14286.0,orchestration not applicable
+power_trade_standard_v1_010,截标前地板价卖单涌现,strategy_advice,SUCCESS,40.6144,38.44,,9.0,,97.8206,68348.0,5617.0,orchestration not applicable
+power_trade_standard_v1_011,上午十点成交量达到八成,strategy_advice,SUCCESS,45.0805,45.48,,9.0,,97.4036,72269.0,5694.0,orchestration not applicable
+power_trade_standard_v1_012,晚高峰成交进度滞后,strategy_advice,SUCCESS,44.7135,44.6,,9.0,,98.7947,59749.0,5356.0,orchestration not applicable
+power_trade_standard_v1_013,大盘偏慢买方主动增强策略,strategy_advice,SUCCESS,57.1585,56.64,,41.67,,82.7245,146089.0,14826.0,orchestration not applicable
+power_trade_standard_v1_014,陕西日前现货申报策略,strategy_advice,SUCCESS,44.7065,42.908,,29.25,,75.9847,174662.0,19551.0,orchestration not applicable
+power_trade_standard_v1_015,上周现货出清电价,data_query,SUCCESS,42.3379,36.618,,31.85,,80.7908,119463.0,19664.0,orchestration not applicable
+power_trade_standard_v1_016,陕西昨日申报负荷曲线,data_query,SUCCESS,36.5168,28.594,,29.25,,77.6786,119096.0,23202.0,orchestration not applicable
+power_trade_standard_v1_017,陕西上周现货价差,data_query,SUCCESS,40.198,34.442,,29.25,,79.5497,134366.0,19570.0,orchestration not applicable
+power_trade_standard_v1_018,今日全省开停机情况,data_query,SUCCESS,35.7311,26.894,,29.25,,78.9357,130913.0,20606.0,orchestration not applicable
+power_trade_standard_v1_019,后天气象情况,data_query,SUCCESS,39.6854,34.442,,29.25,,76.3036,143454.0,22313.0,orchestration not applicable
+power_trade_standard_v1_020,跨省绿电交易规则,business_answer,SUCCESS,43.1472,39.78,,29.25,,75.5638,154987.0,21992.0,orchestration not applicable
+power_trade_standard_v1_021,年用电量500万kWh用户入市,business_answer,SUCCESS,41.6574,42.5,,29.25,,49.4306,268906.0,75762.0,orchestration not applicable
+power_trade_standard_v1_022,前天现货复盘,business_answer,SUCCESS,41.0596,37.06,,29.25,,74.867,163716.0,21903.0,orchestration not applicable
+power_trade_standard_v1_023,明天全省电源预测总出力,data_query,SUCCESS,42.419,36.618,,31.85,,81.3041,117169.0,19316.0,orchestration not applicable
+power_trade_standard_v1_024,2025年绿电交易价格机制,business_answer,SUCCESS,53.1006,53.38,,29.25,,75.4148,172763.0,20382.0,orchestration not applicable
+power_trade_standard_v1_025,跨省绿电安全校核流程,business_answer,SUCCESS,41.7768,42.5,,29.25,,50.3258,258835.0,50055.0,orchestration not applicable
+power_trade_standard_v1_026,光储充消防标准,business_answer,TIMEOUT,0.0,,,,,,240041.0,,case status is TIMEOUT; case score forced to 0; Hermes case timed out after 240s
+power_trade_standard_v1_027,浙江峰谷价差与工商业储能投资,business_answer,SUCCESS,36.0362,39.78,,29.25,,22.2316,574895.0,46720.0,orchestration not applicable
+power_trade_standard_v1_028,实时电价查询,data_query,SUCCESS,42.4837,39.066,,29.25,,77.0714,162027.0,19592.0,orchestration not applicable
+power_trade_standard_v1_029,上个月电价查询,data_query,SUCCESS,37.3273,29.444,,29.9,,78.6118,123337.0,21728.0,orchestration not applicable
+power_trade_standard_v1_030,明天电价预测,data_query,SUCCESS,36.8666,28.664,,29.25,,79.637,134904.0,19418.0,orchestration not applicable
+power_trade_standard_v1_031,电价上涨原因分析,business_answer,TIMEOUT,0.0,,,,,,240044.0,,case status is TIMEOUT; case score forced to 0; Hermes case timed out after 240s
+power_trade_standard_v1_032,选择最省钱用电套餐,robustness,SUCCESS,51.4185,42.88,,9.0,,96.8657,77741.0,5752.0,orchestration not applicable
+power_trade_standard_v1_033,账单分析与套餐推荐,business_answer,SUCCESS,41.9056,38.2,,9.0,,95.1918,92232.0,6186.0,orchestration not applicable
+power_trade_standard_v1_034,今日盘前交易简报,business_answer,SUCCESS,46.6581,44.2,,29.25,,77.5854,140174.0,21199.0,orchestration not applicable
+power_trade_standard_v1_035,大丰风电场功率预测,data_query,SUCCESS,34.1784,24.932,,29.25,,76.2961,152979.0,21369.0,orchestration not applicable
+power_trade_standard_v1_036,威海光伏站现货申报策略,strategy_advice,SUCCESS,44.0417,48.144,,29.25,,47.7692,287596.0,60998.0,orchestration not applicable
+power_trade_standard_v1_037,浙江未来两天日前现货电价预测,data_query,SUCCESS,34.5666,25.194,,29.25,,77.7937,155461.0,19436.0,orchestration not applicable
+power_trade_standard_v1_038,代理售电负荷预测,robustness,SUCCESS,53.8929,45.72,,9.0,,98.8246,60313.0,5291.0,orchestration not applicable
+power_trade_standard_v1_039,后天全省光伏风电预测,data_query,SUCCESS,38.8244,32.13,,29.25,,79.3282,132548.0,20001.0,orchestration not applicable
+power_trade_standard_v1_040,江苏能量块后天预测,data_query,SUCCESS,39.991,34.442,,29.25,,78.2392,160269.0,18454.0,orchestration not applicable
+power_trade_standard_v1_041,今明两天竞价空间,data_query,SUCCESS,38.5582,31.518,,29.25,,79.8862,132870.0,19341.0,orchestration not applicable
+power_trade_standard_v1_042,未来用户预测负荷,robustness,SUCCESS,49.0007,40.04,,9.0,,95.1904,92878.0,6123.0,orchestration not applicable
+power_trade_standard_v1_043,历史用户实际电量,robustness,SUCCESS,31.709,15.2,,9.0,,99.8116,21758.0,4212.0,orchestration not applicable

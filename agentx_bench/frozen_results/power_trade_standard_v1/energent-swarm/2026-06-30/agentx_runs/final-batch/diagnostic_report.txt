@@ -1,0 +1,131 @@
+AgentX Bench Dashboard
+========================================================================
+Run        : final-batch
+EvalRun    : merged:rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_5A5C9EBB10EA46C1BC5697023784947E,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_6FB53B62349F445AAB006F13DC549E8F,ER_93E18B9C6C3C46E8A47DFBB83D7ADC94,rejudged-final-batch-1-2026-06-30,ER_EBCDCA9546DD44B88D331633B0F553F9,ER_D6297FCC8FBD4B00B791CE50F38ECD37,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_209121B1B8F84862A342AF7C94E26678,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_D087F7311BF04A2C9F16487E38F15977,ER_D2922136BE024015A26D5EA813D8A7FD,rejudged-final-batch-1-2026-06-30,rejudged-final-batch-1-2026-06-30,ER_5767FD0F30AF4760BB8673FDD93D84D6,rejudged-final-batch-1-2026-06-30,ER_6270AD40C08647A6B8DAB207E9FEB959,rejudged-final-batch-1-2026-06-30
+Subject    : Energent Swarm
+Status     : Completed (COMPLETED)
+Artifacts  : evaluation_results/agentx/power_trade_standard_v1/energent-swarm/final-batch
+
+Scores
+  total          : 68.66
+  outcome        : 76.05
+  execution      : 66.96
+  orchestration  : 68.14
+  efficiency     : 16.62
+
+Run Stats
+  cases          : 33/43 runtime success, 43/43 scored
+  failed         : 10 runtime | 0 unscorable
+  scorable failed: 10
+  success rate   : 76.74%
+  avg duration   : 640.70s
+  token usage    : 75099524.00
+
+Dimension Breakdown
+  outcome       : [###############.....] 76.05
+  execution     : [#############.......] 66.96
+  orchestration : [##############......] 68.14
+  efficiency    : [###.................] 16.62
+
+Score Coverage
+  confidence     : limited
+  quality metrics: 201/215 scored | unavailable 14 | missing 0 | n/a 0
+  efficiency data: 58/86 available
+  metric results : 301
+  outcomes       : scored=201, statistic=86, unavailable=14
+  metric detail  :
+    - multi_agent.collaboration_quality: scored:34, unavailable:9
+    - multi_agent.task_decompose_reasonability: scored:43
+    - openclaw.duration: statistic:43
+    - openclaw.token_usage: statistic:43
+    - reasoning.answer_accuracy: scored:43
+    - reasoning.task_completion_quality: scored:43
+    - skill.execution_quality: scored:38, unavailable:5
+  note           : some quality metrics are unavailable or missing; treat ranking with caution
+
+Evidence Coverage
+  case results   : 43
+  final answers  : 43
+  events         : 1309
+  raw traces     : 42
+  trace summaries: success 71 | failed 0
+
+Run Diagnostics
+  latest status  : Completed (COMPLETED)
+  phase          : merged
+  message        : merged from final-batch-1, rerun 003, and clean failed-case reruns
+  selected       : 43
+  submitted      : 43
+  caseRuns       : 43
+  metrics        : done
+
+Data Quality
+  leaderboard    : eligible
+  score confidence: limited
+  case coverage  : 33/43 runtime success, 43/43 scored
+  case counters  : failedCases=10, incompleteCases=0, runtimeSuccessCases=33, runtimeFailedCases=10, scoredCases=43, scorableNonSuccessCases=10, unscorableFailedCases=0
+  warning count  : 0
+  exclusion      : none
+  completeness   :
+    - detailFlags.baseFinalBatch=evaluation_results/agentx/power_trade_standard_v1/energent-swarm/final-batch-1
+    - detailFlags.includeEvents=True
+    - detailFlags.includeMetricResults=True
+    - detailFlags.includeRawTrace=True
+    - detailFlags.mergedFinalBatch=True
+    - hasSelectedCaseEcho=True
+    - hasVolatileRunState=False
+    - preCaseRunFailuresComplete=True
+
+Artifacts
+  request.json          : missing
+  run_status.json       : missing
+  status_history.jsonl  : missing
+  raw_results.json      : ok
+  summary.json          : ok
+  case_results.csv      : ok
+  case_results.jsonl    : ok
+  leaderboard_row.csv   : ok
+  dashboard.txt         : ok
+  diagnostic_report.txt : ok
+  errors.jsonl          : missing
+
+Attention Cases
+  - power_trade_standard_v1_002 | FAILED | score 71.65 | 盘前电力交易简报
+    reason: case status is FAILED; scoreEligibility=SCORABLE; metric-
+            derived score used; 风控检查无法完成：必填输入缺失。具体缺失项：1)
+            load_forecast（负荷预测数据）— 私有数据采集阶段确认无用户上传私有数据文件，无负荷预测数据落库；2)
+            bid_curve（日前申报曲线）— 策略生成任务因私有数据缺失降级运行，未生成完整日前申报曲线。可选数据缺失（导致规则
+            跳过）：持仓分析数据（RC-05/06/07 SKIPPED）、月累计偏差率（RC-04
+            SKIPPED）、价格预测曲线（RC-05 SKIPPED）。当前已获取：市场分析评分S=2.67/置信度78%/方向震
+            荡、策略评分S=-
+            3.83/方向偏空。建议：补充负荷预测和日前申报曲线数据后重新执行风控检查，或控制层评估是否允许降级跳过。
+  - power_trade_standard_v1_014 | FAILED | score 62.50 | 陕西日前现货申报策略
+    reason: case status is FAILED; scoreEligibility=SCORABLE; metric-
+            derived score used; 重编排失败: 重编排未产生有效变更，停止重复执行相同失败路径
+  - power_trade_standard_v1_015 | FAILED | score 48.20 | 上周现货出清电价
+    reason: case status is FAILED; scoreEligibility=SCORABLE; metric-
+            derived score used; 依赖任务 t_cbf3330198474641 采集失败：江苏省电力交易平台对2
+            026-06-15至2026-06-
+            21所有日期返回PROVINCE_EXPIRED错误，未能获取任何现货出清电价数据。缺少分析所需的全部基础数据（逐日出清
+            电价），无法完成时段分析、价格波动识别、价格口径说明和关键变化总结。建议控制层协调数据源或调整标的日期范围为已开放查询的
+            时段。
+  - power_trade_standard_v1_017 | FAILED | score 69.91 | 陕西上周现货价差
+    reason: case status is FAILED; scoreEligibility=SCORABLE; metric-
+            derived score used; 当前采集平台账号仅具备江苏省(320000)数据权限，无法采集陕西省(61000
+            0)现货日前与实时出清价格数据。请问：1）是否可以开通陕西省份数据采集权限？2）或者是否可以提供具备陕西权限的独立采集账
+            号？3）如果无法开通陕西权限，是否可以接受用江苏省或其他有权限省份的同期数据作为替代示例？
+  - power_trade_standard_v1_018 | FAILED | score 47.50 | 今日全省开停机情况
+    reason: case status is FAILED; scoreEligibility=SCORABLE; metric-
+            derived score used; 重编排失败: Leader重编排输出为空
+  - power_trade_standard_v1_029 | FAILED | score 55.68 | 上个月电价查询
+    reason: case status is FAILED; scoreEligibility=SCORABLE; metric-
+            derived score used; 重编排失败: 重编排未产生有效变更，停止重复执行相同失败路径
+  - power_trade_standard_v1_030 | FAILED | score 71.65 | 明天电价预测
+    reason: case status is FAILED; scoreEligibility=SCORABLE; metric-
+            derived score used;
+            请提供您的私有数据（持仓头寸/能量块成交记录/储能充放电计划），以Excel附件上传或Markdown表格形式提供。
+  - power_trade_standard_v1_034 | FAILED | score 71.65 | 今日盘前交易简报
+    reason: case status is FAILED; scoreEligibility=SCORABLE; metric-
+            derived score used; 请提供2026-06-
+            23日前交易相关的私有数据文件（Excel/JSON均可），包括：1）历史申报记录；2）机组运行状态数据；3）可用容量约
+            束配置；4）场站运维信息。提供数据后我将恢复执行盘前简报生成流程。

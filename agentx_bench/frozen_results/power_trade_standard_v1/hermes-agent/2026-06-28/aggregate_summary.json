@@ -1,0 +1,204 @@
+{
+  "agentMode": "single_agent",
+  "aggregateMethod": "mean_of_replicates",
+  "aggregateRunId": "hermes-agent-power-trade-standard-v1-final",
+  "avgDurationMs": 158407.9633,
+  "clientRunId": "hermes-agent-power-trade-standard-v1-final",
+  "completedCases": 124.0,
+  "efficiencyScore": 74.6772,
+  "efficiencyScoreInterval": "[73.7547, 75.4964]",
+  "efficiencyScoreMax": 75.4964,
+  "efficiencyScoreMean": 74.6772,
+  "efficiencyScoreMin": 73.7547,
+  "efficiencyScoreStdDev": 0.8754,
+  "executionScore": 23.7729,
+  "executionScoreInterval": "[23.1091, 24.4393]",
+  "executionScoreMax": 24.4393,
+  "executionScoreMean": 23.7729,
+  "executionScoreMin": 23.1091,
+  "executionScoreStdDev": 0.6651,
+  "failedCases": 5.0,
+  "incompleteCases": 0.0,
+  "ineligibleReplicates": [
+    {
+      "index": 1,
+      "reasons": [
+        "status=INCOMPLETE",
+        "leaderboardEligible=false",
+        "traceSuccessCount=42<43"
+      ],
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-1"
+    },
+    {
+      "index": 2,
+      "reasons": [
+        "status=INCOMPLETE",
+        "leaderboardEligible=false",
+        "traceSuccessCount=42<43"
+      ],
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-2"
+    },
+    {
+      "index": 3,
+      "reasons": [
+        "status=INCOMPLETE",
+        "leaderboardEligible=false",
+        "traceSuccessCount=40<43"
+      ],
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-3"
+    }
+  ],
+  "leaderboardEligible": false,
+  "leaderboardRow": {
+    "agentMode": "single_agent",
+    "aggregateMethod": "mean_of_replicates",
+    "aggregateRunId": "hermes-agent-power-trade-standard-v1-final",
+    "avgDurationMs": 158407.9633,
+    "completedCases": 124.0,
+    "efficiencyScore": 74.6772,
+    "efficiencyScoreMax": 75.4964,
+    "efficiencyScoreMean": 74.6772,
+    "efficiencyScoreMin": 73.7547,
+    "executionScore": 23.7729,
+    "executionScoreMax": 24.4393,
+    "executionScoreMean": 23.7729,
+    "executionScoreMin": 23.1091,
+    "failedCases": 5.0,
+    "incompleteCases": 0.0,
+    "ineligibleReplicates": [
+      {
+        "index": 1,
+        "reasons": [
+          "status=INCOMPLETE",
+          "leaderboardEligible=false",
+          "traceSuccessCount=42<43"
+        ],
+        "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-1"
+      },
+      {
+        "index": 2,
+        "reasons": [
+          "status=INCOMPLETE",
+          "leaderboardEligible=false",
+          "traceSuccessCount=42<43"
+        ],
+        "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-2"
+      },
+      {
+        "index": 3,
+        "reasons": [
+          "status=INCOMPLETE",
+          "leaderboardEligible=false",
+          "traceSuccessCount=40<43"
+        ],
+        "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-3"
+      }
+    ],
+    "leaderboardEligible": false,
+    "orchestrationScore": 0.0,
+    "orchestrationScoreMax": 0.0,
+    "orchestrationScoreMean": 0.0,
+    "orchestrationScoreMin": 0.0,
+    "outcomeScore": 35.92,
+    "outcomeScoreMax": 36.746,
+    "outcomeScoreMean": 35.92,
+    "outcomeScoreMin": 35.1855,
+    "runCount": 3,
+    "runId": "hermes-agent-power-trade-standard-v1-final",
+    "scoreConfidence": "full",
+    "scoreInterval": "[39.3803, 40.9090]",
+    "selectedCases": 129.0,
+    "status": "DIAGNOSTIC",
+    "subject": "Hermes Agent",
+    "subjectId": "hermes-agent",
+    "subjectType": "hermes_agent",
+    "successRate": 0.9612,
+    "tokenUsage": 919878.0,
+    "totalScore": 40.1049,
+    "totalScoreMax": 40.909,
+    "totalScoreMean": 40.1049,
+    "totalScoreMin": 39.3803,
+    "totalScoreStdDev": 0.7674,
+    "traceEvidenceRequired": true
+  },
+  "minReplicates": 3,
+  "orchestrationScore": 0.0,
+  "orchestrationScoreInterval": "[0.0000, 0.0000]",
+  "orchestrationScoreMax": 0.0,
+  "orchestrationScoreMean": 0.0,
+  "orchestrationScoreMin": 0.0,
+  "orchestrationScoreStdDev": 0.0,
+  "outcomeScore": 35.92,
+  "outcomeScoreInterval": "[35.1855, 36.7460]",
+  "outcomeScoreMax": 36.746,
+  "outcomeScoreMean": 35.92,
+  "outcomeScoreMin": 35.1855,
+  "outcomeScoreStdDev": 0.7843,
+  "replicateRuns": [
+    {
+      "completedCases": 42,
+      "efficiencyScore": 75.4964,
+      "executionScore": 24.4393,
+      "failedCases": 1,
+      "incompleteCases": 0,
+      "leaderboardEligible": false,
+      "orchestrationScore": 0.0,
+      "outcomeScore": 36.746,
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-1",
+      "scoreConfidence": "full",
+      "selectedCases": 43,
+      "status": "INCOMPLETE",
+      "totalScore": 40.909
+    },
+    {
+      "completedCases": 42,
+      "efficiencyScore": 74.7806,
+      "executionScore": 23.7702,
+      "failedCases": 1,
+      "incompleteCases": 0,
+      "leaderboardEligible": false,
+      "orchestrationScore": 0.0,
+      "outcomeScore": 35.8284,
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-2",
+      "scoreConfidence": "full",
+      "selectedCases": 43,
+      "status": "INCOMPLETE",
+      "totalScore": 40.0255
+    },
+    {
+      "completedCases": 40,
+      "efficiencyScore": 73.7547,
+      "executionScore": 23.1091,
+      "failedCases": 3,
+      "incompleteCases": 0,
+      "leaderboardEligible": false,
+      "orchestrationScore": 0.0,
+      "outcomeScore": 35.1855,
+      "runId": "hermes-agent-power-trade-standard-v1-final-final-batch-3",
+      "scoreConfidence": "full",
+      "selectedCases": 43,
+      "status": "INCOMPLETE",
+      "totalScore": 39.3803
+    }
+  ],
+  "runCount": 3,
+  "runId": "hermes-agent-power-trade-standard-v1-final",
+  "scoreConfidence": "full",
+  "scoreInterval": "[39.3803, 40.9090]",
+  "selectedCases": 129.0,
+  "status": "DIAGNOSTIC",
+  "subjectId": "hermes-agent",
+  "subjectName": "Hermes Agent",
+  "subjectType": "hermes_agent",
+  "successRate": 0.9612,
+  "suiteId": "power_trade_standard_v1",
+  "suiteVersion": "v1",
+  "tokenUsage": 919878.0,
+  "totalScore": 40.1049,
+  "totalScoreInterval": "[39.3803, 40.9090]",
+  "totalScoreMax": 40.909,
+  "totalScoreMean": 40.1049,
+  "totalScoreMin": 39.3803,
+  "totalScoreStdDev": 0.7674,
+  "traceEvidenceRequired": true
+}

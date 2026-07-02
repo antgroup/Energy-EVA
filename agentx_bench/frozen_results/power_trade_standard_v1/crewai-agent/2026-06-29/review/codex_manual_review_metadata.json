@@ -1,0 +1,23 @@
+{
+  "judgeEndpointStatus": "no external judge endpoint used; codified manual-review rubric applied consistently to CrewAI Agent answer plus local trace",
+  "orchestrationMetricCodes": [
+    "multi_agent.task_decompose_reasonability",
+    "multi_agent.collaboration_quality"
+  ],
+  "qualityMetricCodes": [
+    "reasoning.answer_accuracy",
+    "reasoning.task_completion_quality",
+    "skill.execution_quality"
+  ],
+  "reviewMode": "answer_plus_crewai_lite_agent_trace",
+  "reviewerProcess": "codex_manual_review_rubric_v1_codified_for_crewai_agent",
+  "rowCount": 129,
+  "rubricSummary": {
+    "business_answer": "Scores factual coverage, domain specificity, usable explanation, and honest data limitations.",
+    "data_query": "Strictly requires concrete supported market data; honest unavailability scores low but above fabricated values.",
+    "robustness": "Rewards safe clarification, non-fabrication, and useful next-step guidance.",
+    "scenario_analysis": "Scores causal coverage, market impact analysis, and evidence discipline.",
+    "strategy_advice": "Scores actionable trading logic, constraints, risk controls, and evidence discipline."
+  },
+  "secretsPersisted": false
+}

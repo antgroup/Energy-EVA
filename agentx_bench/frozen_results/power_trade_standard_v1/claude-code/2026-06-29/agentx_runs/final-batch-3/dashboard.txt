@@ -1,0 +1,113 @@
+AgentX Bench Dashboard
+========================================================================
+Run        : claude-code-power-trade-standard-v1-final-final-batch-3
+EvalRun    : -
+Subject    : Claude Code
+Status     : Incomplete (INCOMPLETE)
+Artifacts  : /Users/renke/Projects/zkenergyaicommon/evaluation_results/agentx/power_trade_standard_v1/claude-code/claude-code-power-trade-standard-v1-final-final-batch-3
+
+Scores
+  total          : 42.62
+  outcome        : 35.22
+  execution      : 27.60
+  orchestration  : 0.00
+  efficiency     : 89.17
+
+Run Stats
+  cases          : 42/43 completed
+  failed         : 1
+  success rate   : 97.67%
+  avg duration   : 103.57s
+  token usage    : 311954.00
+
+Dimension Breakdown
+  outcome       : [#######.............] 35.22
+  execution     : [######..............] 27.60
+  orchestration : [....................] 0.00
+  efficiency    : [##################..] 89.17
+
+Score Coverage
+  confidence     : full
+  quality metrics: 126/210 scored | unavailable 0 | missing 0 | n/a 84
+  efficiency data: 84/84 available
+  metric results : 215
+  outcomes       : scored=129, not_applicable=86
+  metric detail  :
+    - multi_agent.collaboration_quality: not_applicable:43
+    - multi_agent.task_decompose_reasonability: not_applicable:43
+    - reasoning.answer_accuracy: scored:43
+    - reasoning.task_completion_quality: scored:43
+    - skill.execution_quality: scored:43
+
+Evidence Coverage
+  case results   : 43
+  final answers  : 42
+  events         : 0
+  raw traces     : 467
+  trace summaries: success 42 | failed 1
+
+Run Diagnostics
+  latest status  : Incomplete (INCOMPLETE)
+  phase          : -
+  message        : -
+  selected       : 43
+  submitted      : 43
+  caseRuns       : -
+  metrics        : -
+  warnings       :
+    - 1 case(s) have failed according to the service status.
+
+Data Quality
+  leaderboard    : diagnostic only
+  score confidence: full
+  case coverage  : 42/43 completed, 1 not completed
+  case counters  : failedCases=1, incompleteCases=0
+  warning count  : 1
+  exclusion      : terminal status INCOMPLETE is not complete
+  completeness   :
+    - hasSelectedCaseEcho=True
+    - hasVolatileRunState=False
+    - manualImport=True
+    - missingManualRows=1
+
+Artifacts
+  request.json          : ok
+  run_status.json       : ok
+  status_history.jsonl  : ok
+  raw_results.json      : ok
+  summary.json          : ok
+  case_results.csv      : ok
+  case_results.jsonl    : ok
+  leaderboard_row.csv   : ok
+  dashboard.txt         : ok
+  diagnostic_report.txt : ok
+  errors.jsonl          : ok
+
+Attention Cases
+  - power_trade_standard_v1_029 | FAILED | score 0.00 | 上个月电价查询
+    reason: case status is FAILED; case score forced to 0; Claude Code
+            subprocess failed rc=1; stderr= stdout={"type":"system","sub
+            type":"init","cwd":"/private/tmp/agentx-claude-code-
+            runs/claude-code-power-trade-standard-v1-final/final-batch-
+            3/power_trade_standard_v1_029-a1","session_id":"a839ad57-
+            f70b-4376-badb-
+            a45f68364dde","tools":["WebFetch","WebSearch"],"mcp_servers"
+            :[],"model":"gpt-
+            5.5","permissionMode":"bypassPermissions","slash_commands":[
+            "deep-research","update-config","verify","debug","code-
+            review","simplify","batch","fewer-permission-
+            prompts","loop","claude-api","run","run-skill-generator","cl
+            ear","compact","context","heapdump","init","reload-
+            skills","review","security-
+            review","usage","insights","goal","team-onboarding"],"apiKey
+            Source":"none","claude_code_version":"2.1.177","output_style
+            ":"default","agents":["claude","Explore","general-
+            purpose","Plan"],"skills":["deep-research","update-
+            config","verify","debug","code-
+            review","simplify","batch","fewer-permission-
+            prompts","loop","claude-api","run","run-skill-generator"],"p
+            lugins":[],"analytics_disabled":true,"product_feedback_disab
+            led":true,"uuid":"5d2a3732-638c-44d7-981e-
+            705e152a65a6","fast_mode_state":"off"} {"type":"system","sub
+            type":"thinking_tokens","estimated_tokens":10,"estimated_tok
+            ens_delta":10,"uuid":"60d9ae78-c225-4f30-b...[truncated]

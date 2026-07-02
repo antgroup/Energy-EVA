@@ -1,0 +1,45 @@
+{
+  "method": "openclaw_observability_span_tree",
+  "status": "SUCCESS",
+  "caseId": "power_trade_standard_v1_016",
+  "clawRunId": "5fda3ffb-6272-4f85-92f8-53cad46dc1a2",
+  "attempt": 1,
+  "fetchedAt": "2026-06-28T14:36:12+08:00",
+  "elapsedMs": 326,
+  "spanCount": 23,
+  "spanTypes": {
+    "agent": 1,
+    "generation": 11,
+    "tool": 11
+  },
+  "rootSpanNames": [
+    "openclaw - Turn turn-1782625827923-1",
+    "LLM Call 1",
+    "Tool: web_search",
+    "Tool: web_search",
+    "LLM Call 2"
+  ],
+  "modelNames": [
+    "qwen3.6-plus"
+  ],
+  "toolOrSkillNames": [
+    "Tool: Bash",
+    "Tool: read",
+    "Tool: relic_recall",
+    "Tool: relic_search",
+    "Tool: web_search",
+    "Tool: whole_network_search"
+  ],
+  "toolOrSkillCallCount": 6,
+  "errorCount": 0,
+  "errorSpanNames": [],
+  "tokenUsage": {
+    "promptTokens": 422616,
+    "completionTokens": 7416,
+    "totalTokens": 430032
+  },
+  "evidenceFile": "final-batch-3/trace_summaries/power_trade_standard_v1_016.trace.summary.json",
+  "responseSha256": "15e3d13ba601967eca4df24de9cf00ba663e750eb8b2523430a17947a125a70b",
+  "redactionStatus": "sanitized_before_persist",
+  "finalBatch": "final-batch-3"
+}
