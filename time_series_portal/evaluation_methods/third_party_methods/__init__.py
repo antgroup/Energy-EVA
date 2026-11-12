@@ -8,3 +8,4 @@ from .chronos2.evaluate_model import *
 from .moirai2.evaluate_model import *
 from .timesfm25.evaluate_model import *
 from .toto2.evaluate_model import *
+from .simons.evaluate_model import *
